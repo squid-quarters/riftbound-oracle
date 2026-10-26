@@ -1,0 +1,3637 @@
+{
+  "source": "https://playriftbound.com/en-us/card-gallery/",
+  "snapshot_sha256": "f3525e832ed70a0af4a2fa39f1362b62cbbf60d3d1f8acae45a379e42c0b5dce",
+  "scope": "Visual type/domain/tag audit of all167 base RAD card images; no full numeric or ability-text audit",
+  "limits": [
+    "No absent power value was generalized to zero.",
+    "Gear raw might/mightBonus are not unit base Might. Nazuman Ntofo has printed+0 granted Might and Shield2; Protector Shield printed+1 grantsTank; Blade of the Exile printed+3 grantsGanking.",
+    "Printed metadata audit does not establish correctness of all energy/power/might/ability fields.",
+    "Only base167 images audited, not every variant.",
+    "Same-full-name variant reuse must retain base evidence ID; variant-only older champion reprints need existing canonical evidence or separate audit.",
+    "All six named rune domain glyphs visually verified, but no complete variant census claimed."
+  ],
+  "cards": {
+    "rad-001-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3dca5e04ff8dff983993f87d5a82a7fd56d7bc9c-744x1039.png?accountingTag=RB",
+      "image_sha256": "7d24363ab440754f3483aa615e6f841982550d0ee2c4c4b99ddb685c9308bee3",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Bandle City",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-002-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1e2a4e0a8cf533c82e9c3f4d507dd7eb63ece943-744x1039.png?accountingTag=RB",
+      "image_sha256": "73700384d5a62a8c7482e713ccd97116172b1cb50ec1b274a765568b66dccd36",
+      "type": "gear",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-003-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b660759a6bcb9c7ca41ea969cf11463259e284c9-744x1039.png?accountingTag=RB",
+      "image_sha256": "52810b6ac0f04b2b7501f1a8d5f269869d2d7e422904f0684d639b7e934c7570",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Bilgewater"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-004-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/38fd13c7522bb47dcc5ce1596aeb6a638087ee09-744x1039.png?accountingTag=RB",
+      "image_sha256": "1404a259df9d7786bcf8f69180422ce07e627926b5148a6ca767ed46d880ecf2",
+      "type": "spell",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-005-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5453008d27b3bb4f00941cb5a0d9ca52e4eb0245-744x1039.png?accountingTag=RB",
+      "image_sha256": "f5a54a56ad2f9b3c9a665a1f0d7648b6ccf41569f25c00c4eaae983b328b495f",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Shadow Isles",
+        "Spirit"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-006-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e646f9850571e20eca22e07af5d4dd68813fdd19-744x1039.png?accountingTag=RB",
+      "image_sha256": "6beb47cbbe3bc260ca8052030a7dad5eff2f114ca2abf1e2acf769a8b0493f5c",
+      "type": "spell",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-007-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/09c0fc35d8f4b72f58a95d1745b99c4133d02513-744x1039.png?accountingTag=RB",
+      "image_sha256": "f3f49a588d2a623574c8465c3364cfee32dc2b98bada11c346aa79277782dad2",
+      "type": "spell",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-008-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3adae96f4731752074cf2145507a175dee800411-744x1039.png?accountingTag=RB",
+      "image_sha256": "da5cb394c6bf7fc432e7a054de3b389c9a705b5d168930507e9cbf33612990a0",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Demacia",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-009-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5be775464c8b897501317c6d32fd60c8b962b5c2-744x1039.png?accountingTag=RB",
+      "image_sha256": "639bd5d99ba344dcbc49f8e5e5463a007812a7a0c1e384c281614db2940f5753",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Bandle City",
+        "Yordle",
+        "Mech"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-010-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/293518dcf6c2f9e3f59a2e259826fd813436b3a5-744x1039.png?accountingTag=RB",
+      "image_sha256": "0d4949f8df3d71de1089971e25473bd71e2a93db3f0175732bfd85089b247bfd",
+      "type": "spell",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-011-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e95470d5c2fbc9f7f8ab0b1c19f32fd704918c83-744x1039.png?accountingTag=RB",
+      "image_sha256": "adcc40776a8d97b6be8321696a3598c8ce4d74f59110da91a1634a1acd64ae64",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Piltover",
+        "Mech"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-012-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/11e2ddea70ec4dd8e562681a1ab1dfbc2b2dca0f-744x1039.png?accountingTag=RB",
+      "image_sha256": "a588d7f44850709610582230cc210d8383a039e863c26d36804383885a343d91",
+      "type": "gear",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-013-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/92071a0f4d495f5f7acdf78d060133b98d1cebae-744x1039.png?accountingTag=RB",
+      "image_sha256": "2242758e8b2685c028ffb46459a166eafb33800a31810e338536c8c7121ab3ce",
+      "type": "spell",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-014-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/02ef2a5c93cf60048bb932a709d3a5b17b93bb1d-744x1039.png?accountingTag=RB",
+      "image_sha256": "2fa219f76f280674ebd2b354dcaf22be1770a193106e838d0f08ac8f7f976d9b",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Bilgewater"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-015-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/20997ddaef2cd714c36e5473c156faf331b80b7b-744x1039.png?accountingTag=RB",
+      "image_sha256": "452279b7573f6865572b695a7cb900b8355c014ea494bbecdbd43299f5647007",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Akali",
+        "Ionia"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": [
+          "Ionia",
+          "Akali"
+        ]
+      }
+    },
+    "rad-016-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/59e551045ca75d932ff76c4820d873d4a2cde9e8-744x1039.png?accountingTag=RB",
+      "image_sha256": "a6185c10363c57ae3035dd1552099bcd3d7fbb87e5b9f69ce3c09cfe74723b04",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Shurima"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-017-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0cd07e77e69a53b78486b07dd7610183c953d581-744x1039.png?accountingTag=RB",
+      "image_sha256": "844ef35acb29895ef4f3ec2c74084a8509babd917304aef808a191febda73690",
+      "type": "gear",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-018-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9ddc2759cf8b039bc1ee77e32326c5475cc001e8-744x1039.png?accountingTag=RB",
+      "image_sha256": "f97b755290bfc2bc3c64aa90ca2ca33d32f114838b1f163a104694b0aac44e1b",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Noxus"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-019-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/922ef5a266378fa8ebd7e75bf83435bacd1a75d8-744x1039.png?accountingTag=RB",
+      "image_sha256": "863a8a2356be4bbf92a6eefa7c302f5550c2af9e40b97ede4ecc40b392df8ed6",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Freljord"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-020-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/66db9510de566ac43157ecdcc96f33b5f553a38d-744x1039.png?accountingTag=RB",
+      "image_sha256": "53ab934b29cd59cd35d52a1df82efe3b3cc0f79d66907457f02553e9ac8cf9be",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Mordekaiser",
+        "Noxus",
+        "Spirit"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": [
+          "Noxus",
+          "Mordekaiser"
+        ]
+      }
+    },
+    "rad-021-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d13964c46506f9f36430dfe91ee02d258a304908-744x1039.png?accountingTag=RB",
+      "image_sha256": "e11fdf8681409047d4ca1166c6f79cdfa2072d469cf4e980af876478be5089c9",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Ekko",
+        "Zaun"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": [
+          "Ekko",
+          "Zaun"
+        ]
+      }
+    },
+    "rad-022-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a05ff95e5bb933664e09656973c72f4d39d8e701-744x1039.png?accountingTag=RB",
+      "image_sha256": "b8c3aa0b671620b1f04b0d806712bc77303783eaf1120416e45835e29071d960",
+      "type": "gear",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-023-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9df0d347bcfc0593cb724258ee07a1208c620848-744x1039.png?accountingTag=RB",
+      "image_sha256": "633b8e6eac1995806781991bf17c4b3b285d53cbcef61eac6ed692587790d282",
+      "type": "unit",
+      "domain": [
+        "fury"
+      ],
+      "tags": [
+        "Ziggs",
+        "Zaun",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": [
+          "Bandle City",
+          "Ziggs"
+        ]
+      }
+    },
+    "rad-024-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b819cc232389f3ef1438350d68c7801e181961c-744x1039.png?accountingTag=RB",
+      "image_sha256": "3bfad68405a05598b1566de028635b460dd9e958bd38686f1be82d70b24ce8d7",
+      "type": "gear",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-025-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/120b20ee26d221cea31f510090cef037e74c023f-744x1039.png?accountingTag=RB",
+      "image_sha256": "5388cbce32d7ddcf994b8293144740871d5f58225a22eaa0570727ffbceaf20d",
+      "type": "spell",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-026-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8d8688f43e219f7f4b5f5fd17cff204dcebc3bdc-744x1039.png?accountingTag=RB",
+      "image_sha256": "be35638fd1cab8a31ef62deeeef04a4a1d997ce7571c3a4514c1ac6ddca419e9",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Freljord"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-027-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/73fde9189b222313dcf8c2abe79b38082c76961e-744x1039.png?accountingTag=RB",
+      "image_sha256": "cb2a94361a021c7dfcb792216c91cc62716aaf18889fac134e4da767a6c584e0",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Ixtal",
+        "Bird"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-028-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/33af916b50007c01b33e78aef3dc99b757edc3f2-744x1039.png?accountingTag=RB",
+      "image_sha256": "4b46b0caecc19d1a738a8b8b6020bf61712ba08ea737889f644c233a7ce05510",
+      "type": "spell",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-029-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6a849c0425f0fecb8d00e1b9494e975c4dbbba75-744x1039.png?accountingTag=RB",
+      "image_sha256": "d2fc5c2f7b6d3e0830dc259aa1e486f242b1e7b598ec3852d2a1ffb3d927d3a9",
+      "type": "spell",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-030-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/776973101613a15a7d0a2fc90587d19098ecc894-744x1039.png?accountingTag=RB",
+      "image_sha256": "55175a3e0d81053cb0c5bc8f4ff4a5591548116cdd23f9031b0b0ec4d27bd769",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Shurima"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-031-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8513fbe02a37f957b2a98bcee5badfdc56f41e82-744x1039.png?accountingTag=RB",
+      "image_sha256": "9cdc1bd0dbe86250e6fe6460b8cf0f7f126cd25a30c98c63b957455ec79fe2d3",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Bilgewater",
+        "Sentinel"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-032-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9422caf2fcd4cfb346cf0dce48245ef13a77180f-744x1039.png?accountingTag=RB",
+      "image_sha256": "eaeb7715b05c5183fd7ddfb84f32935f18e3c92cf71f38787843c2929ef0ac4c",
+      "type": "spell",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-033-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b025756992e22af480902e13b01e25acbc747221-744x1039.png?accountingTag=RB",
+      "image_sha256": "738e2541492fe203002de28977015016f480cda9d55d9862409694f759836439",
+      "type": "spell",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-034-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/111c518590b17919e5b851ef6c713c7eb7504ae2-744x1039.png?accountingTag=RB",
+      "image_sha256": "22f84b148f61d383851b89a1eb3f16ae857325f813a48f4eda2bea1bcdf62d7e",
+      "type": "spell",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-035-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/66d4436ef5d7a7a81c60ee9b1b3ebae06162b7d2-744x1039.png?accountingTag=RB",
+      "image_sha256": "6ad47d79015e19c2433943ad31e97d5f72478632c1fe07b9427b2d7120574bdc",
+      "type": "gear",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-036-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fc59661dfc70a1fdb393d795c90779a2b5661609-744x1039.png?accountingTag=RB",
+      "image_sha256": "9b87f7e488234932ac9daa19d6aaf814838d40405cdcf91e05d72d130ea16186",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Freljord",
+        "Bird"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-037-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5081f81341bb02dfd26c970c09651fcf64a18a04-744x1039.png?accountingTag=RB",
+      "image_sha256": "822fc141705ef6b340ee1112e997b5f17a82751cd4f2464a9e51a8665c2877e3",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Piltover"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-038-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cf3c6a5963ad27976960977b0a51ea185f551696-744x1039.png?accountingTag=RB",
+      "image_sha256": "9d7151d24a13b01c04288d54b225b2e3eb51dca545b47409aa867461238e4d20",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Ahri",
+        "Ionia"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": [
+          "Ahri",
+          "Ionia"
+        ]
+      }
+    },
+    "rad-039-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d2e562a1b69a42ebd9c8f95a9420750f45aca5dc-744x1039.png?accountingTag=RB",
+      "image_sha256": "cfbe564b36fd15e431816a315588ad1efb80bb54fbe616f4077d07e1a799f1bb",
+      "type": "gear",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-040-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0a5f9ab3216462356f6ddf8f172284dca6be21e9-744x1039.png?accountingTag=RB",
+      "image_sha256": "8efa5bb8f3b31319f7febe88878c83037b54d6a86bba9053eece822489166775",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Shadow Isles",
+        "Spirit"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-041-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b9c1b9441e42639805b715466938ccd26b89892d-744x1039.png?accountingTag=RB",
+      "image_sha256": "5a6024a14de44725e0147767126586bcc938f46f67a496643a22b327c1aa8a2f",
+      "type": "spell",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-042-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3e608c51698b6fb0cc6a00335dbd1bca84f57c73-744x1039.png?accountingTag=RB",
+      "image_sha256": "c3dce56815fae72651600ab02b62d577f4a3db930653170230071e0788cdf67f",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Orianna",
+        "Piltover"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": [
+          "Piltover",
+          "Orianna"
+        ]
+      }
+    },
+    "rad-043-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0c9ac0da1c144f46a1e0c5423f51f9b8f6ba295b-744x1039.png?accountingTag=RB",
+      "image_sha256": "e1eeccd4286ed7421a7126ad606eef6d3b3fe192f61e6dddd6d651b89568207a",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "Riven",
+        "Noxus"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": [
+          "Riven"
+        ]
+      }
+    },
+    "rad-044-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0a625c22d828c83302132b0465dceb3ab11a08bc-744x1039.png?accountingTag=RB",
+      "image_sha256": "57375e77ecfb01ab252831369801d0e31333031bd224a4aa32e70453e92e71ec",
+      "type": "gear",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-045-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f56e9f9db199f915e32ea264b7dab70202f97957-744x1039.png?accountingTag=RB",
+      "image_sha256": "8cf114a2a16ed29ab61bc1a3dbd5fe571cecdbb47bffb7fa9725cfc6744325ca",
+      "type": "unit",
+      "domain": [
+        "calm"
+      ],
+      "tags": [
+        "K'Sante",
+        "Shurima"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": [
+          "Shurima",
+          "K'Sante"
+        ]
+      }
+    },
+    "rad-046-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/df1c12e65cc3c63c96fb6c96b2071795f37f30a6-744x1039.png?accountingTag=RB",
+      "image_sha256": "d3967994b03f702815d2dd5b3b63f3e8b47ee5e882aea34a9a44fc6ae2bf307f",
+      "type": "gear",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": []
+      }
+    },
+    "rad-047-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/75a3d8fbfd8caeabfd5be38513a6624c61f5230f-744x1039.png?accountingTag=RB",
+      "image_sha256": "d2bce00c0a78be7c4b0577cda48a355fe1d5015b369fc113cfc06dde55add24d",
+      "type": "spell",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-048-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/afba3669ea1063dafb0e4c2c766694e00540eb13-744x1039.png?accountingTag=RB",
+      "image_sha256": "32ccab4cc6aa05b57ebd9c4a59b671a7bd3a908e6a4bc92915b56dd04354eea2",
+      "type": "spell",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-049-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c8f6b4191874f23b522566f8ebeeb6e5ee18eb7f-744x1039.png?accountingTag=RB",
+      "image_sha256": "c774d6ae77fea8f050ee29c609bbad7fe1897362aef1cae1e9426f16c756c12b",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Zaun"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-050-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/72828b0fe019b2e03069510f781dfa8f5759ac12-744x1039.png?accountingTag=RB",
+      "image_sha256": "718dd7c7c6dbb63e0d450b6904ad747b1e791b6de5dec55a5b9ddf4fed1f6594",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Shurima"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-051-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/55e382346c6fa890936a1cf14abaf57b8ee0b8f2-744x1039.png?accountingTag=RB",
+      "image_sha256": "514fb2f007cd9d2f09dfa9396d5fda79a30237df28c9711fcd85c9d763099672",
+      "type": "spell",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-052-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d5cc2f85febe2260e51b88bddfeab6ce700c85dd-744x1039.png?accountingTag=RB",
+      "image_sha256": "ef9e0c9eaffd1ffffa2ca6b64874ccf4060115fa7e672ec6f1ed6b7ea71a28a8",
+      "type": "gear",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-053-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5973b5036060f29e24f8778949bf6f01f360c0a4-744x1039.png?accountingTag=RB",
+      "image_sha256": "eae44f177ee7f22b6639bb48e14ad21a846e1f834726e742a2617c84fb7b573e",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Freljord",
+        "Bird"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-054-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/78106b7cea441b13d108e532adc5ce063f448165-744x1039.png?accountingTag=RB",
+      "image_sha256": "75ecad5a4744dc9d74ebd02f9f0ab3440b22a17da8a9fb89246f38eb484993fc",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Bandle City",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-055-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5d4c22ef863e041887a00d34b2dae1f3ce658326-744x1039.png?accountingTag=RB",
+      "image_sha256": "0e979f3dce7ede1cc60e480612b2f26ddca54e43f53b63c2edf8a189312b5602",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Piltover",
+        "Mech"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-056-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ecbb970f955b8e12369921f30ad08cab04e59a3f-744x1039.png?accountingTag=RB",
+      "image_sha256": "a8cc88da3376522b793f359fe32cfae2f6335350d19e8750207eb49e21148042",
+      "type": "spell",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-057-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9558ced7593f5a26911eb6e1393aae3289842e20-744x1039.png?accountingTag=RB",
+      "image_sha256": "066c0365029994d13e3fce99bd04c4a5a568b6080a4719f7be11a03b2274d9ae",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Piltover",
+        "Mech"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-058-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4e3c24c1c315656772d0bfd8d100bc7893e94994-744x1039.png?accountingTag=RB",
+      "image_sha256": "10a3fa79ee865fdb5a8c879372c2a9380ffab9192fda95a93ffa81be4315185b",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Bilgewater"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-059-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bea8e402f99b0afb5af1b19c0ee8ea34052e736f-744x1039.png?accountingTag=RB",
+      "image_sha256": "e13818035cf55c287d5402fb1f2ebe4c25883a6a0ad4c20861e83e84fe77efe1",
+      "type": "spell",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-060-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b7cd2e475834863bf4e66994118a835ba4377d16-744x1039.png?accountingTag=RB",
+      "image_sha256": "c5522cb561818d33b32433f3ec8510244e961368f66fbdcd15e05a64811e0d89",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Ionia",
+        "Dragon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": [
+          "Dragon"
+        ]
+      }
+    },
+    "rad-061-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3129469742d7aa5c6921ebae841ccee1923bb279-744x1039.png?accountingTag=RB",
+      "image_sha256": "ee873f2834302aaaad7c5e4db648b851425df88494ce615ce425837131db3184",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Ekko",
+        "Zaun"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": [
+          "Ekko",
+          "Zaun"
+        ]
+      }
+    },
+    "rad-062-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/51f589e5ed0f7316b6cb64ebc93c4ef3e75b7f46-744x1039.png?accountingTag=RB",
+      "image_sha256": "cf874989914837b94cefdfba4397da14585b14b4c10189a7a246506a31d4085a",
+      "type": "gear",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-063-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/53a7fdbb66f0d05111f4a7f54853db30f62fa5c4-744x1039.png?accountingTag=RB",
+      "image_sha256": "13c4893fa6a87c6748cb1508311e5b08d47744e72d14d572c8bf16949511cc62",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Kai'Sa",
+        "The Void"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": [
+          "Kai'Sa",
+          "The Void"
+        ]
+      }
+    },
+    "rad-064-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6a028fc372c14dda73864aba3d3e84063f6da98d-744x1039.png?accountingTag=RB",
+      "image_sha256": "c5be7815382e405b83204ffe0341a471184bc28cd31e60b70cdd79733c07a07e",
+      "type": "gear",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-065-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/60e0711c64958cc3a59a3bd3bf4c013758b1b92b-744x1039.png?accountingTag=RB",
+      "image_sha256": "6f944f7e1ed62e74b197bc14b6344f1750f619438ed604411b5addb349e947a1",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Seraphine",
+        "Piltover"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": [
+          "Piltover",
+          "Seraphine"
+        ]
+      }
+    },
+    "rad-066-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7a1f527e5910fbc18f7cb3cddf2aa59b483393f4-744x1039.png?accountingTag=RB",
+      "image_sha256": "9b933f8b4654a85c41541748b439e7044d195501f6a49454d99b5151174eae5f",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Freljord",
+        "Spirit"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-067-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b846d604eee450a4ab8f457f2738b0596e7b361e-744x1039.png?accountingTag=RB",
+      "image_sha256": "3dbf3e11af22df0e5ec2d4572e52cb6f2af087aa05aa062cfcf008b5ce99387a",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Shurima"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": [
+          "Mech"
+        ]
+      }
+    },
+    "rad-068-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/00f5a081a085e9c3851daf79d9e39bd378f71fe3-744x1039.png?accountingTag=RB",
+      "image_sha256": "44f0c3b4d3fb912d8313222e7ef23a14cf989713370ada78391dccfc245ea0bc",
+      "type": "unit",
+      "domain": [
+        "mind"
+      ],
+      "tags": [
+        "Orianna",
+        "Piltover"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": [
+          "Piltover",
+          "Orianna"
+        ]
+      }
+    },
+    "rad-069-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5e0646270d27f9fa78f4c3a637695e5cdeb8ee67-744x1039.png?accountingTag=RB",
+      "image_sha256": "5ba64a98544977cc0cfe3ccb38a8c959246b757a82d54696d926ab3720edc26c",
+      "type": "gear",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "mind"
+        ],
+        "tags": []
+      }
+    },
+    "rad-070-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0d9af22d38d32b0ec2a6584d25abe201730f9e11-744x1039.png?accountingTag=RB",
+      "image_sha256": "e028fcb3938054a4c52c7cef79d27015a8f9e5dcf03d8ba754f57a4985e3abdc",
+      "type": "spell",
+      "domain": [
+        "body"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-071-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9d518a6db3ae174096b09cf80cece2997f685ede-744x1039.png?accountingTag=RB",
+      "image_sha256": "e51348b0e52fb1d8747a665e393f3eaa748cd27fa61973b957b0b5b19053f9fe",
+      "type": "gear",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Equipment"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-072-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6db2839d8702b15ab62413028c0321c75e87801c-744x1039.png?accountingTag=RB",
+      "image_sha256": "1b5802a0594b09bc87aa0153cb5784b6519169b992e1261e15d7744059611379",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Bandle City",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-073-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/374248eb65ca1e90a434652073dbbd3a12a11eda-744x1039.png?accountingTag=RB",
+      "image_sha256": "6db52cb8232b3724b2a9db695070dae72d6eb29d429550e56cef0c862216f603",
+      "type": "gear",
+      "domain": [
+        "body"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "calm"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-074-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/778e70b353d7f28eae9b54b1a37af3853238ba04-744x1039.png?accountingTag=RB",
+      "image_sha256": "154a6e8a93a6496123fc26e4fdfeba40c843e8c5ccfb7b47db5ffc7babfeb624",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Freljord"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-075-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/694a362579d3f2e9805cac0da4814ea911423033-744x1039.png?accountingTag=RB",
+      "image_sha256": "bd710462ef50042bf634e625a14c460025af3047cbb03736c40eaacb941db6fc",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Demacia",
+        "Elite",
+        "Bird"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-076-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c04963c90ab2b338883c980ac947b8c9d80a7427-744x1039.png?accountingTag=RB",
+      "image_sha256": "480be6c574f23fee6e9967a825011d57ab61e7124b81917b1a2deba0fa9cfa47",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Mount Targon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-077-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/531b923f3437f497b858bf186b46b4ac88460da6-744x1039.png?accountingTag=RB",
+      "image_sha256": "1a5bf56c01b20aa5ab6af35ba984b64e7123b98e1488a0d4b594da3560a8fb3a",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Freljord",
+        "Spirit"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-078-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c479f2fda00506e71a57ac4e8cc297f7f3110a54-744x1039.png?accountingTag=RB",
+      "image_sha256": "1bfe065178df0b026f98ba4f6fabc3fc0c443466b059791833ea5407b8573356",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Noxus"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-079-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b2103352935061e19cf90036a6aa4cd35ad5922-744x1039.png?accountingTag=RB",
+      "image_sha256": "7c49a9e8ea465d35cdd7f2f6c12926d099ca724e14a50a8c26434377a5957283",
+      "type": "spell",
+      "domain": [
+        "body"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-080-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/775ccea752fb404be2433c4b870c7877e2445a8c-744x1039.png?accountingTag=RB",
+      "image_sha256": "13505573d71dd8abae31492c4c8a166780809c13a729246ac656e3de36c58c42",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Shurima"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-081-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1799cd4c46fcf0243b4022de2d427b15e67a15ad-744x1039.png?accountingTag=RB",
+      "image_sha256": "2a156d2670733492f9a96bce1f04402b2ac439fa21b239c9702697343fba97ca",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Freljord"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-082-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/945633b0c2ed7f303245c917ffbcdb80dcfb524e-744x1039.png?accountingTag=RB",
+      "image_sha256": "9bf282440a558645b0fc1761b91c9bc27dd6b0f9bfd1ce0bd6138e34eefc0428",
+      "type": "spell",
+      "domain": [
+        "body"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-083-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bff85727b58017cbd3921fd73e9b363f5a0205e4-744x1039.png?accountingTag=RB",
+      "image_sha256": "8ced2784d486a993fb2b291bf2d5220bfd10a78b0a74f53002e0fecbb32536c1",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Mount Targon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-084-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dc551ece6cf007c76a3a16feba5f26fb7dd4ed65-744x1039.png?accountingTag=RB",
+      "image_sha256": "3e2e1a16f478d7823848395e9b81eec05f6078e3a703306b4033749a8618fe1a",
+      "type": "spell",
+      "domain": [
+        "body"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-085-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5bc0671f9f78630e2932052bb9f7f42ef2742c86-744x1039.png?accountingTag=RB",
+      "image_sha256": "6849e72a3d7621ed5b4d97bd0ff4dfe8829bc3b03c9ad0ff17f6a7ac1b28cf65",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Graves",
+        "Bilgewater"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": [
+          "Bilgewater",
+          "Graves"
+        ]
+      }
+    },
+    "rad-086-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2a5edfa252798770045f8cd7cc50a93fbbb690fa-744x1039.png?accountingTag=RB",
+      "image_sha256": "32e0563458fe26a37bd626e744741c796738d701bc62e58ec70d31737ed49267",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "K'Sante",
+        "Shurima"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": [
+          "Shurima",
+          "K'Sante"
+        ]
+      }
+    },
+    "rad-087-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dba5c879aae5c614198eb8408e0104a1b0618102-744x1039.png?accountingTag=RB",
+      "image_sha256": "6dba6d768919a69bfdd7b90fba01e241abbbf8df6dde9e6a24a9790fc47fdeef",
+      "type": "gear",
+      "domain": [
+        "body"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-088-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/91c4670531d7773cae9e7b4bfd5ac4e259602162-744x1039.png?accountingTag=RB",
+      "image_sha256": "388aceadbfc128350d5fca52fea29d6d9a2b7b5076398a7605773b8f89d294ac",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Freljord"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-089-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7d027f4e30df4f7141799709f9fb785835adefed-744x1039.png?accountingTag=RB",
+      "image_sha256": "abfd22c7624fade11ab068f8237f68e4ae28c9299cea9097a182e0fe1258c105",
+      "type": "gear",
+      "domain": [
+        "body"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-090-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/26b83de26622fb5163d2fe321ff29e2bf16ac027-744x1039.png?accountingTag=RB",
+      "image_sha256": "bda4994444a9308e75b08d9566843ac23e07f47d2597e8218b496a010ecc001d",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Evelynn",
+        "Demon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": [
+          "Evelynn"
+        ]
+      }
+    },
+    "rad-091-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8edacba51db193506e13e1afb6a8509256cdf55c-744x1039.png?accountingTag=RB",
+      "image_sha256": "5c2097f3618565af7c9c92a2d2f1c2ce831e2657e4fea8a2db9c8ce47902f6ee",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Jarvan IV",
+        "Demacia"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": [
+          "Demacia",
+          "Jarvan IV"
+        ]
+      }
+    },
+    "rad-092-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ad1793554440d8d5017eadc565ca6c787a969de1-744x1039.png?accountingTag=RB",
+      "image_sha256": "c4576ae1ca68484d923b5ac20d5fec228139a850a7cfda36358dede1e84ddbdb",
+      "type": "unit",
+      "domain": [
+        "body"
+      ],
+      "tags": [
+        "Mount Targon",
+        "Dragon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": [
+          "Dragon"
+        ]
+      }
+    },
+    "rad-093-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/79ec89753be773e7ea93b2116ea29d21c81fcef9-744x1039.png?accountingTag=RB",
+      "image_sha256": "2671b171ea193b69b81e0b01b804e8b041ac27b82f6945dc998183bdea53a69c",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Bandle City",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-094-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f2590617229f3efc078aa2429f65b85101303200-744x1039.png?accountingTag=RB",
+      "image_sha256": "04b67c11ad94c222bdb968c2b4c91206c229c9c093ca1b62695b5bb6a5957bdc",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Zaun"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-095-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/aea67209470e47ec876a11ae9b3eacda00df7be1-744x1039.png?accountingTag=RB",
+      "image_sha256": "55ab5e101b569288674f8aa83d9db4f729274b427b3187b5c1b57efaf9db6950",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Shadow Isles",
+        "Demon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-096-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b07c26438f600b87c92e4ed778a1c8b073b47f5c-744x1039.png?accountingTag=RB",
+      "image_sha256": "facafbcf5f3d339d48484acce5f0a5f66a4e4894d3f07bbcd1c281d54979c40d",
+      "type": "spell",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-097-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e666029dcebc507cc80435eee17db435305d1361-744x1039.png?accountingTag=RB",
+      "image_sha256": "4099f32d5b278b21c49d6dfe037bffcd9c1647f9f1dc856513bced71c8af1b2f",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Bilgewater"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-098-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/742967b3e85f51b242fc04b8db4c4e3cd7b88672-744x1039.png?accountingTag=RB",
+      "image_sha256": "5d5cc902611d98bf59388e2f2b4785745466159330e3c16f77bdc456c2db8b15",
+      "type": "spell",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-099-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/20e2752ddf0af274d26a3c25c737ccea2c353e39-744x1039.png?accountingTag=RB",
+      "image_sha256": "79aac9a8b9df98f3cc09612fc5eaead1a4b03b86f56b3bd87b68e3fae630d9a1",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Bilgewater",
+        "Demon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-100-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0552932562db1dd48f14c74779999a645d62cc0d-744x1039.png?accountingTag=RB",
+      "image_sha256": "f32132e7144dbe0944767ad3131aa2bd013a5e28bc3840f6ceea1a0f551bcf60",
+      "type": "spell",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-101-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f724f95257abeacee82c774eff64973b56035357-744x1039.png?accountingTag=RB",
+      "image_sha256": "99830a3cf41e5714212b0b5225d1a94209324fbd6a6605e4f411c8370919360a",
+      "type": "spell",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-102-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e9dd313886624aafc7e0c7f9e1689225c042b484-744x1039.png?accountingTag=RB",
+      "image_sha256": "f5d70b44fc7e7f1ecdfc4dd0f360727b5c44ba5420a7f55cfb61358e26557bb6",
+      "type": "spell",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": []
+      }
+    },
+    "rad-103-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/756827744317003e4992163ff9bf1dc991682de8-744x1039.png?accountingTag=RB",
+      "image_sha256": "6edd5883e33bd043ef024dbe74e522c864e12b96df64dffb1402c9bb4f624289",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Zaun"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-104-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fc61b244fb3ed01d61617c3c2633a71424604130-744x1039.png?accountingTag=RB",
+      "image_sha256": "33ba0a1a723df3bfc885e7397527bdacd72204e78d890e7b6e7d5eb42ffde100",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Shadow Isles",
+        "Cat"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-105-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b7ff5684309bcd346e6b3534e0d1f38ec1a38726-744x1039.png?accountingTag=RB",
+      "image_sha256": "cb6f6be20c39b4e5a8cf690d3430532449e57185aaa01ab79979709f39ad4c3c",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Piltover"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-106-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e7dcc9ad059b471373f0093453a0ca7537d6aa0f-744x1039.png?accountingTag=RB",
+      "image_sha256": "028e731345ca72847dd3312a2dea4e7e02cfbdf56e2c46ecb8003cf627a3a31a",
+      "type": "gear",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-107-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d112a706fe957e5cea58ea1e4366ac02e3ba292b-744x1039.png?accountingTag=RB",
+      "image_sha256": "5a0503ca0036983004020f6d9b15cf8392b7e23f479087f77b1be0fb5a862dca",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Shadow Isles",
+        "Demon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-108-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/120762e23a599ee14d3f88856fcf707154338fb0-744x1039.png?accountingTag=RB",
+      "image_sha256": "ab38b080e4706e5889640a89b6d7d0c9b2fd53e14c706df72319f2f23d3c87f2",
+      "type": "gear",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-109-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8c17158e6153eddb4b56abd8a09cbbd20600b049-744x1039.png?accountingTag=RB",
+      "image_sha256": "b4042c426ff45d8726d0058172741950cb8ec254d45d5d44865c9823abc74feb",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Evelynn",
+        "Demon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": [
+          "Evelynn"
+        ]
+      }
+    },
+    "rad-110-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/defd09480671a1e394725f21b6c3448ebec77913-744x1039.png?accountingTag=RB",
+      "image_sha256": "761a414adb6b9968159815d61291ea86507ae5fbaea7b41d9c6523438bf36fb8",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Lulu",
+        "Bandle City",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": [
+          "Yordle",
+          "Bandle City",
+          "Lulu"
+        ]
+      }
+    },
+    "rad-111-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cb2a419b61b6f1e6d138c3c3b07b393a4037237b-744x1039.png?accountingTag=RB",
+      "image_sha256": "64e10fc3c5bfa04de7d7729b4c5a760ddc626e7b9d783dc757b43c871499a864",
+      "type": "gear",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "fury"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-112-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f0c1f1f3b69b31a69f9637ece841b5ee1029cdd3-744x1039.png?accountingTag=RB",
+      "image_sha256": "d7fb2141a4693686f819a6366bc7f2df1ae2cc668cf3a9479a418b4423f1a944",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Ziggs",
+        "Zaun",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": [
+          "Bandle City",
+          "Ziggs"
+        ]
+      }
+    },
+    "rad-113-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e805eba9add03fd3e1b1601b15c12a46fd403282-744x1039.png?accountingTag=RB",
+      "image_sha256": "216871b2c3c10d516ec2c0641338b710a598c2b7eee296183254e26e5e58d5a0",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Bilgewater",
+        "Dragon"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-114-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/59c080321a697164c9eeb6f0ad297ff0d0b85808-744x1039.png?accountingTag=RB",
+      "image_sha256": "ea93b14aa9dab95b4bec422bc861ad1b7a335771051c032769c9e2eea2a2d37f",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Riven",
+        "Noxus"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": [
+          "Riven"
+        ]
+      }
+    },
+    "rad-115-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/60cf9dbb9345d44f0a9a78b60d5fb71411b50d69-744x1039.png?accountingTag=RB",
+      "image_sha256": "5cd8c9f94d73d5391fe593887f16a529a6b97ce7583980ec6c5183cc8aec07d5",
+      "type": "unit",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [
+        "Bilgewater"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "chaos"
+        ],
+        "tags": []
+      }
+    },
+    "rad-116-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0e80322dac6065e3ee726f5f9a2650a88195a44c-744x1039.png?accountingTag=RB",
+      "image_sha256": "d70d74a3d08a102a83476d7fde15a8b9cb978204ed74b4a534dd78c4e0ebfce9",
+      "type": "gear",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-117-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5d119653fcba423c150815de3a412922c4e481e8-744x1039.png?accountingTag=RB",
+      "image_sha256": "8fdd7c16552e51a3656179533f2a2aadc749bc11086d880ac49641b578cf1909",
+      "type": "spell",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-118-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a168856002994f7ac67150d991e65152e6434ab6-744x1039.png?accountingTag=RB",
+      "image_sha256": "7a2be87cff9b0d29a902bdde59104276a4b8f64252a7663cc0d1183bffcbfda3",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Shurima"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-119-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cefd575150527670879748a7212f80a1f4c1c4fc-744x1039.png?accountingTag=RB",
+      "image_sha256": "62b2e8c8b7a8a409a121a45d303855fffcf7b06d3359d9e68d685e7e77c966d4",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Demacia",
+        "Dog"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-120-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ee50fbf5e902e7109a3d54b417edc440b5a37198-744x1039.png?accountingTag=RB",
+      "image_sha256": "3e2b4cfc1c2345824c3c803518d0db1763f658060293275867a409ab52674dd5",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Piltover"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-121-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1f246286c658d44dc4e7d51c158b2f822da39825-744x1039.png?accountingTag=RB",
+      "image_sha256": "016ab7cb9c5d882d6e5f6622a13d25bb2e3e47bd2f5c63d7da9af8c6e7880b28",
+      "type": "spell",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-122-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3413fc46086d559c2a60657e4729f22475bbdec0-744x1039.png?accountingTag=RB",
+      "image_sha256": "d22fe8966610de49ac2b6bee88e49e54b41619061261a787c1a416e4f64c358c",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Zaun"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-123-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/97618bc30e9b65a2e5223e6f94db58d7098d30a6-744x1039.png?accountingTag=RB",
+      "image_sha256": "4b59ef5825aa36cfb6a98cd9bb196b93213f8e3d763c078b821020a49f1afa6b",
+      "type": "gear",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Equipment"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-124-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/751629a34ee6ba6476ce2f0a821b9f84b5562acd-744x1039.png?accountingTag=RB",
+      "image_sha256": "06e041970d02ac880d51f2f0ba94585a2b6d7ec83e32f07bfa84054fef80b52d",
+      "type": "spell",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "body"
+        ],
+        "tags": []
+      }
+    },
+    "rad-125-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4f49bf38f0d3abb71e148783ebec97f446db8166-744x1039.png?accountingTag=RB",
+      "image_sha256": "309139a7d07c711102c656c51fed4944174a7ebf693f7b9809eb25509dcff988",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "The Void"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-126-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6d8500ac7efc5382985f566212d88ac8f41c135d-744x1039.png?accountingTag=RB",
+      "image_sha256": "a226ad34dfd407100505cbee32c1b2e8da134e9971a2fadeb50a99d0667d754e",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Shadow Isles",
+        "Spirit"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": [
+          "Spirit"
+        ]
+      }
+    },
+    "rad-127-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/18aa7cab082fd0e293260bcf480a1a76d12b64d9-744x1039.png?accountingTag=RB",
+      "image_sha256": "4506300e338bc61eec3db2ad741fc130c205028aa68ffa7ebce73ec53077bbcb",
+      "type": "spell",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-128-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/efa8d58e65b1b1f804d37bb51bb67ea52e0b3205-744x1039.png?accountingTag=RB",
+      "image_sha256": "f7cb77f2fa04ed5eeac1210d4d79e89fc97aae5f96cfbf521e70eef906070f72",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Demacia"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-129-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/914ced10400826a878ed5cf7294207a4e7b542b1-744x1039.png?accountingTag=RB",
+      "image_sha256": "6965e01684626f32de65ca732995acf11ee8a5a47977baa7026bd9b9d72e63c0",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Noxus",
+        "Trifarian"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-130-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/eb04c39763de8fb8e56153d1f0e4f799e15dced9-744x1039.png?accountingTag=RB",
+      "image_sha256": "9a15146d79901cbe2a04ed138c6d7e0046bd1ea9945b0f9e866eca818edc5938",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Demacia"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-131-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/127c2700ee4e2557dfd463ed84c45f4600ad9723-744x1039.png?accountingTag=RB",
+      "image_sha256": "e02e6175cf37981013fa363b97e58f5937630130347fcb3f8c34b9aeb5d870a5",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Demacia"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-132-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1795e905171c74b84b4b7f84a57fecbb4bbd6f75-744x1039.png?accountingTag=RB",
+      "image_sha256": "9c131221fbcab87afde21feb79b0b6fa969cabede975308f6c66b5cee971fcf5",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Heimerdinger",
+        "Piltover",
+        "Yordle"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": [
+          "Yordle",
+          "Heimerdinger",
+          "Piltover"
+        ]
+      }
+    },
+    "rad-133-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/967de7aa18d5833896825bfd7d78b234e088ae73-744x1039.png?accountingTag=RB",
+      "image_sha256": "48fa0847f6e988a3592df4a7c85daf5c308c8e04ae4f19fc15555ae46e21cf49",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Jarvan IV",
+        "Demacia"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": [
+          "Demacia",
+          "Jarvan IV"
+        ]
+      }
+    },
+    "rad-134-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0c307d5f4785efc4f0a4c8e486b53735f8cf04aa-744x1039.png?accountingTag=RB",
+      "image_sha256": "4abd9d8ffc4a2d18a57e0d07d169dda548ef096229a94ebe44248db918187a62",
+      "type": "spell",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [],
+        "domain": [],
+        "tags": []
+      }
+    },
+    "rad-135-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0bfd45446d5ffb816438ae2668ad4e5b7f188ad3-744x1039.png?accountingTag=RB",
+      "image_sha256": "89980e731a92901a37f07e12d823030ae446dfdf335d259f5f19b966a771abef",
+      "type": "spell",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": []
+      }
+    },
+    "rad-136-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4f477ccc474cb16e4e9d681b388f0673f77fae5b-744x1039.png?accountingTag=RB",
+      "image_sha256": "1658228c501d964c3c33685651fd6c8a0b6572eac27a98081f50539eb2f06949",
+      "type": "gear",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": [
+          "Device"
+        ]
+      }
+    },
+    "rad-137-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/43068166258356908b364566abcfc57123e96caa-744x1039.png?accountingTag=RB",
+      "image_sha256": "8a034eed7757ec65f1b42877e43e9b7fa6b852d4edff0fc1f4afc7dd230dae89",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Mordekaiser",
+        "Noxus",
+        "Spirit"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": [
+          "Noxus",
+          "Mordekaiser"
+        ]
+      }
+    },
+    "rad-138-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/756f0d5d9e83ba0ebcfaf1b69055fdc29458b084-744x1039.png?accountingTag=RB",
+      "image_sha256": "3b46a37b44b93e9a1ff65926e36a46a83126b8f70cd775162447f04a0c1d216b",
+      "type": "unit",
+      "domain": [
+        "order"
+      ],
+      "tags": [
+        "Seraphine",
+        "Piltover"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "order"
+        ],
+        "tags": [
+          "Piltover",
+          "Seraphine"
+        ]
+      }
+    },
+    "rad-139-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8ca3ef446631784ce1d261e30f6a163843ffcb2b-744x1039.png?accountingTag=RB",
+      "image_sha256": "9e3537ba5dccac487fab1cd845ce9700ddda5b1f2a42d52f3b999a13d34628d9",
+      "type": "legend",
+      "domain": [
+        "fury",
+        "mind"
+      ],
+      "tags": [
+        "Ekko"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "fury",
+          "mind"
+        ],
+        "tags": [
+          "Ekko"
+        ]
+      }
+    },
+    "rad-140-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/af2123a99f3e3e7e6c9b101c5fc2c9b0ff56e096-744x1040.png?accountingTag=RB",
+      "image_sha256": "f9c92ae0051a36b57efd6ffd53e8d595245913e1399dd98c44d078b2e383821b",
+      "type": "spell",
+      "domain": [
+        "fury",
+        "mind"
+      ],
+      "tags": [
+        "Ekko"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "fury",
+          "mind"
+        ],
+        "tags": [
+          "Ekko"
+        ]
+      }
+    },
+    "rad-141-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/69899f4d5e05ff0a060b9f38894cd77f9e17d195-744x1039.png?accountingTag=RB",
+      "image_sha256": "2a611f314a8d090f62095edf0521c89d5bf803a0c8dd4ea2f961bc79c197ff60",
+      "type": "legend",
+      "domain": [
+        "fury",
+        "chaos"
+      ],
+      "tags": [
+        "Ziggs"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "fury",
+          "chaos"
+        ],
+        "tags": [
+          "Yordle",
+          "Ziggs"
+        ]
+      }
+    },
+    "rad-142-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/65b599befcc6ed873de0e7965bf497a805505327-744x1040.png?accountingTag=RB",
+      "image_sha256": "43771dee2e1807714fbe57042bb80801720e979abd419d7af109b557f0fdcfa9",
+      "type": "spell",
+      "domain": [
+        "fury",
+        "chaos"
+      ],
+      "tags": [
+        "Ziggs"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "fury",
+          "chaos"
+        ],
+        "tags": [
+          "Ziggs"
+        ]
+      }
+    },
+    "rad-143-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/90ec3319518771820909592eee963d34dab037bc-744x1039.png?accountingTag=RB",
+      "image_sha256": "aac8629948acdf1fba345052db233540b24cb2911134bcf954ffc4346635d0bf",
+      "type": "legend",
+      "domain": [
+        "fury",
+        "order"
+      ],
+      "tags": [
+        "Mordekaiser"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "fury",
+          "order"
+        ],
+        "tags": [
+          "Mordekaiser"
+        ]
+      }
+    },
+    "rad-144-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fd3b4c6939b6a80b33956da7e3a9102eba9c32a8-744x1040.png?accountingTag=RB",
+      "image_sha256": "668628f93cc4c026b0d958d48043d05756fa5dc6b941ac969b7027f5611a4052",
+      "type": "spell",
+      "domain": [
+        "fury",
+        "order"
+      ],
+      "tags": [
+        "Mordekaiser"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "fury",
+          "order"
+        ],
+        "tags": [
+          "Mordekaiser"
+        ]
+      }
+    },
+    "rad-145-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d1f940425d4d913d8f56c017254343bc898f4892-744x1039.png?accountingTag=RB",
+      "image_sha256": "d30caa28dc78f62c0eb8aadef4f4e8ae44546651c97a322d17366dbdd18a4e77",
+      "type": "legend",
+      "domain": [
+        "calm",
+        "mind"
+      ],
+      "tags": [
+        "Orianna"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "calm",
+          "mind"
+        ],
+        "tags": [
+          "Orianna"
+        ]
+      }
+    },
+    "rad-146-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4b11f36bd5ce2b08677959664cda3906a04d234c-744x1040.png?accountingTag=RB",
+      "image_sha256": "2eff7c4cce06322b977353002fd9536f84dfc60aa609a43c0a24359626390933",
+      "type": "gear",
+      "domain": [
+        "calm",
+        "mind"
+      ],
+      "tags": [
+        "Orianna"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "calm",
+          "mind"
+        ],
+        "tags": [
+          "Device",
+          "Orianna"
+        ]
+      }
+    },
+    "rad-147-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/190a27bf844fa21105824efc19de4e71c3137df6-744x1039.png?accountingTag=RB",
+      "image_sha256": "e5e4641e90e3535ca7d2f1f9ed7ce99c2698e88b2f7b8d8ec68a6e6c0477f6b5",
+      "type": "legend",
+      "domain": [
+        "calm",
+        "body"
+      ],
+      "tags": [
+        "K'Sante"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "calm",
+          "body"
+        ],
+        "tags": [
+          "K'Sante"
+        ]
+      }
+    },
+    "rad-148-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab5aa7d29bd49efe2c9da3b62a8065295c189991-744x1040.png?accountingTag=RB",
+      "image_sha256": "1919852c4a46982eeb8f5816857abd57b21b5ffd0580bb0490424f2d7a4d7437",
+      "type": "spell",
+      "domain": [
+        "calm",
+        "body"
+      ],
+      "tags": [
+        "K'Sante"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "calm",
+          "body"
+        ],
+        "tags": [
+          "K'Sante"
+        ]
+      }
+    },
+    "rad-149-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/342befcaab98642a2348bd2f6fdb92c68563b6d7-744x1039.png?accountingTag=RB",
+      "image_sha256": "cebfd4db3c8d32d91908559a4ac80fc75951862828792cbb79012f104f99f01d",
+      "type": "legend",
+      "domain": [
+        "calm",
+        "chaos"
+      ],
+      "tags": [
+        "Riven"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "calm",
+          "chaos"
+        ],
+        "tags": [
+          "Riven"
+        ]
+      }
+    },
+    "rad-150-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/04aaded01b23641e496e39f51882ccfe89715492-744x1040.png?accountingTag=RB",
+      "image_sha256": "2da06b97e7d52bea3a5fc27617a54a1aff6dc5d6bdee34d1b38962d0a9a7b358",
+      "type": "gear",
+      "domain": [
+        "calm",
+        "chaos"
+      ],
+      "tags": [
+        "Riven",
+        "Equipment"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "calm",
+          "chaos"
+        ],
+        "tags": [
+          "Equipment",
+          "Riven"
+        ]
+      }
+    },
+    "rad-151-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/399262205b15aa3b6306eb1d80a308791dcbe2ca-744x1039.png?accountingTag=RB",
+      "image_sha256": "afdc946010552bc1545a37e86fa5461627582e2140144f6ef814a04d71853b4f",
+      "type": "legend",
+      "domain": [
+        "mind",
+        "order"
+      ],
+      "tags": [
+        "Seraphine"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "mind",
+          "order"
+        ],
+        "tags": [
+          "Seraphine"
+        ]
+      }
+    },
+    "rad-152-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0200aeca5d0a1cca4b8ab5b3f3910207118ee4e4-744x1040.png?accountingTag=RB",
+      "image_sha256": "5fd6644009c2481d2429970108141b531c1c87b55e6003926ed1765fc01f6bd9",
+      "type": "spell",
+      "domain": [
+        "mind",
+        "order"
+      ],
+      "tags": [
+        "Seraphine"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "mind",
+          "order"
+        ],
+        "tags": [
+          "Seraphine"
+        ]
+      }
+    },
+    "rad-153-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ca217b57d0e8d2e04e7a35105deaa6be17e854f0-744x1039.png?accountingTag=RB",
+      "image_sha256": "087420aed17de9b86ea762d6f549ee6dfd83dad8e6e8d8ad2f71f91c41d3708e",
+      "type": "legend",
+      "domain": [
+        "body",
+        "chaos"
+      ],
+      "tags": [
+        "Evelynn"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "body",
+          "chaos"
+        ],
+        "tags": [
+          "Evelynn"
+        ]
+      }
+    },
+    "rad-154-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c34881b6fe2e63f6345845fe95cfe72eb9d4878c-744x1040.png?accountingTag=RB",
+      "image_sha256": "f4a840b649597fad0131ea1a814ac9d67577ec4ced5f8f7d1db78f2ba1aeef00",
+      "type": "spell",
+      "domain": [
+        "body",
+        "chaos"
+      ],
+      "tags": [
+        "Evelynn"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "spell"
+        ],
+        "domain": [
+          "body",
+          "chaos"
+        ],
+        "tags": [
+          "Evelynn"
+        ]
+      }
+    },
+    "rad-155-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e85c005f938e44655f926bb406a47359ae51ecc1-744x1039.png?accountingTag=RB",
+      "image_sha256": "bb94a4788fe2257d6a124f454811e392411b906e227917f72453dfc556ce45eb",
+      "type": "legend",
+      "domain": [
+        "body",
+        "order"
+      ],
+      "tags": [
+        "Jarvan IV"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "legend"
+        ],
+        "domain": [
+          "body",
+          "order"
+        ],
+        "tags": [
+          "Jarvan IV"
+        ]
+      }
+    },
+    "rad-156-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/315b0f7901a83df38b9765f12b1edfdc7de566a3-744x1040.png?accountingTag=RB",
+      "image_sha256": "5f90e1807f28ca2d0b8e078a94646af14f1cde78a18fac8f2eee5de719c77d86",
+      "type": "gear",
+      "domain": [
+        "body",
+        "order"
+      ],
+      "tags": [
+        "Jarvan IV"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "gear"
+        ],
+        "domain": [
+          "body",
+          "order"
+        ],
+        "tags": [
+          "Device",
+          "Jarvan IV"
+        ]
+      }
+    },
+    "rad-157-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f5bb93e1ad9005fd42a9129b91f72877f1dedbe1-1039x744.png?accountingTag=RB",
+      "image_sha256": "9a226758a8df56aeb93a3214e5ec8abc862c8a23a1af6ad1064b39b8fdabc1dd",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-158-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9a02ae108f32a8b88be47a94b5f0d39b5a06a6a1-1039x744.png?accountingTag=RB",
+      "image_sha256": "a9d28f2316a56f3823149c174acd5694ad7176824a4583ebd06111895c557c80",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-159-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/03ce18a231c7c919875b436b06bbe4e1a99c4831-1039x744.png?accountingTag=RB",
+      "image_sha256": "57dfa95d1c21fdccd7d3ec272d86f7e13a93c14f6aff3f6bec109ed2a52c281b",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-160-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0efb6db0a41350e9cfc116b235eeb92bb05ed5bf-1039x744.png?accountingTag=RB",
+      "image_sha256": "0c79f248d727568d43756b122d6e6518b724bfeede9cf5b64d585fdbaa0c236a",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-161-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b565fec4e11308f5f01416a1c914d50a1d17ca19-1039x744.png?accountingTag=RB",
+      "image_sha256": "b7fa83bea8d47a93d9ffa0357db9aff8df109fcc8f973a1a67623ea4a7f912f8",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-162-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f8e2d555ff0dc250de38a1c8924a199dc121f036-1039x744.png?accountingTag=RB",
+      "image_sha256": "9d960ef2108bae32208aad5e8191a4a50b1c38a8d0ff07691d5e9a2576a77791",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-163-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e7e25d90506d805f1996e7f751cb5b6baa8ec305-1039x744.png?accountingTag=RB",
+      "image_sha256": "0659fc100a23ba270712dfbc47b9152fbbd782ef5183e17432f84634c616eb90",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-164-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f4b396780dd7a5aa1be43f763265f308ee0fe665-1039x744.png?accountingTag=RB",
+      "image_sha256": "26804272e196806c717dd1f5cd9b678e4434562a564b58923b799b1544f19103",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-165-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/53c096e4bc843a4cfe84fd16d922033b7fcfb330-1039x744.png?accountingTag=RB",
+      "image_sha256": "2184e3e68565b7ce9571fc241379b6dc01562ac69680b2aae8c55648ad390451",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-166-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2d756c5198dafb151f51cceca4f11824575960cd-1039x744.png?accountingTag=RB",
+      "image_sha256": "964fa7d9ca555da5d8244825346302caff910e55c06a27757e94718b7b0edb3d",
+      "type": "battlefield",
+      "domain": [],
+      "tags": [],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "battlefield"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": []
+      }
+    },
+    "rad-167-167": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/607da6f534ce1b960ad02586ed4cd47c996e2c42-744x1039.png?accountingTag=RB",
+      "image_sha256": "45313e1bd27ab890b84af7841a851e16fc261ef33f33742ab7b0dffed97ae3f7",
+      "type": "unit",
+      "domain": [
+        "colorless"
+      ],
+      "tags": [
+        "Neeko",
+        "Ixtal"
+      ],
+      "basis": "Visually read the printed type/tag band and named-domain glyph(s) from official card-image pixels; no collector-number inference.",
+      "raw_metadata": {
+        "type": [
+          "unit"
+        ],
+        "domain": [
+          "colorless"
+        ],
+        "tags": [
+          "Ixtal",
+          "Neeko"
+        ]
+      }
+    },
+    "rad-r01": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e0337944fa56c357ab3b9a822064a8f58ead8315-744x1039.png?accountingTag=RB",
+      "image_sha256": "f89c25e91ec28e0788db4e99f91a6ec91f8c239f9cc41a2aae32ceafb4ecd597",
+      "type": "rune",
+      "domain": [
+        "fury"
+      ],
+      "tags": [],
+      "basis": "Visually inspected the named official rune image and its domain glyph; no collector-number inference."
+    },
+    "rad-r02": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/34661f9fff9e12addbfa320a88b794fcffd6652f-744x1039.png?accountingTag=RB",
+      "image_sha256": "1f8a63b056a9589791f453fa3567928511f7dc4b149378aebaab0314cf08e0bc",
+      "type": "rune",
+      "domain": [
+        "calm"
+      ],
+      "tags": [],
+      "basis": "Visually inspected the named official rune image and its domain glyph; no collector-number inference."
+    },
+    "rad-r03": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/10804d84483e8813a6b5277e4527ac148bbabdd0-744x1039.png?accountingTag=RB",
+      "image_sha256": "bf1a6ee13e1f10e06bbec6a36099eddc5a0d3c1b524ffdd9483f1bb3fb4ea8fd",
+      "type": "rune",
+      "domain": [
+        "mind"
+      ],
+      "tags": [],
+      "basis": "Visually inspected the named official rune image and its domain glyph; no collector-number inference."
+    },
+    "rad-r04": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6d78f8e8cf237cc19a8546184501d4be97df29fd-744x1039.png?accountingTag=RB",
+      "image_sha256": "2000131352f514ba418a2761074e4541b7e3b1fd82cdadc2b031633fa1538f79",
+      "type": "rune",
+      "domain": [
+        "body"
+      ],
+      "tags": [],
+      "basis": "Visually inspected the named official rune image and its domain glyph; no collector-number inference."
+    },
+    "rad-r05": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f420625850dc43c96e29b6d85b6581c7ccb6126c-744x1039.png?accountingTag=RB",
+      "image_sha256": "9e7269e26ed974414cfd6718b6e4e9b992bcf62650c4235f8fcfabf7320e123b",
+      "type": "rune",
+      "domain": [
+        "chaos"
+      ],
+      "tags": [],
+      "basis": "Visually inspected the named official rune image and its domain glyph; no collector-number inference."
+    },
+    "rad-r06": {
+      "image_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/402fa10965dbee64aa1ddef654e4b9d9a5ccd28e-744x1039.png?accountingTag=RB",
+      "image_sha256": "fd3aa24189b2dfe0d66c0e5bf88e8f9b1b3777b5b1cd5e777030065f962bfecf",
+      "type": "rune",
+      "domain": [
+        "order"
+      ],
+      "tags": [],
+      "basis": "Visually inspected the named official rune image and its domain glyph; no collector-number inference."
+    }
+  }
+}

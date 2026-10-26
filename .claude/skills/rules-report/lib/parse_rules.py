@@ -8,9 +8,12 @@ becomes possible.
 Run:  python3 parse_rules.py [--json out.json]
 """
 import re, json, sys, os
+import hashlib
 from collections import Counter
+from datetime import date
 
 from corpus import source_corpus_dir
+from source_anomalies import matching as source_anomalies
 
 # Fallback only, and only when a document carries no date. Both documents used
 # to derive their version from this ONE literal, which made the per-document
@@ -19,14 +22,20 @@ from corpus import source_corpus_dir
 # document; read it.
 RULES_VERSION = "2026-07-16"
 
-_DATE = re.compile(r"Last Updated:?\s*(\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{4})", re.I)
+_MONTHS = {name.lower(): number for number, name in enumerate((
+    "January", "February", "March", "April", "May", "June", "July", "August",
+    "September", "October", "November", "December"), 1)}
+_DATE = re.compile(
+    r"Last Updated:?\s*(\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{4}|(?:"
+    + "|".join(_MONTHS) + r")\s+\d{1,2},\s+\d{4})", re.I)
 
 
 def source_version(path):
     """The version Riot states inside a rules document.
 
     Riot writes `2026-07-16` in the Core Rules and `7/16/2026` in the Tournament
-    Rules; both normalise to ISO. Raises rather than guessing: a wrong version
+    Rules; the Radiance Tournament Rules print `October 9, 2026`. All normalise
+    to ISO without depending on the machine's locale. Raises rather than guessing: a wrong version
     reaches the masthead, the rulebook header and the copy-cite string a judge
     pastes into a dispute, and a silent fallback is how one literal came to
     stand for two independent documents.
@@ -38,6 +47,12 @@ def source_version(path):
         raise SystemExit(f"{os.path.basename(path)}: no 'Last Updated' date in the first 4KB — "
                          "refusing to stamp the corpus with a guess")
     raw = m.group(1)
+    if raw[0].isalpha():
+        month, day, year = raw.replace(",", "").split()
+        try:
+            return date(int(year), _MONTHS[month.lower()], int(day)).isoformat()
+        except ValueError:
+            raise SystemExit(f"{os.path.basename(path)}: invalid 'Last Updated' date: {raw}")
     if "/" in raw:
         mth, day, yr = raw.split("/")
         return f"{yr}-{int(mth):02d}-{int(day):02d}"
@@ -236,7 +251,12 @@ def sort_key(rule_id: str):
 
 def main():
     all_rules, stats, all_vetoed, disorder = {}, {}, [], []
+    source_hashes = {}
     for doc, path, version in docs():
+        pdf_path = os.path.splitext(path)[0] + ".pdf"
+        if os.path.exists(pdf_path):
+            with open(pdf_path, "rb") as source:
+                source_hashes[doc] = hashlib.sha256(source.read()).hexdigest()
         rules, order, titles, vetoed = parse_doc(doc, path, version)
         for rid, r in rules.items():
             all_rules[f"{doc}:{rid}"] = r
@@ -297,9 +317,23 @@ def main():
     for a, b in broken_xref[:5]:
         print(f"    xref: {a} -> {b} (not found)")
 
+    # Do not hide defects or rewrite Riot's numbering. Only exact, visually
+    # checked source defects may remain, with their PDF and rule text pinned.
+    def printed(r, kind, target):
+        digest = source_hashes.get(r["doc"])
+        return bool(digest and source_anomalies(r, kind, target, digest))
+    unexpected_orphans = [r for r in orphans if not printed(r, "missing_parent", r["parent"])]
+    unexpected_refs = [(r, x) for r in rules_list for x in r["see_also"]
+                       if f'{r["doc"]}:{x}' not in all_rules
+                       and not printed(r, "missing_cross_reference", x)]
+    known = len(orphans) + len(broken_xref) - len(unexpected_orphans) - len(unexpected_refs)
+    print(f"  source-pinned printed anomalies: {known}; unexpected: {len(unexpected_orphans) + len(unexpected_refs)}")
+    if empty or untitled or unexpected_orphans or unexpected_refs or disorder:
+        raise SystemExit("Integrity failed; existing rules.json is unchanged. Review source/parser defects before rebuilding.")
+
     print()
-    print("=== spot check: 471.1.b.1 with ancestry ===")
-    key = "CR:471.1.b.1"
+    print("=== spot check: 473.1.b.1 with ancestry ===")
+    key = "CR:473.1.b.1"
     if key in all_rules:
         chain, cur = [], all_rules[key]
         while cur:

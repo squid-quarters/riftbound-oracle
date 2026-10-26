@@ -6,6 +6,8 @@ const BASE_URL = process.env.RIFTCODEX_API_URL ?? "https://api.riftcodex.com";
 const DEFAULT_PAGE_SIZE = 50;
 
 export interface RiftcodexCard {
+  source?: { url: string; record_id: string; public_code: string; snapshot_sha256: string;
+    metadata_evidence?: { source_record_id: string; image_url: string; image_sha256: string; basis: string } };
   id: string;
   name: string;
   riftbound_id: string;

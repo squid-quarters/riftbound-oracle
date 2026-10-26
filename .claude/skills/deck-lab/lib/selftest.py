@@ -242,7 +242,7 @@ def deck_legality():
 
     d = copy.deepcopy(legal[0])
     d.main = [(n, 4 if i == 0 else q) for i, (n, q) in enumerate(d.main)]
-    check("a 4th copy of a card is rejected (103.2.b)",
+    check("a 4th copy of a card is rejected (103.3.b)",
           any("3-copy" in e for e in deckfile.check(d).errors))
 
     # Drop a COPY, not an entry. Slicing entries assumed the fixture deck spread
@@ -251,7 +251,7 @@ def deck_legality():
     # anything the moment such a deck sorted first.
     d = copy.deepcopy(legal[0])
     d.runes = [(d.runes[0][0], d.runes[0][1] - 1)] + d.runes[1:]
-    check("a rune deck that is not exactly 12 is rejected (103.3.a)",
+    check("a rune deck that is not exactly 12 is rejected (103.4.a)",
           any("Rune Deck has" in e for e in deckfile.check(d).errors))
 
     d = copy.deepcopy(legal[0])
@@ -259,20 +259,20 @@ def deck_legality():
     # Cite the rule, not merely the field name: with the 103.2.a.1 branch removed
     # the code still errors — "chosen_champion None is not in the card pool" —
     # so matching on the field name passed while the rule was gone.
-    check("a deck with no Chosen Champion is rejected (103.2.a.1)",
-          any("103.2.a.1" in e for e in deckfile.check(d).errors),
+    check("a deck with no Chosen Champion is rejected (103.3.a.1)",
+          any("103.3.a.1" in e for e in deckfile.check(d).errors),
           "; ".join(deckfile.check(d).errors)[:80])
 
     d = copy.deepcopy(legal[0])
     d.battlefields = [(d.battlefields[0][0], 3)]
-    check("duplicate battlefield names are rejected (103.4.c)",
+    check("duplicate battlefield names are rejected (103.5.c)",
           any("distinct names" in e for e in deckfile.check(d).errors))
 
     # 103.2.a.2 binds by CHAMPION tag. A legend also carries traits and regions —
     # a Kennen legend is tagged ['Yordle', 'Kennen'] — so matching on any shared
     # tag let Fizz, also a Yordle, pass as its Chosen Champion.
     ct = cards.champion_tags()
-    check("champion tags are told apart from traits and regions (103.2.a.2)",
+    check("champion tags are told apart from traits and regions (103.3.a.2)",
           "Yordle" not in ct and "Kennen" in ct,
           f"{len(ct)} champion tags derived")
     check("every legend in the pool has a derivable champion tag",
@@ -292,7 +292,7 @@ def deck_legality():
         "main": [{"name": "Fizz - Trickster", "qty": 3}],
         "runes": [], "battlefields": [],
     })
-    check("a deck whose champion shares only a trait is rejected (103.2.a.2)",
+    check("a deck whose champion shares only a trait is rejected (103.3.a.2)",
           any("champion tag" in e for e in deckfile.check(wrong).errors),
           "both are Yordles; only Kennen is the legend's CHAMPION tag")
 
@@ -308,9 +308,9 @@ def deck_legality():
           "; ".join(amb_errors)[:90])
 
     check("format legality is reported as unchecked, not as a pass",
-          any("103.2.e" in u for u in deckfile.check(legal[0]).unchecked))
-    check("the Domain exception is reported as unchecked too (103.1.b.5)",
-          any("103.1.b.5" in u for u in deckfile.check(legal[0]).unchecked),
+          any("103.3.e" in u for u in deckfile.check(legal[0]).unchecked))
+    check("the Domain exception is reported as unchecked too (103.2.b.6)",
+          any("103.2.b.6" in u for u in deckfile.check(legal[0]).unchecked),
           "silence there reads as 'checked and fine'")
 
     # Every legality rule counts CARDS. Counting the deck's JSON entries let
@@ -318,14 +318,14 @@ def deck_legality():
     d = copy.deepcopy(legal[0])
     first = d.main[0][0]
     d.main = [(first, 3), (first, 3)] + d.main[1:]
-    check("the copy limit counts a card across every entry naming it (103.2.b)",
+    check("the copy limit counts a card across every entry naming it (103.3.b)",
           any("6x" in e and "3-copy" in e for e in deckfile.check(d).errors),
           "two entries of three is six copies, not two legal threes")
 
     d = copy.deepcopy(legal[0])
     bf = d.battlefields[0][0]
     d.battlefields = [(bf, 1), (bf, 1), (d.battlefields[1][0], 1)]
-    check("the same battlefield listed twice is caught (103.4.c)",
+    check("the same battlefield listed twice is caught (103.5.c)",
           any("distinct names" in e for e in deckfile.check(d).errors))
 
     d = copy.deepcopy(legal[0])
@@ -625,7 +625,7 @@ def combat():
     d1 = stub_unit(t, 1, "Irelia, Fervent", "bf:0")
     d2 = stub_unit(t, 1, "Irelia, Fervent", "bf:0")
     assignment = t.assign_damage([a1, a2], [d1, d2])
-    check("damage is assigned lethal-first, not spread (465.2.c.3)",
+    check("damage is assigned lethal-first, not spread (467.2.c.3)",
           assignment[d1.id] == d1.might and assignment.get(d2.id, 0) == 8 - d1.might,
           str(assignment))
 
@@ -642,7 +642,7 @@ def combat():
     check("a 0-Might unit is assigned its minimum lethal of 1, not skipped (142.4.b)",
           a.get(zero.id) == 1,
           f"assigned {a}")
-    check("the excess is not dumped while a unit is still owed lethal (465.2.c.4)",
+    check("the excess is not dumped while a unit is still owed lethal (467.2.c.4)",
           a.get(other.id, 0) <= other.might + 1,
           f"assigned {a}")
 
@@ -651,7 +651,7 @@ def combat():
     big = stub_unit(t, 0, "Irelia, Fervent", "bf:0")   # 4 Might
     small = stub_unit(t, 1, "Stellacorn Herder", "bf:0")
     a = t.assign_damage([big], [small])
-    check("no more than minimum lethal is assigned while it is the only target (465.2.c.4)",
+    check("no more than minimum lethal is assigned while it is the only target (467.2.c.4)",
           a[small.id] == big.might,
           "excess has nowhere else to go, so it stays on the last unit")
 
@@ -660,9 +660,9 @@ def combat():
     stub_unit(t, 0, "Irelia, Fervent", "bf:0")
     stub_unit(t, 1, "Irelia, Fervent", "bf:0")
     result = _resolve(t, 0)
-    check("equal Might trades both units simultaneously (465.2.c.1.a)",
+    check("equal Might trades both units simultaneously (467.2.c.1.a)",
           t.units_at("bf:0") == [] and result["result"] == "no result",
-          "466.3.d: neither side was the only one left, so it is No Result")
+          "468.3.d: neither side was the only one left, so it is No Result")
 
     # The attacker must SURVIVE for this to test a recall at all — an attacker
     # that dies satisfies "not standing at the battlefield" without any recall
@@ -702,7 +702,7 @@ def combat():
     zero.buffs = -zero.base_might
     stub_unit(t, 0, "Stellacorn Herder", "bf:0").buffs = -3
     _resolve(t, 0)
-    check("a 0-Might unit assigned no damage is not lethally damaged (465.2.c.2)",
+    check("a 0-Might unit assigned no damage is not lethally damaged (467.2.c.2)",
           zero in t.permanents)
 
     # Forgetting a unit's text is the one mistake combat makes irreversible:
@@ -741,7 +741,7 @@ def combat():
     t.battlefield(0).contested = False
     t.battlefield(0).contested_by = None
     intruder = t.put_into_play(1, "Stalwart Poro", "bf:0", source="elsewhere")
-    check("the Attacker is whoever applied Contested, not the turn player (464.2.c.1)",
+    check("the Attacker is whoever applied Contested, not the turn player (466.2.c.1)",
           _attacker_or_none(t, t.battlefield(0)) == 1,
           "seat 0 is the turn player; seat 1 moved in and contested")
     roles = _roles_or_empty(t, 0)
@@ -758,7 +758,7 @@ def combat():
     t.battlefield(0).controller = None
     before = t.player(1).points
     result = _resolve(t, 0, attacker_assignment={}, defender_assignment={})
-    check("a repelled attack still leaves the defender establishing control (466.5)",
+    check("a repelled attack still leaves the defender establishing control (468.5)",
           result["result"] == "attackers repelled"
           and t.battlefield(0).controller == 1 and t.player(1).points == before + 1)
 
@@ -790,9 +790,9 @@ def scoring():
     t.score(0, 0, method="Conquer")
     check("scoring gains a point", t.player(0).points == 1)
     # 469.2: a Hold is scored during the Beginning Phase and nowhere else.
-    check("a Hold outside the Beginning Phase is refused (469.2)",
+    check("a Hold outside the Beginning Phase is refused (471.2)",
           raises(lambda: t.score(0, 1, method="Hold"), "Beginning Phase"))
-    check("a battlefield cannot be scored twice in a turn (470)",
+    check("a battlefield cannot be scored twice in a turn (472)",
           raises(lambda: t.score(0, 0), "already scored"))
 
     t = fresh(first=0)
@@ -808,15 +808,15 @@ def scoring():
     t.player(0).points = 7
     hand_before = len(t.player(0).hand)
     t.score(0, 0, method="Conquer")
-    check("a Conquer at 7 points draws instead of winning when a battlefield is unscored (471.1.b.1)",
+    check("a Conquer at 7 points draws instead of winning when a battlefield is unscored (473.1.b.1)",
           t.player(0).points == 7 and len(t.player(0).hand) == hand_before + 1)
-    check("a Score whose point was withheld still triggers the battlefield (471.2)",
+    check("a Score whose point was withheld still triggers the battlefield (473.2)",
           any(t.battlefield(0).name in e["text"] and "reads:" in e["text"] for e in t.log)
           or not cards.text(t.battlefield(0).name).strip())
     t.score(0, 1, method="Conquer")
     check("the final point lands once every battlefield has been scored that turn",
           t.player(0).points == 8)
-    check("reaching the Victory Score wins the game (472)", t.winner == 0)
+    check("reaching the Victory Score wins the game (474)", t.winner == 0)
 
     # 472 is "greater than or equal to the Victory Score, AND more points than
     # any opponent". Nothing covered the second half.
@@ -825,7 +825,7 @@ def scoring():
     tied.player(0).points = 8
     tied.player(1).points = 8
     tied.check_victory()
-    check("a tie at the Victory Score wins for nobody (472)",
+    check("a tie at the Victory Score wins for nobody (474)",
           tied.winner is None,
           "reaching 8 is not enough; it must beat every opponent")
     check("a finished game refuses to start another turn",
@@ -934,7 +934,7 @@ def burn_out():
     t.player(0).main_deck = []
     t.player(0).trash = ["Called Shot"]
     t.draw(0, 1)
-    check("drawing from an empty Main Deck reports a Burn Out (431)",
+    check("drawing from an empty Main Deck reports a Burn Out (432)",
           any("BURNS OUT" in entry["text"] for entry in t.log))
 
     # 431.2 is a sequence, not a notification. It used to be the log line alone,
@@ -947,12 +947,12 @@ def burn_out():
     hand_before = len(p.hand)
     opp_before = t.player(1).points
     t.draw(0, 1, reason="draw phase")
-    check("burning out recycles the trash into the Main Deck (431.2.b)",
+    check("burning out recycles the trash into the Main Deck (432.2.b)",
           len(p.main_deck) == 34 and p.trash == [],
           "35 recycled, one of them then drawn")
-    check("burning out gives an opponent a point (431.2.c)",
+    check("burning out gives an opponent a point (432.2.c)",
           t.player(1).points == opp_before + 1)
-    check("the draw that caused the burn out still completes (431.2.d, 315.4.b.2)",
+    check("the draw that caused the burn out still completes (432.2.d, 315.4.b.2)",
           len(p.hand) == hand_before + 1)
 
     # 431.3.a: with the trash empty too, it repeats until someone wins.
@@ -960,10 +960,10 @@ def burn_out():
     t.player(0).main_deck = []
     t.player(0).trash = []
     t.draw(0, 1)
-    check("an empty deck AND an empty trash hands the game to the opponent (431.3.a)",
+    check("an empty deck AND an empty trash hands the game to the opponent (432.3.a)",
           t.winner == 1 and t.player(1).points >= t.victory_target,
           f"seat 1 reached {t.player(1).points}")
-    check("that win is immediate, without waiting for a cleanup (431.3.c.1)",
+    check("that win is immediate, without waiting for a cleanup (432.3.c.1)",
           t.winner == 1)
 
 
@@ -1443,9 +1443,9 @@ def guards():
     absent = next(n for n in t.player(0).main_deck if n not in t.player(0).hand)
     check("a spell not in hand cannot be played (157)",
           raises(lambda: t.play_spell(0, absent), "not in seat"))
-    check("a card cannot be discarded from a hand that lacks it (422)",
+    check("a card cannot be discarded from a hand that lacks it (423)",
           raises(lambda: t.discard(0, absent), "not in seat"))
-    check("a card cannot be recycled from a zone it is not in (416)",
+    check("a card cannot be recycled from a zone it is not in (417)",
           raises(lambda: t.recycle_card(0, absent, "hand"), "not in seat"))
     check("a card cannot enter play from a zone it is not in",
           raises(lambda: t.put_into_play(0, absent, "base:0", source="trash"), "not in seat"))
@@ -1464,7 +1464,7 @@ def guards():
           raises(lambda: t.recycle_rune_for_power(1, rune.id), "not controlled"))
 
     unit = stub_unit(t, 0, "Stellacorn Herder", "base:0")
-    check("a unit cannot move to where it already is (447)",
+    check("a unit cannot move to where it already is (449)",
           raises(lambda: t.move(unit.id, "base:0"), "already at"))
 
     gear = t.put_into_play(0, "Zhonya's Hourglass", "base:0", source="elsewhere")
@@ -1485,12 +1485,12 @@ def guards():
 
     ready = stub_unit(t, 0, "Stellacorn Herder", "base:0")
     t.exhaust(ready.id)
-    check("exhausting an already-exhausted object is refused (414)",
+    check("exhausting an already-exhausted object is refused (415)",
           raises(lambda: t.exhaust(ready.id), "already exhausted"))
 
     t2 = fresh(first=0)
     t2.begin_turn()
-    check("combat needs units from two players to resolve (461)",
+    check("combat needs units from two players to resolve (463)",
           raises(lambda: t2.resolve_combat(0), "no combat staged"))
 
     # The mulligan validates its argument against the hand. Every other mulligan

@@ -4,9 +4,9 @@
   "question": "How do Showdowns work?",
   "reframe": "the Window of Opportunity rule 342 calls a Showdown — how it opens at a contested Battlefield, who acts, how Focus moves between players, and what closes it.",
   "corpus": {
-    "CR": "2026-07-16",
-    "TR": "2026-07-16",
-    "generated": "2026-08-26"
+    "CR": "2026-10-09",
+    "TR": "2026-10-09",
+    "generated": "2026-10-26"
   },
   "in_one_line": "A Showdown is an alternating window at a contested Battlefield: whoever contested it takes Focus and acts first, Focus moves on each time a Chain closes, and the window shuts only once every player has passed in sequence without playing anything.",
   "steps": [
@@ -102,7 +102,7 @@
           "cites": [
             {
               "rule": "CR:347.2.b",
-              "quote": "Otherwise, Focus passes to the next Player in Turn Order."
+              "quote": "Otherwise, the next Player in Turn Order gains Focus."
             }
           ]
         },
@@ -144,7 +144,7 @@
           "cites": [
             {
               "rule": "CR:347.1.b",
-              "quote": "When that Chain closes, Focus passes to the next Player in Turn Order."
+              "quote": "When that Chain closes, the next Player in Turn Order gains Focus."
             }
           ]
         },
@@ -168,7 +168,7 @@
       "cites": [
         {
           "rule": "CR:348",
-          "quote": "If all players pass Focus without playing a spell or activating an ability, then the Showdown Closes."
+          "quote": "If all players pass Focus without playing a card or activating an ability, then the Showdown Closes."
         },
         {
           "rule": "CR:347.2.a",
@@ -181,7 +181,7 @@
           "cites": [
             {
               "rule": "CR:348.1",
-              "quote": "If it is a Combat Showdown, proceed with the remaining steps of Combat to resolve the phase. See rule 463. The Steps of Combat for more information."
+              "quote": "If it is a Combat Showdown, proceed with the remaining steps of Combat to resolve the phase. See rule 465. The Steps of Combat for more information."
             }
           ]
         },
@@ -212,7 +212,7 @@
         },
         {
           "rule": "CR:347.2.b",
-          "quote": "Otherwise, Focus passes to the next Player in Turn Order."
+          "quote": "Otherwise, the next Player in Turn Order gains Focus."
         }
       ]
     },
@@ -251,7 +251,7 @@
       "why": "FEPR is the machinery that runs the Chain a Showdown spell creates — what happens inside step 3, not a step of the Showdown itself."
     },
     {
-      "rule": "CR:459",
+      "rule": "CR:461",
       "why": "Combat is a separate procedure that a Showdown can become the first step of; the Showdown's own steps end at 348."
     },
     {

@@ -11,7 +11,7 @@ assigns, who scored and when. You do everything that requires reading a card and
 a choice.
 
 That split is the whole design. If you guess what you drew, the game is worthless.
-If code tries to read 1,037 cards' text, it is wrong in ways nobody notices.
+If code tries to read 1,121 cards' text, it is wrong in ways nobody notices.
 
 ## What is decided by code
 
@@ -202,7 +202,7 @@ the same thing.
 
 The distinct-card count is the **scripting frontier**: how many different cards
 anything that wants to play these games has to know. It comes from the meta
-rather than from the 954-card pool, which is why it is a tenth of the size.
+rather than from the 1,121-card pool, which is why it is a tenth of the size.
 
 Two ways to fill the gauntlet. Scraping covers two sites — `rift-atlas.com` for
 curated meta decks and `riftools.app` for tournament placements:

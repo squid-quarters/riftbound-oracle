@@ -58,6 +58,13 @@ async function main() {
     case "skill-data":
       await handleSkillData();
       break;
+    case "import-radiance": {
+      const source = process.argv.find(a => a.startsWith("--source="))?.slice("--source=".length);
+      if (!source) throw new Error("import-radiance requires --source=<verified package directory>");
+      const { importRadiance } = await import("./import-radiance.js");
+      p.log.success(JSON.stringify(importRadiance(source), null, 2));
+      break;
+    }
     case "decks":
       await handleDecks();
       break;
@@ -83,6 +90,7 @@ ${color.bold("Commands:")}
   ${color.cyan("print --set=X")}      Download card images for printing
   ${color.cyan("extract")}            Extract downloaded rulebook PDFs to markdown
   ${color.cyan("skill-data")}         Rebuild the skill's vendored card data (needs network)
+  ${color.cyan("import-radiance")}    Import a verified official snapshot (--source=<directory>; offline)
   ${color.cyan("decks pull")}         Pull competitive decklists into the deck-lab gauntlet (needs network)
   ${color.cyan("  --site=X,Y")}       Pull from these sites only (${DECK_SITES.join(", ")})
   ${color.cyan("  --limit=N")}        At most N deck pages per site
@@ -276,10 +284,11 @@ async function handleProcess() {
     else failed++;
   }
 
-  writeManifest(manifest);
+  if (succeeded > 0) writeManifest(manifest);
 
   if (failed > 0) {
     p.log.warning(`${succeeded} succeeded, ${failed} failed`);
+    process.exitCode = 1;
   } else {
     p.log.success(`All ${succeeded} source(s) processed`);
   }
@@ -312,6 +321,7 @@ async function handleExtract() {
     } catch (err) {
       s.error(`Failed: ${pdf}`);
       p.log.error(String(err));
+      process.exitCode = 1;
     }
   }
 }
@@ -346,8 +356,8 @@ async function handleWatch() {
     const result = await checkUpstream();
 
     if (!result.reachable) {
-      // Not an error in this repository: hosted CI is blocked by Cloudflare at
-      // both upstreams. Say so, and do not claim all-clear.
+      // An unreachable source cannot verify a refresh. Keep the last snapshot
+      // and fail the command so automation cannot report stale data as fresh.
       s.stop("Could not reach upstream");
       p.log.warning(
         `${result.reason} — no conclusion drawn. Riftcodex and Riot's hub both ` +
@@ -360,6 +370,7 @@ async function handleWatch() {
           { flag: "a" }
         );
       }
+      process.exitCode = 1;
       return;
     }
 
@@ -565,6 +576,7 @@ async function handleSkillData() {
   } catch (err) {
     s.error("skill-data failed — the committed cards.json is unchanged");
     p.log.error(String(err));
+    process.exitCode = 1;
   }
 }
 

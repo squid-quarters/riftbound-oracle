@@ -2348,3 +2348,585 @@ _(We recognize the rules for “activate” in the way discussed above are under
 **What happens if I play Atakhan from my deck with Rek’Sai, Breacher on the board? Can I pay the Accelerate cost and kill Rek’Sai for the Atakhan additional cost? Will it enter ready?**
 
 Yes, as long as you pay the Accelerate cost, Atakhan will enter ready, even if he kills Rek’Sai for his additional cost. This is because Accelerate creates a delayed replacement effect that causes Atakhan to enter ready. Although he lacks the Accelerate keyword when he resolves, he still has the delayed replacement effect that Accelerate generates.
+
+<!-- oracle:radiance-context:start -->
+## Radiance official source update
+
+Current Core and Tournament source documents are dated October 9, 2026; their Radiance update is effective October 16. The earlier Rules Hub snapshot above is retained as historical source context.
+Card errata overrides explanatory examples when their wording differs, including Neeko's choice of up to three additional legends.
+
+## Core Rules: Radiance Patch Notes (Effective October 16, 2026)
+
+_Source: https://playriftbound.com/en-us/news/announcements/core-rules-radiance-patch-notes-effective-october-16-2026/_
+_Retrieved: 2026-10-26T11:09:00.636414+00:00; SHA-256: 5446d0e23e0624e9a559b2aa8a53352edbf6a56bddfdab304f6d9047e7e120cc_
+
+_Radiance Rules Update Effective October 16, 2026_
+
+Welcome to the patch notes for Riftbound, _Radiance_ edition. Included in today’s update are rules for playing with _Radiance’s_ new mechanics, updates from the _Vendetta_ [FAQ](https://playriftbound.com/en-us/news/rules-and-releases/vendetta-rules-faq-and-clarifications/), improvements to the rules’ logical infrastructure to better prepare for future sets and mechanics and a collection of scenarios to help folks understand some of the more complicated interactions introduced with _Radiance_.
+
+## Unique _Radiance_ Interactions
+
+While the patch notes and core rules are aimed at arming our judges, we wanted to include questions and answers prepared by the design team for some of the more tricky interactions and cards released in that set. This article will be released in addition to an FAQ article in the window when we’ve previously released FAQ articles.
+
+Although this article is not an FAQ, it still is a collection of official rulings. These rulings are based on the Core Rules Document that also releases today, as well as the wording of the cards. When a new version of the Core Rules Document is released, it will take precedence over any points that differ from this document.
+
+Throughout this document, we use some specific shorthand to represent symbols in card text. Here’s a short guide:
+
+-   \[E\] means “exhaust”
+-   \[M\] means “Might”
+-   \[A\] means “one power of any domain”
+-   \[C\] means “one power of this card’s domain”
+    -   \[C\] in Accelerate costs takes on the domain of the Unit, or turns into \[A\] if the Unit has no domain or multiple domains.
+    -   \[C\] in other cases is treated as the corresponding power symbol in all respects, matching how the cards are actually printed—it’s just a design shorthand!
+
+![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/0bc0d0f1ddcb16d913c77ac014728a96593e91be-1848x1063.jpg)
+
+**What happens when I play Ekko, Boy Who Shattered Time’s activated ability, play a unit, and then play Unlicensed Armoy’s activated ability? Will the unit be killed on my next turn?**
+
+Your unit’s death from its triggered ability will be replaced by Unlicensed Armory. Although the unit has the text “Kill me at end of turn.” appended to it, that text is synonymous with “Kill me at the end of this turn.” On subsequent turns, it will not trigger.
+
+When “at end of turn” appears on card text, it is used synonymously with “at the end of this turn.” Although granting that text to a unit is strange, it isn’t outside the bounds of possibility. If the unit remains on the board after the triggered ability resolves, the condition for its ability to trigger will no longer be able to be fulfilled, so it will not trigger again. If the unit changes zones to or from a non-board zone _prior_ to the triggered ability triggering, all of its temporary modifications—including this granted text—will be removed. As such, the ability will no longer exist to trigger.
+
+_Relevant rules: 359.3.e.16., 124.1._
+
+_![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/17b1dd933304bb2b66a8537a5ff90d048b6faf8e-1848x1063.jpg)_
+
+**Can I show off a facedown card at a battlefield with the Show Off ability of Gutter Guardian?**
+
+You cannot. Facedown cards don’t have any referenceable characteristics from their front side.
+
+The keyword “Hidden” only appears on the front side of the card; that’s the side with the cost, name, Might, and rules text among other traits. While a card is facedown, any information on its front side cannot be referenced by other cards and effects. Although a facedown card may be friendly to Gutter Guardian, it doesn’t have the appropriate characteristic to be shown off. Note that only the card from hand is revealed with Show Off. You don’t reveal the friendly objects on the board that you’re Showing Off, so you can’t reveal the facedown card even if you wanted to.
+
+_Relevant rules: 811.5.a., 129.4._
+
+_![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/de9f26fbf297501fd24c8b2fd12242e533cd788c-1848x1063.jpg)_
+
+**What’s up with the reminder text on Chronobreak? Do I get to choose the order?**
+
+You get to choose the order if you own all of the units being banished. If you control some number of units that you don’t own and banish those units as well, the units you banish will be placed on the chain starting with units owned by the current turn player and then proceeding in turn order.
+
+Items cannot be placed on the chain simultaneously for any reason. If chain items would be played simultaneously, their controller chooses the order they go on the chain. If multiple players would add items to the chain simultaneously, they place their items on the chain in turn order instead, starting with the current turn player. In the case of Chronobreak, each player chooses the order of their own units being played to the chain (this is what the reminder text is referring to), but each player plays their units to the chain in turn order, starting with the current turn player.
+
+Example: You control five total units, two of which are owned by your opponent. You play Chronobreak, choosing all five units. You banish them, then for each, their owner plays them to the chain as pending items. You’re the current turn player, so you play your three units first in the order of your choice, then your opponent plays their two units in the order of their choice. Pending chain items are finalized from oldest to newest and units resolve as soon as they’re finalized. Thus, we go up the chain starting with the first unit you played to the chain, finalizing and resolving all of the pending units on the chain until there are no more units on the chain. Then we finalize any play effects of those units in the order they triggered. Finally, players can react to the most recent item on the chain. If they don’t, that item resolves, and we repeat the process until all items on the chain have resolved.
+
+_Relevant rules: 303.2.a._
+
+_![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/2ab2cc334e066b7c395c9dd2b8e0e57f1f25ca84-1848x1063.jpg)_
+
+**What happens when I play Transpositionist’s activated ability choosing an empowered Gangplank, Naval with 6 \[M\]? Can I play Angler Wyrm?**
+
+Gangplank being returned to hand will be replaced with him being given +3 \[M\] this turn. You can play Angler Wyrm from hand with Transpositionist’s activated ability.
+
+Transpositionist returns a unit to hand and then references that unit’s information. If the unit didn’t change zones and it was a legal target as the instruction that targeted it was being processed, the activated ability will reference that unit’s current information. Gangplank, Naval’s current Might as it is referenced is 9 \[M\], allowing you to play a unit with 9 \[M\] or less.
+
+_Relevant rules: 359.3.e.13., 359.3.e.13.a._
+
+_![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/edcbc8d4fd71d7e5fa2df975f8e4649c2eaa3966-1848x1063.jpg)_
+
+**What happens when I choose an attached Equipment with Orianna, Lady of Clockwork?** 
+
+It detaches from the object it is attached to when it becomes a unit. Although its equip ability can be activated and it can be targeted by Weaponmaster triggers, it cannot attach to a unit; nothing will happen when those abilities resolve.
+
+In this rules update we’ve clarified that units cannot be attached to other game objects. If a unit were to be attached to a game object, it would need to stop being a unit first. If a non-unit game object becomes a unit, it will detach from anything it is attached to as it becomes a unit. If an effect would attempt to attach a unit to another game object without making it no longer a unit first, nothing happens.
+
+_Relevant rules: 143.5., 435.1.h., 718.6._
+
+_![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/1e019f43a06c544f13a4c4a8e50817cacdd3dbce-1848x1063.jpg)_
+
+**What happens when I choose a gear with Deploy located at a battlefield with Orianna, Lady of Clockwork?**
+
+That gear will become a unit-gear when the triggered ability resolves; if their controller doesn’t control that battlefield, they will apply contested status to that battlefield, and a combat or showdown will be staged there in the subsequent cleanup. When the chain clears, that showdown or combat will open.
+
+_Relevant rules: 190.3.a., 323.7, 323.8., 323.11., 323.12._
+
+**What happens when I choose another gear with Orianna, Lady of Clockwork and the previous unit-gear stops being a unit? Will its attached Equipment fall off? If it’s a deploy gear in base, do I get to move it?**
+
+Its attached Equipment will remain attached, and if it is a Deploy gear in base, it will remain in base.
+
+Although units cannot be attached to objects, other objects have no such compunctions. Any attached Equipment that don’t become units will remain attached to the gear even after it stops being a unit. Their Might bonus won’t apply, since the gear doesn’t have a Might, but they will continue to apply their effect text to the gear they are attached to.
+
+The majority of gear with Deploy reference “this battlefield” or “hold here” in such a way that gaining a benefit from base is not possible. That being said, if you want to move it back to a battlefield you can either turn it into a unit again with Orianna, Lady of Clockwork or you can use movement effects that specify moving gear, such as Command: Attack.
+
+Note that there is a small gap between finalizing the Orianna, Lady of Clockwork trigger causing the previous unit-gear to stop being a unit, and the triggered ability resolving and causing the new gear to become a unit. During that gap, neither gear is a unit unless it was already one prior to ever being chosen by Orianna, Lady of Clockwork.
+
+_Relevant rules: 137.3.b._
+
+_![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/0f074b589892832b854c47db8e7fa2ac97dc8102-1848x1063.jpg)_
+
+**So how does Neeko, Blending In actually work? When do I choose the legends, do I get three legends per Neeko in my deck, can I add multiple of the same legend to the Legend Zone, do the legends enter ready, and do I need to reveal them to my opponent?**
+
+You choose the legends during deck building—at competitive OPL, you must register those legends as part of your deck list, and you can store them with your sideboard. The 3 legends are shared by all Neekos in your deck. You cannot add multiple of the same legend to the Legend Zone. The legends enter ready. You do not need to reveal them to your opponent until they are added to the Legend Zone.
+
+Let’s break down Neeko’s rules text. If your deck (Main Deck or sideboard) has one or more copies of Neeko, Blending In, you pick three legends in addition to your starting Champion Legend. Those 3 legends must be different from each other and from your Champion Legend. Regardless of how many copies of Neeko you have in your deck, you will choose three legends in this way.
+
+When Neeko’s play effect resolves, its controller picks one of the legends chosen during deck building and adds it to their Legend Zone alongside their Champion Legend for as long as Neeko is on the board. If Neeko leaves the board, that legend will also cease to exist. The legends don’t exist in any zone of the game while they’re not in the Legend Zone; they don’t exist at all. That being said, if one or more of those legends are already on the board, a player can’t choose to create additional versions of those legends; they can have at most one legend on the board per legend chosen during deckbuilding. If somehow a player played a fourth Neeko, they would fail to add a legend to their legend zone.
+
+The legends added this way are not tokens. They are legend cards and behave in all ways like normal legends do. If an effect instructs a player to “ready a friendly legend” they can target and ready any legends controlled by them or an ally. If an effect instructs a player to ready “your legend,” that refers to any legend controlled by that player. Such an effect does _not_ target a legend; the legend is chosen as the spell or ability resolves.
+
+_Relevant rules: 103.1., 440.2.a., 440.3.b., 440.3.c., 355.10.g._
+
+_![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/a4e3e77ebfd1fc67b0dad116d44e5a458b467a2d-1848x1063.jpg)_
+
+**What happens when the unit on the board that I Showed Off with Primordial Roar is returned to my hand with Star-Crossed? Do I still deal damage? What about if I play Lunar Boon and discard the unit from hand?**
+
+You still deal damage in both scenarios.
+
+Any referenced characteristics of shown off objects are locked in when you show them off. Regardless of what subsequently happens to them, their information will be able to be checked by the card that showed them off. This also means that giving a unit +\[M\] or -\[M\] after showing that unit off will not affect the damage dealt by Primordial Roar; it’s too late by that point.
+
+_Relevant rules: 832.1.d.1._
+
+![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/2725dc53eec8bfb5340af52bd65b0614bdacb0a4-1848x1063.jpg)
+
+**What counts as reducing a unit’s Might for Ahri, Confident? If I play Discipline on my 1 \[M\] unit while it’s stunned and located at the same battlefield as an enemy Leona, Zealot, will I trigger their Ahri, Confident located at that battlefield?**
+
+Reducing a unit’s Might means an ability of an object you control causes a unit to receive a -\[M\] effect. Ahri, Confident will trigger if you Discipline a stunned 1 \[M\] unit at the same battlefield as an enemy Leona, Zealot.
+
+Although Discipline never causes the unit’s Might to increase, the unit goes from 1 \[M\] with a -0 \[M\] effect applied to it, which will not trigger Ahri, Confident, to 3 \[M\] with a -2 \[M\] effect applied to it. This change in state triggers Ahri, Confident, the same as a 3 \[M\] unit being stunned and receiving a -2 \[M\] effect from Leona, Zealot’s passive ability. Note that this doesn’t work for other cases: if a stunned 3 \[M\] unit at the same battlefield as an enemy Leona, Zealot has Discipline played on it, that unit will not have a new Might reduction effect applied to it and thus Ahri, Confident will not trigger. Spells, triggered abilities, and activated abilities are easier; if a spell, triggered ability, or activated ability applies non-zero -\[M\] to a unit, Ahri, Confident will trigger.
+
+* * *
+
+## Core Rules Changes
+
+The _Unleashed_ and _Vendetta_ rules updates have laid a relatively stable base for this rules update. We’ve made small changes as necessary, but we have fewer logical holes to patch, and there aren’t any sweeping fixes that need to be implemented in this set. The vast majority of the rules in this update are about new cards and mechanics in the _Radiance_ set.
+
+Now let’s take a look at the rules changes we have in store for _Radiance_!
+
+**—**
+
+**Radiance Addition:** Deploy
+
+-   Deploy is a new keyword appearing on gear in _Radiance._ Gear with Deploy enable players to apply localized, battlefield-altering effects.
+-   Gear with Deploy can be played to any battlefield; enemy occupied, friendly, or uncontrolled. However, when an opponent holds a battlefield where you have gear with Deploy, those gear will be killed.
+-   Gear with Deploy remain at their current battlefield so long as they aren’t destroyed. Some effects can move gear with Deploy to other battlefields too!
+    -   **NEW RULE:** Deploy keyword added.
+
+**Radiance Addition:** Disarm
+
+-   Disarm is a new keyword appearing on units in _Radiance._
+-   Disarm is an attack trigger. The first time a unit with Disarm attacks each combat, they will give an enemy unit at their battlefield -1 \[M\] this turn. If a unit has Disarm 2, they’ll give an enemy unit -2 \[M\] this turn.
+-   Disarm stacks just like Assault or Shield; meaning if a unit has gained multiple Disarm keywords from different sources, the unit will have one trigger for Disarm with a total of the sum of their Disarm values.
+    -   **NEW RULE:** Disarm keyword added.
+
+**Radiance Addition:** Show Off
+
+-   Show Off is a new keyword appearing on both units and spells in _Radiance._
+-   When you Show Off something, you reveal a card from your hand that matches the requirement, or pick a friendly game object (card or token) on the board with the appropriate characteristics.
+-   Cards with Show Off can reference information from the shown off card or object. That information is locked in when the card or object is shown off, even if it’s referenced later.
+    -   **NEW RULE:** Show Off keyword added.
+
+**Rules Update:** Copy Effects Layer
+
+-   We saw some confusion on how copy effects work and their placement in the trait-altering layer. In the _Radiance_ rules update, we’ve moved to clarify this by giving copy effects a layer of their own. The first layer is now for copy effects and all subsequent layers (trait-altering, ability-altering, arithmetic) have been shifted down to reflect this change.
+-   Because copy effects only interacted with other copy effects anyway, there was functionally no reason for them to remain in the trait-altering layer. Our hope with this move is that it will be clearer that they only interact with other copy effects. Effects like the Mech tag appended by Experimental Hexplate in the trait-altering layer are not copied by copy effects.
+    -   **NEW RULE:** Copy Effects layer added.
+
+**Radiance Addition:** Copy Game Action
+
+-   To support and build on this clarification for copy effects, we’ve also added the copy game action to the game actions section.
+-   This section also clarifies how game objects that are created as copies, like the tokens played by Zilean, Time Mage’s replacement effect, work; those game objects don’t have a copy effect applied to them, but are created directly with the copyable traits of the object it is a copy of, as if those were its own printed traits.
+    -   **NEW RULE:** Copy game action added.
+
+**Radiance Support:** Additional Deckbuilding Decisions
+
+-   _Radiance_’s Neeko, Blending In adds the first instance of additional choices made during deckbuilding, so we’ve added rules to clarify how those choices are made.
+    -   **NEW RULE:** Additional deckbuilding decisions added.
+
+**Radiance Support:** Equipment Units
+
+-   Orianna, Lady of Clockwork presents some unique rules scenarios for the game, including what happens to an Equipment that becomes a unit. We decided on the simplest answer: units can’t be attached to other game objects. If an attached game object becomes a unit, it detaches immediately.
+    -   **CLARIFIED RULE:** Units cannot be attached to other game objects.
+    -   **CLARIFIED RULE:** If an attached non-unit game object becomes a unit, it detaches as it becomes a unit.
+
+**Rules Update:** Layer Calculations and Object Dependencies
+
+-   We’ve added rules for layer calculations in an effort to support future interactions and clarify how the layer effects are calculated.
+-   When calculating layer effects, each game object is treated individually. If a game object needs to reference information from another game object, the game evaluates that game object’s layer information before returning to calculate the original game object’s information.
+-   If multiple game objects reference information from each other, instead evaluate all of their information simultaneously, layer by layer.
+    -   **NEW RULE:** Layer calculation procedure added.
+
+**Rules Update:** Pick
+
+-   We’re starting to see the word “pick” appear on cards, which will become even more important when _Legacy_ releases early next year. Pick is the word we’re moving towards for when you make a choice that isn’t a target. We want to make it clear to players that when a card says for you to  “choose” something, that means you are targeting what you choose.
+-   When the _Legacy_ rules and templating change is implemented in card text, many cards that currently say “choose” will have their text updated to pick. We are doing some of that work in _Radiance._ As such, we can also make this clearer in the rules prior to the _Legacy_ rules update.
+    -   **NEW RULE:** Pick added.
+
+**Rules Update:** Conditional Clause Scope
+
+-   In _Vendetta_ we saw some players understandably confused over the scope of conditional clauses in instruction text. 
+-   With the _Radiance_ rules update, we’ve clarified what scope conditional clauses have in a given instruction.
+    -   **NEW RULE:** Conditional clauses scope added.
+
+**Rules Update:** Finalizing Time Actions Scope
+
+-   We received feedback that cards which referred to “you” when checking if costs were paid or actions were taken was confusing if control of the card is gained by another player. New rules have been added to clarify this.
+    -   **NEW RULE:** Instructions of a spell or ability may reference actions taken during Finalization. They will do so by checking whether “you” performed those game actions.
+    -   **NEW RULE:** These instructions check whether the game action was performed, not by whom. If another player gains control of the spell or ability after the game action was performed during finalization, it will still be considered true for the purposes of these instructions.
+
+**Rules Update:** Making New Choices
+
+-   In the _Vendetta_ rules update we included a model for making new choices as used by cards like Mystic Reversal and Rebuttal. We received feedback that the rules were unclear, and we clarified in the _Vendetta_ FAQ how the interim model would work. Upon review, we found we weren’t entirely satisfied with that implementation.  We decided to overhaul how new decisions are made to be simpler and more intuitive. 
+-   When making new decisions now, _all_ decisions must be made anew. You can choose to make the same decisions as made previously, but if you’re making new decisions, you can’t go halfway. 
+-   Similar to the previous model, all decisions must be legal and valid; however, with this new model, any abilities that trigger on targeting, for example, will trigger again; even if you previously targeted the same unit. It should feel like you’re going through the process of choosing targets all over again.
+    -   **CLARIFIED RULE:** Making new choices updated.
+
+**Rules Update:** Pending Item Target Legality
+
+-   Players have long wondered whether pending items are legal to target with spells and abilities. It’s very rare that such a case is possible but, like many strange rules interactions in _Riftbound,_ we can blame these few cases on Promising Future. We figured we might as well make it clear: Pending items are _not_ legal targets for spells and abilities.
+    -   **NEW RULE:** Pending item target legality clarified.
+
+**Rules Update:** 2v2 Scoring
+
+-   The rules for 2v2 scoring were slightly contradictory. In the _Vendetta_ rules update we cleaned them up, and in this rules update they’ve been fully aligned. Specifically, the final point and scoring eligibility special rules now apply only to teams that maintain control of a battlefield during their own or a teammate’s turn, and not during an opponent’s turn.
+    -   **CLARIFIED RULE:** 2v2 scoring updated.
+
+Empower Abilities
+
+-   _Vendetta_’s Kayle, Justified needed some support from the FAQ. We’ve codified that support with the _Radiance_ rules update.
+    -   **NEW RULE:** Game Objects with Empower abilities may have or gain permissions to be Empowered multiple times. Such Game Objects ignore the normal “Play only if not Empowered.” restriction on Empower abilities.
+        -   _Note that this means you can activate the ability even if you’re at your max number of empowered statuses. That is intentional! It just does nothing. That is also intentional._
+
+Negated and Ignored Instructions
+
+-   Insightful judges and players recognized some strangeness in the rules for linked instructions from the _Unleashed_ rules update, made more apparent by rules added in the _Vendetta_ rules update. In the _Vendetta_ FAQ we clarified how those rules should function, and now we’re codifying that fix into the _Radiance_ rules update.
+-   If an instruction mistargets, that instruction is _ignored._ If an instruction fails to execute for any other reason, such as it being replaced, skipped, or being impossible to perform, it is _negated._ Instructions that are ignored will cause any later instructions linked to them to also be ignored. If an instruction is negated, later linked instructions will not be negated; they will still execute if possible. 
+    -   **NEW RULE:** Negated and ignored instructions added.
+
+Mandatory Requirements and Restrictions
+
+-   The _Vendetta_ FAQ clarified how Dragon Roost and other mandatory requirements functioned together. We’ve codified that into the rules in the _Radiance_ rules update with extra clarifications. We’ve also codified the concept of a restriction: that being an effect like Perched Grimwyrm’s “Play me only to a battlefield you’ve conquered this turn.” 
+    -   **NEW RULE:** Mandatory requirements added.
+    -   **NEW RULE:** Restrictions added.
+
+### Legacy Updates
+
+As we’ve shared before, we’re preparing a major update to Riftbound rules with _Legacy_ in January. To part the curtain some, this is a massive undertaking—we’re completely reformatting the rules documents to improve their readability as reference for players and judges.
+
+We’re literally starting from the ground up, which will give us room to reduce redundant information, improve ordering, and generally clean up the rules documentation.
+
+To be clear: this is about rewriting the rules to be more readable, and it won’t change how Riftbound’s mechanics actually work. 
+
+As always, we do not update the rules of Riftbound or introduce card errata to manage the power level of any card or effect—if we ever need to manage a powerful card, we’ll use other tools. 
+
+We’ll release an additional FAQ article after _Radiance_ is released to further clarify remaining points of confusion for players and keep you updated as we learn more.
+
+## Radiance Errata Updates
+
+_Source: https://playriftbound.com/en-us/news/announcements/radiance-errata-updates/_
+_Retrieved: 2026-10-26T11:09:00.528691+00:00; SHA-256: 3b29c346a278e9b1d92f4a290f6c428a4ead75d728866412164ff18da254b79e_
+
+[](https://cms.riotgames.com/news/intent/edit/id=187c4e97-e326-4216-810f-b4c3bc92ba15.template;type=article/)
+
+# [](https://cms.riotgames.com/news/intent/edit/id=187c4e97-e326-4216-810f-b4c3bc92ba15.template;type=article/)
+
+Hey Riftbounders!
+
+We’ve got some fresh card errata for you today, covering cards from Radiance. If you’re just starting Riftbound, or new to TCGs, card errata refers to any updates to card text after a card was printed. We do this to make cards more easily understood and to clarify how they work within the rules of the game.
+
+# Radiance Cards
+
+## Elnuk Herd
+
+**\[NEW TEXT\]** 
+
+\[Hidden\] (Hide now for \[A\] to react with later for \[0\].)
+
+When you play me, give a friendly unit +3 \[M\] this turn, then recycle me if I was played from face down.
+
+▲
+**\[OLD TEXT\]**
+
+\[Hidden\] (Hide now for \[A\] to react with later for \[0\].)
+
+When you play me, give another friendly unit +3 \[M\] this turn, then recycle me if I was played from face down.
+
+* * *
+
+## Last Caress
+
+**\[NEW TEXT\]** 
+
+\[Reaction\] (Play any time, even before spells and abilities resolve.)
+
+The next unit you play this turn, even from face down, can be played to any battlefield. When you play it, \[Buff\] it. (Give it a +1 \[M\] buff if it doesn't have one.)
+
+▲
+**\[OLD TEXT\]**
+ 
+
+\[Reaction\] (Play any time, even before spells and abilities resolve.)
+
+The next unit you play this turn (even from face down) can be played to any battlefield. When you play it, \[Buff\] it. (Give it a +1 \[M\] buff if it doesn't have one.)
+
+* * *
+
+## Forbidden Technique
+
+**\[NEW TEXT\]** 
+
+Ready a unit.
+
+When you play a card with Energy cost \[7\] or more, you may play this from your trash for \[1\]\[C\]\[C\]. Then banish this.
+
+▲
+**\[OLD TEXT\]**
+
+Ready a unit.
+
+When you play a card with Energy cost \[7\] or more, you may play this from your trash for \[1\]\[C\]\[C\]. Banish this.
+
+* * *
+
+## Neeko, Blending In
+
+**\[NEW TEXT\]** 
+
+(Neutral cards can go in decks of any Domain.)
+
+If Neeko is in your deck, choose up to 3 different legends in addition to your starting legend. (Different means none match names.)
+
+When you play me, choose one of those Legends and add it to your Legend Zone while I'm on the board.
+
+▲
+**\[OLD TEXT\]**
+
+(Neutral cards can go in decks of any Domain.)
+
+If Neeko is in your deck, choose 3 different legends in addition to your starting legend. (Different means none match names.)
+
+When you play me, choose one of those Legends and add it to your Legend Zone while I'm on the board.
+
+## October 2026 Tournament Rules Changelog
+
+_Source: https://playriftbound.com/en-us/news/announcements/october-2026-tournament-rules-changelog/_
+_Retrieved: 2026-10-26T11:09:00.863911+00:00; SHA-256: 28afd9793ba883985c5a8d4b24dead46607a417dadde7925299bf93c2e483e4e_
+
+Hey Riftbounders,
+
+Vriss here with a new Tournament Rules Update! Today’s rules go into effect with the _Radiance_ Pre-Rift on October 16, 2026.
+
+While this update may look large, it mostly involves cleaning up small mistakes and adding clarity for judges where it was lacking. I’d like to give a huge shoutout to the Riftbound judge community for all the amazing feedback that helped inform this update, especially [@benediktwerner](https://x.com/benediktwerner) for collating a ton of information and sending it our way. Riftbound thrives when we can work with players and judges to provide the best Organized Play experience possible.
+
+For a detailed breakdown of all the changes, see the bulleted list below. For a link to the full Tournament Rules document, look here:
+
+\[[Tournament rules doc link](https://cmsassets.rgpub.io/sanity/files/dsfx7636/news_live/861752822d217edf37d9febaeaf77a7d924c1bb6.pdf)\]
+
+While we’ve come a long way developing and improving the Tournament Rules, we see a need to share more about our philosophy and thought processes behind this document. We’re working on a new companion document for the Tournament Rules which fully breaks down the philosophy and intent behind each rule, especially for the judge perspective. More details to come soon!
+
+### Changing Gameplay Decisions
+
+Before letting you dive into the nitty gritty, I want to elaborate on Riftbound’s **Gameplay Decision** policy (509. in the Tournament Rules).
+
+The **Gameplay Decisions** policy exists to give players some flexibility when making decisions (we are not aiming for an equivalent of chess’ touch-move), but it is **not** meant to allow players to take back errors once their opponent is required to call information to their attention. 
+
+For example:
+
+> -   Player A moves their 3 Might unit to a battlefield and passes focus. 
+> -   Player B indicates their 2 Might unit at that battlefield is now at 4 Might due to their legend, Wuju Bladesman. 
+> -   **Player A can no longer change their decision to move to that battlefield and pass focus.**
+
+High Organized Play Level (OPL) Riftbound events have the highest level of competitive integrity, valuing player’s skills and abilities to evaluate the game and make strategically correct tactical decisions. At high OPL, we never want it to feel like you need to play the game for your opponent or get punished for your opponent’s mistakes.
+
+> (At casual OPL, allowing an opponent to take back a mistake like this is not required, but it is encouraged for sportsmanship and learning.)
+
+### Changelog
+
+-   Increased clarity on when players can change gameplay decisions.
+    -   Updated 509.5. - 509.6.b., renumbered following.
+-   Completely reworked **Deck Presentation Error** remedies to be clearer and better describe their intent, and detail missing Chosen Champions remedies for all OPLs.
+    -   Updated 703.4.b. and its sub-bullets.
+-   Clarified that loops must be fully deterministic and include no random elements. Added examples.
+    -   Added 505.2. - 505.2.b. and 505.13.
+-   Clarified that knowingly attempting to engage in **Improperly Determining a Winner** is cheating, increased penalty at Professional OPL.
+    -   Added 703.10.d. - 703.10.e.
+-   Further defined **Floor Judge** responsibility on correcting errors they see, even if they are not called by a player.
+    -   Added 204.5.c. - 204.5.c.1., renumbered following
+-   Added clarity to when penalties should be upgraded based on being advantageous to the erroring player.
+    -   Added 702.1.d. - 702.1.d.1.
+-   Added _Radiance_ to Standard sets.
+    -   Added 601.3.c.6. - 601.3.c.6.a.
+-   Expanded **Facedown Card Error** to include when cards illegally leave a facedown zone.
+    -   Rewrote 702.13. and its sub-bullets.
+-   Added Might/Might Bonus to the parts of a card that must remain intact when a card is altered.
+    -   Updated 419.4.a.
+-   Clarified that players are allowed to bluff about their private information.
+    -   Added 502.11. and renumbered following.
+-   Clarified that tokens must be represented by card objects with a clear ready state and must be understandable by opponents when used.
+    -   Updated 508.8.
+-   Clarified “choosing” things, lethal damage, and adding resources as examples of observable impact for triggers.
+    -   Added 506.3.e.10. - 506.3.e.12.
+-   Added a requirement for the state of additional turns to be communicated between players.
+    -   Added 502.4.b. and renumbered following,
+-   Clarified that when applying remedies, a “full round cycle” completes when the player whose turn the error occurred on begins their next turn.
+    -   Added 702.1.e.
+-   Added missing penalties for illegally scouting matches or using electronic devices at inappropriate times.
+    -   Updated 410.4. and added 703.9.g.
+-   Clarified that randomized deck checks should occur at the start of a round and should verify all deck elements, added some process clarification.
+    -   Added 411.3.a. Updated 411.3. and renumbered following
+-   Corrected typo in **Mispayment for Cost** remedy.
+    -   Updated 702.9.b.3.
+-   Fixed missing/incorrect number references.
+    -   Added 602.1.a.3. Updated 406.1.d. , 702.2.b.
+-   Clarified that Battlefields can’t be reused if a game loss is applied after Battlefields have been revealed.
+    -   Added 406.1.c. and renumbered following.
+-   Changed the **Overpayment for Cost** remedies to not include giving the erroring player floating resources if a simple rewind is not possible.
+    -   Updated 702.8.b.1.
+-   Clarified that players may look at outside notes during sideboarding and after Battlefields are revealed, but must stop once opening hands are drawn (before mulligans).
+    -   Updated 416.4. - 416.5
+-   Clarified that best-of-one sideboarding does not apply to limited competitions.
+    -   Added 602.3.g. and renumbered following.
+-   Clarified **Failure to Maintain Game State** warnings are fully exempt from upgrades.
+    -   Reworded 702.1.b. and 702.1.b.1.
+-   Added guidance for judges when performing a shuffle remedy and the deck is fully known or the randomized portion is indeterminable.
+    -   Added 701.4.b.1. - 701.4.b.2.
+-   Added special deck registration requirements for special deckbuilding rules such as Neeko.
+    -   Added 401.2.a.
+-   Updated **Failure to Maintain Game State** to exclude penalties covered by missed triggers.
+    -   Updated 702.17.a.
+-   Updated Chosen Champion sleeve requirements to include secret zones.
+    -   Updated 422.2.b.
+-   Clarified that 1-1 card exchange does not apply to limited sideboarding.
+    -   Updated 403.4.
+-   Removed confusing wording that implied deck registration was required at low OPL.
+    -   Updated 402.1. and 703.10.b.
+-   Clarified that at low OPL constructed events, players are typically expected to use the same deck throughout the event, unless given permission otherwise by the tournament organizer.
+    -   Added 401.1.b.
+-   Clarified that simple rewinds include ready/unrecycling runes spent on the action that is being rewound.
+    -   Added 701.5.b.3.
+
+## Preparing for the Radiance Pre-Rift
+
+_Source: https://playriftbound.com/en-us/news/announcements/preparing-for-the-radiance-pre-rift/_
+_Retrieved: 2026-10-26T11:09:00.684128+00:00; SHA-256: 9d3dd231470aed21b7b798f87168de2e23ccb2ce73a983af384f2189d1e420e5_
+
+Hello Riftbounders!
+
+This Friday, October 16, stores will begin running their Radiance Pre-Rift events. 
+
+Events begin on Friday, but the Pre-Rift window lasts for the week, so check the schedule at your local store to find out when you can register to play. If you want to see when local game stores are running Pre-Rifts near you, check out our [event locator](https://playriftbound.com/en-US/events/).
+
+## So, what’s a Pre-Rift event?
+
+A Pre-Rift event is your first chance to get your hands on a new set’s cards and play with them before the set is officially released. When you attend a Pre-Rift, you get to crack packs with your local game store (LGS) community, build a deck, and play it immediately.
+
+Pre-Rift events are fun, social, and casual! The focus is on learning and lighthearted fun, so don’t worry about bumping into any extreme competition. Instead, have fun with the people around you, chat about the deck you’re gonna try out, and don’t hesitate to ask your fellow Riftbounders or the event judge for help while you’re building your deck or in the middle of a game.
+
+The other great thing about Pre-Rifts is that they are Sealed events. This means all the cards you need to play will be provided to you as part of the event, and you’ll just need to build your deck from that limited card pool.
+
+## What’s a Sealed format?
+
+In Sealed formats, you open Booster Packs and play with the cards you get; for this event, they'll be Radiance Booster Packs. You can use any of the cards you open from those packs when building your deck, but you can’t add outside cards from your collection to your deck. 
+
+If this is your first Sealed event, here are the deckbuilding rules to keep in mind: 
+
+-   Sealed decks have a minimum Main Deck size of 25 cards, but you can play more than that if you want to.
+-   Sealed decks can use up to three domains of cards and Runes. 
+    -   You can use any Signature spell in your deck, as long as both of that Signature spell’s domains are represented in your Main Deck’s three domains.  
+-   You can choose to play without a Legend, or without a Champion Unit. If you do, you draw an additional card on your first turn.
+    -   If you choose to play with a Legend, you must have both of the Legend’s domains represented in your Main Deck’s three domains. 
+-   You can use any Champion Unit as your Chosen Champion, regardless of your Legend.
+-   You can use as many copies of a card as you open.
+    -   This means you can go above the normal limit of 3 copies per card.
+-   You are not limited to using Runes or tokens that you open in your packs. 
+    -   The event organizer will provide additional Runes, and you can use anything handy to represent tokens! 
+-   You can use Battlefields that you open, or use a facedown card as a "blank" substitute Battlefield. These blank Battlefields have no abilities and are just locations for players to conquer and hold. 
+-   You can change the cards of your deck in between games and rounds, as long as you’re still following the other rules above. Don’t be afraid to alter your build as you go!
+-   For more details on Sealed deckbuilding, see the Tournament Rules.
+
+![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/1d179316291bac7faa22b8a953d26659b19ed114-2312x1300.jpg)
+
+#### Pre-Rift Kit Contents
+
+For Radiance Pre-Rift events, you’ll be provided with the following to open and use to build your deck. Remember, anything you open is yours to keep!
+
+-   Five Radiance Booster Packs.
+-   A champion pack themed around one of nine new Legends in Radiance. These packs have a Legend, a Rare Champion, a Battlefield, and support cards all for that Champion.
+-   A Heimerdinger, Academy Instructor promo card. You can’t include the Heimerdinger Promo in your Sealed deck. If you pull the non-promo version in your packs, you can play that one! 
+
+### Building Your Deck
+
+Remember, your Main Deck has to have at least 25 cards and follow the Domain rules listed above. With that in mind, here are a few tips for building your Sealed deck at a Pre-Rift:
+
+1.  **Include a reasonable amount of Units in your deck, because they’re  your main way to score points.** 
+    1.  Most decks want to have at least 15 Units that can fight for you. 
+    2.  You’ll want about five of your Units to cost 2 Energy, so you have plays to make in your first turns. 
+    3.  The rest of your Units can be more expensive, with a diversity of costs so you have powerful plays at all points of the game.
+2.  **Use your non-Unit cards to help bolster the strategy of your deck.** 
+    1.  Gear or Spells that give Might are great options to improve your Units. 
+    2.  It’s also always a good idea to have a few spells that will let you interact directly with your opponent’s Units by removing them from play.
+3.  **Think about the different Power costs in your deck.** 
+    1.  Cards with Power costs tend to have stronger effects, and you will want to have some without going overboard on the Runes you'll have to recycle. 
+    2.  When deciding what Runes to play in your Rune Deck, make sure to think about the specific Power costs in your Main Deck.
+4.  **Radiance has new mechanics called Disarm, Deploy, and Show Off.** 
+    1.  Try playing around with the new keywords to learn how they work.
+
+When building the foundation of your deck, the cards from your Pre-Rift kit are a great place to start. Here's a quick rundown on the Champions in the Pre-Rift kits and their strategies. 
+
+### Pre-Rift Seeded Legends
+
+![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/96738476b27957e3b4bf7c044260414b753fb010-1848x1063.jpg)
+
+####  Ekko
+
+Ekko is all about planning ahead, and manipulating time. Use his Legend to cheat out powerful units with impactful effects ahead of the curve. 
+
+![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/3bdb7b5a6e67ff957ca2e4fb1bbf2c2926611186-1848x1063.jpg)
+
+#### Evelynn
+
+Evelynn is all about luring you into her embrace and springing her trap. She uses hidden cards to outwit her enemies. 
+
+![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d333b213df02a056f66abd3b740861a1b6103b41-1848x1063.jpg)
+
+#### Jarvan IV
+
+Jarvan IV leverages the new keyword Deploy. With his Legend, you can send Units to battlefields with Deployed Gear and surprise your opponent, getting Units directly into the fight even if your base is empty. You can’t count Jarvan out of the fight. 
+
+![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/e566015e0961d28c56730fd2f05d70ef1f61787f-1848x1063.jpg)
+
+#### K’Sante
+
+K’Sante is all about protecting his allies and Battlefields. His unique flavor is that he can transform his defenses to be used on offense. Surprise your opponents by turning your beefy Hold cards into Conquering monsters. ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/e27f3db5bbdc80850198fd95accc4f893c4f5563-1848x1063.jpg)
+
+#### Modekaiser
+
+Mordekaiser rules over the realm of death. His game plan centers around banishing his own Gear and Units, to play out more Units and Gear for cheaper. ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/6b7141f039ae750f4eaaf7fc96286f834334db31-1848x1063.jpg)
+
+#### Orianna
+
+Orianna’s Legend puts a new spin on Riftbound. She can transform powerful Gear into powerful Units, and even surprise opponents by transforming Deployed Gear into a Unit at unexpected times. Use your robot army to conquer Battlefields from underneath the opponent’s nose. ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/42d3e444fb26538ff0d11ab2603f9c6efd1e97b2-1848x1063.jpg)
+
+#### Riven
+
+Riven is an exiled swordfighter who focuses on movement, and her Legend leans into this game plan. Allowing Units that are played to the Battlefield to come in ready synergises with cards that can Gank or have exhaust abilities, creating a surprising amount of early game pressure. ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/ac15715d46319ace2e7c6dfe9a88ef9cf7164d83-1848x1063.jpg)
+
+#### Seraphine
+
+Seraphine draws powers from her followers, and can exhaust them to help her cast expensive, game-changing spells. Her game plan is to assemble a large army of low cost Units and overwhelm her opponent with both spells and sheer numbers. ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/7d13e6cc4cb724716937439feca51847b9b2c4dd-1848x1063.jpg)
+
+#### Ziggs
+
+Ziggs is a chaotic yordle who wants to blow everything up—and he really wants to blow up the board. His game plan leans fully into controlling the board and deterring the enemy from even setting foot on a Battlefield. 
+
+### Pre-Rift Rules FAQ
+
+If you haven't, check out our recently released patch notes. We’ll be releasing an extended FAQ once Radiance has been out for a bit to cover any odd interactions, but we wanted to call out a few things early to make Pre-Rift as smooth as possible. ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/a4db480e6069c37803d372047413ecf1e04f9de2-1848x1063.jpg)
+
+**Q:** If I use K’Sante Legend on a Unit like Staunch Survivor that has both Shield 2 and Assault 2, does the card now have Assault 4?
+
+**A:** Yes! This is worded this way to communicate that K’Sante’s Legend is a passive effect for that turn. This way you can use combat tricks to give that Unit additional Shield, and increase their Assault that turn! ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/0f074b589892832b854c47db8e7fa2ac97dc8102-1848x1063.jpg)
+
+**Q:** If I pull Neeko and have fewer than 3 Legends, can I still play Neeko?
+
+**A:** Yes, you can! Neeko is receiving an errata to read “...choose up to 3 different Legends...” so you can still legally play Neeko in Pre-Rift even if you don’t pull 3 Legends. ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/339f6ed2170c18db05a7dffc6278ae4fffc3dc34-1848x1063.jpg)
+
+**Q:** Can I choose the same option twice when playing Encore? 
+**A:** No, you cannot. You must choose 2 different options from the 4. ![](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/16e653d62e5701fba50f82e0e0da89105e98f432-1848x1063.jpg)
+
+**Q:** When an Equipment becomes a unit, does it inherit its equipped text?
+**A:** No. Its “Equipment” text is only active when it is equipped to a unit. If you are running Orianna Legend with a Blade of Exile in your deck and turn it into a Unit, it will be a 3 might Unit without Ganking. 
+
+### See You On the Rift!
+
+Excited to find a nearby Pre-Rift? Check the [event locator](https://playriftbound.com/en-US/events) and find one near you—and don’t forget to post your hits! Tag us at @PlayRiftbound with the hashtag #RBRadiance.
+
+<!-- oracle:radiance-context:end -->

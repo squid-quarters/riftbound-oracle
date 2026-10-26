@@ -4,9 +4,9 @@
   "question": "Explain the HOT FEPR loop as best you can",
   "reframe": "the process rule 334 names HOT FEPR — how a player works through outstanding Tasks and then through the Chain, and which condition sends play from each step to the next.",
   "corpus": {
-    "CR": "2026-07-16",
-    "TR": "2026-07-16",
-    "generated": "2026-08-26"
+    "CR": "2026-10-09",
+    "TR": "2026-10-09",
+    "generated": "2026-10-26"
   },
   "in_one_line": "Anything that incurs a Task runs the same loop: clear every Task first, then work the Chain one item at a time through Finalize, Execute, Pass and Resolve — where most steps can send you backwards, which is why one Chain runs the loop many times before play moves on.",
   "steps": [
@@ -270,7 +270,7 @@
       "cites": [
         {
           "rule": "CR:340.1",
-          "quote": "The newest Finalized Chain Item resolves. Execute its game effects in their entirety. See rule 349. Playing Cards for more information on resolving spells. See rule 398. Playing or Activating Abilities for more information on resolving abilities."
+          "quote": "The newest Finalized Chain Item resolves. Execute its game effects in their entirety. See rule 349. Playing Cards for more information on resolving spells. See rule 399. Playing or Activating Abilities for more information on resolving abilities."
         },
         {
           "rule": "CR:340.3",

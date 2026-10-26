@@ -38,13 +38,13 @@ DIVERGENCES = {
     "a unit enters the board exhausted (359.2.c)":
         "neutralised — the harness passes exhausted=True to the table's "
         "put_into_play, which defaults to ready and leaves it to its reader",
-    "battlefields are placed in turn order (485.5)":
+    "battlefields are placed in turn order (487.5)":
         "neutralised — the table's battlefields are transplanted from the "
         "engine's, so both index them the same way",
     "every loop over both players goes in turn order (303.2.a)":
         "invisible to a state diff — it changes the order events happen in, "
         "not the state they leave behind, and the mirror test is what pins it",
-    "victory is decided at a cleanup, not inside the Score (472, 323.1)":
+    "victory is decided at a cleanup, not inside the Score (474, 323.1)":
         "compared only at the end of the scenario — mid-game the table has "
         "already set a winner that the engine will only notice at the next "
         "Cleanup, and both agree once the game is actually over",
@@ -60,7 +60,7 @@ UNMAPPED = {
     "chain (347) — the Showdown Focus window":
         "the table has no Focus and no Showdown State; its `cleanup` settles "
         "control directly.",
-    "target — which staged Showdown or Combat opens (323.12, 323.13)":
+    "target — which staged Showdown or Combat opens (323.11, 323.12)":
         "the table never opens one; the reader calls `resolve_combat` at the "
         "battlefield they mean.",
     "table.combat_preview":
@@ -240,7 +240,7 @@ def resync(top, s):
     """Re-align the ORDER of the face-down decks, and nothing else.
 
     Both tools shuffle with their own generator, so a mulligan (117.3) or a burn
-    out (431.2.b) leaves the same multiset of cards in a different order and the
+    out (432.2.b) leaves the same multiset of cards in a different order and the
     next draw takes a different card — a divergence with no rule behind it.
 
     Only when the two decks hold the SAME CARDS. Mid-play the engine and the
@@ -323,7 +323,7 @@ class _Mirror:
         The state diff cannot see this one. The harness gives the table the
         damage the engine actually assigned, so that the RESOLUTION is what is
         compared — which means a wrong assignment would be copied across and
-        agree with itself. 465.2.c is checked here instead, by asking each tool
+        agree with itself. 467.2.c is checked here instead, by asking each tool
         for its own answer on the same board and requiring the same dict.
         """
         s, index = game.s, c["bf"]
@@ -339,7 +339,7 @@ class _Mirror:
         self.assignments += 1
         if engine_says != table_says:
             self.problems.append(
-                "seat %d's lethal-first assignment at %s differs — 465.2.c\n"
+                "seat %d's lethal-first assignment at %s differs — 467.2.c\n"
                 "      engine: %r\n      table:  %r"
                 % (c["by"], s.battlefield(index)["name"],
                    engine_says, table_says))
@@ -476,12 +476,12 @@ def snapshot(s, top):
 
 #: Which rule decides each field, so a mismatch reports one instead of a diff.
 RULE_FOR = {
-    "points": "467-472 scoring, and 431.2.c",
-    "battlefields": "188-192 control, 190.3.a Contested, 470 once per turn",
-    "units": "465 combat damage, 428 kill, 144/446 movement, 359.2 entering",
-    "runes": "430 channel, 164.2 paying",
-    "zones0": "413 draw, 416 recycle, 428 trash, 431 burn out",
-    "zones1": "413 draw, 416 recycle, 428 trash, 431 burn out",
+    "points": "469-474 scoring, and 432.2.c",
+    "battlefields": "188-192 control, 190.3.a Contested, 472 once per turn",
+    "units": "467 combat damage, 429 kill, 144/446 movement, 359.2 entering",
+    "runes": "431 channel, 164.2 paying",
+    "zones0": "414 draw, 417 recycle, 429 trash, 432 burn out",
+    "zones1": "414 draw, 417 recycle, 429 trash, 432 burn out",
 }
 
 
@@ -497,7 +497,7 @@ def _diff(name, at, game, top, final):
     if final and game.s.winner != top.winner:
         # Divergence 4 is about WHEN the win is noticed, never about who won.
         out.append("%s: the game ended with different winners — engine %r, table %r "
-                   "(472)" % (name, game.s.winner, top.winner))
+                   "(474)" % (name, game.s.winner, top.winner))
     return out
 
 

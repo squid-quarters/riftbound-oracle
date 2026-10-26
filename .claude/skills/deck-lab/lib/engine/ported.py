@@ -56,31 +56,31 @@ PORTED = {
         "N/A: display spacing is for a reader; the engine never prints card text",
     "every deck that ships is legal and playable":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "a 4th copy of a card is rejected (103.2.b)":
+    "a 4th copy of a card is rejected (103.3.b)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "a rune deck that is not exactly 12 is rejected (103.3.a)":
+    "a rune deck that is not exactly 12 is rejected (103.4.a)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "a deck with no Chosen Champion is rejected (103.2.a.1)":
+    "a deck with no Chosen Champion is rejected (103.3.a.1)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "duplicate battlefield names are rejected (103.4.c)":
+    "duplicate battlefield names are rejected (103.5.c)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "champion tags are told apart from traits and regions (103.2.a.2)":
+    "champion tags are told apart from traits and regions (103.3.a.2)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
     "every legend in the pool has a derivable champion tag":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
     "a champion sharing only a trait is not a legal Chosen Champion":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "a deck whose champion shares only a trait is rejected (103.2.a.2)":
+    "a deck whose champion shares only a trait is rejected (103.3.a.2)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
     "a deck naming an ambiguous card says so, not 'not in the card pool'":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
     "format legality is reported as unchecked, not as a pass":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "the Domain exception is reported as unchecked too (103.1.b.5)":
+    "the Domain exception is reported as unchecked too (103.2.b.6)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "the copy limit counts a card across every entry naming it (103.2.b)":
+    "the copy limit counts a card across every entry naming it (103.3.b)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
-    "the same battlefield listed twice is caught (103.4.c)":
+    "the same battlefield listed twice is caught (103.5.c)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
     "exactly one Chosen Champion copy leaves the deck, however it is listed (112)":
         "SHARED: deckfile.py builds the Deck objects the engine plays with",
@@ -139,7 +139,7 @@ PORTED = {
     "exhausting a rune adds 1 Energy (164.2.a)":
         "exhausting a rune adds 1 Energy (164.2.a)",
     "a rune cannot be exhausted twice":
-        "exhausting an already-exhausted object is refused (414)",
+        "exhausting an already-exhausted object is refused (415)",
     "recycling a rune adds Power of its domain (164.2.b.1)":
         "recycling a rune adds Power of its domain (164.2.b.1)",
     "a recycled rune returns to the Rune Deck, not the Main Deck (161.2.b)":
@@ -156,7 +156,7 @@ PORTED = {
     "Power can be recycled from an EXHAUSTED rune (164.2.b)":
         "Power can be recycled from an EXHAUSTED rune (164.2.b)",
     "paying that way actually recycles the rune":
-        "and paying that way actually recycles the rune (416)",
+        "and paying that way actually recycles the rune (417)",
 
     # -- movement (144, 445-458) -----------------------------------------
     "a Standard Move exhausts the unit (144.2)":
@@ -171,24 +171,24 @@ PORTED = {
         "a Standard Move happens during the Main Phase (144.1.a)",
 
     # -- combat (459-466) -------------------------------------------------
-    "damage is assigned lethal-first, not spread (465.2.c.3)":
-        "damage is assigned lethal-first (465.2.c.3)",
+    "damage is assigned lethal-first, not spread (467.2.c.3)":
+        "damage is assigned lethal-first (467.2.c.3)",
     "a 0-Might unit is assigned its minimum lethal of 1, not skipped (142.4.b)":
         "a 0-Might unit needs a non-zero assignment to take lethal damage (142.4.b)",
-    "the excess is not dumped while a unit is still owed lethal (465.2.c.4)":
-        "excess lands only once every defender has its lethal (465.2.c.4)",
-    "no more than minimum lethal is assigned while it is the only target (465.2.c.4)":
-        "no more than the minimum lethal lands while it is the only target (465.2.c.4)",
-    "equal Might trades both units simultaneously (465.2.c.1.a)":
-        "equal Might trades both units simultaneously (465.2.c.1.a)",
+    "the excess is not dumped while a unit is still owed lethal (467.2.c.4)":
+        "excess lands only once every defender has its lethal (467.2.c.4)",
+    "no more than minimum lethal is assigned while it is the only target (467.2.c.4)":
+        "no more than the minimum lethal lands while it is the only target (467.2.c.4)",
+    "equal Might trades both units simultaneously (467.2.c.1.a)":
+        "equal Might trades both units simultaneously (467.2.c.1.a)",
     "a repelled attacker is recalled to base, not left standing (466.1.a.2)":
         "attackers still present when defenders remain are recalled (466.1.a.2)",
     "winning a combat establishes control and Conquers (466.5.d)":
         "winning a combat establishes control and Conquers (466.5.d)",
     "units are healed after combat (466.1.a.1)":
         "combat heals every unit before the result is determined (466.1.a.1)",
-    "a 0-Might unit assigned no damage is not lethally damaged (465.2.c.2)":
-        "and assigning nothing at all leaves it alive (465.2.c.2)",
+    "a 0-Might unit assigned no damage is not lethally damaged (467.2.c.2)":
+        "and assigning nothing at all leaves it alive (467.2.c.2)",
     "the preview shows every involved unit's printed text":
         "N/A: `combat_preview` is a reader's tool — it puts card text in front of "
         "a person before they assign damage. The engine assigns it",
@@ -196,18 +196,18 @@ PORTED = {
         "N/A: `combat_preview` is a reader's tool — it puts card text in front of "
         "a person before they assign damage. The engine assigns it",
     "the preview reports an assignment that is at least lethal":
-        "damage is assigned lethal-first (465.2.c.3)",
+        "damage is assigned lethal-first (467.2.c.3)",
     "a Might change applied before combat changes who dies":
         "a Might change applied before combat changes who dies (703, 142.4.b)",
     "combat logs the text of the units that fought, so it can be audited":
         "N/A: the table prints card text so its reader can apply it. The engine's "
         "log is a record of physical operations, and card text is issue #25",
-    "the Attacker is whoever applied Contested, not the turn player (464.2.c.1)":
-        "the Attacker is whoever's unit applied Contested (464.2.c.1)",
+    "the Attacker is whoever applied Contested, not the turn player (466.2.c.1)":
+        "the Attacker is whoever's unit applied Contested (466.2.c.1)",
     "the preview labels the resident unit the defender":
-        "every unit at the battlefield takes its controller's designation (464.2.c.3)",
-    "a repelled attack still leaves the defender establishing control (466.5)":
-        "a defender that survives keeps the battlefield (466.5)",
+        "every unit at the battlefield takes its controller's designation (466.2.c.3)",
+    "a repelled attack still leaves the defender establishing control (468.5)":
+        "a defender that survives keeps the battlefield (468.5)",
     "a unit with lethal damage marked is killed at a cleanup (323.5)":
         "a unit with lethal damage marked is killed at a cleanup (323.5)",
     "gear arriving at a battlefield does not contest it (190.3.a)":
@@ -215,34 +215,34 @@ PORTED = {
 
     # -- scoring, control and winning (188-196, 467-472) ------------------
     "scoring gains a point": "a Score gains a point (468.1)",
-    "a Hold outside the Beginning Phase is refused (469.2)":
-        "a Hold is refused outside the Beginning Phase (469.2)",
-    "a battlefield cannot be scored twice in a turn (470)":
-        "a battlefield is scored at most once per turn per player (470)",
+    "a Hold outside the Beginning Phase is refused (471.2)":
+        "a Hold is refused outside the Beginning Phase (471.2)",
+    "a battlefield cannot be scored twice in a turn (472)":
+        "a battlefield is scored at most once per turn per player (472)",
     "the turn player Holds every battlefield they control (315.2.b.2)":
         "the Turn Player Holds every battlefield they control, in the Beginning "
         "Phase (315.2.b)",
     "a Conquer at 7 points draws instead of winning when a battlefield is "
-    "unscored (471.1.b.1)":
+    "unscored (473.1.b.1)":
         "a Conquer at one point short draws instead, without every battlefield "
-        "scored (471.1.b.1)",
-    "a Score whose point was withheld still triggers the battlefield (471.2)":
-        "N/A: 471.2's Score abilities are battlefield card text, which this slice "
+        "scored (473.1.b.1)",
+    "a Score whose point was withheld still triggers the battlefield (473.2)":
+        "N/A: 473.2's Score abilities are battlefield card text, which this slice "
         "does not execute (docs/engine/spec.md, issue #25)",
     "the final point lands once every battlefield has been scored that turn":
-        "with every battlefield scored, the final point lands (471.1.b.1)",
-    "reaching the Victory Score wins the game (472)":
-        "the Victory Score with more points than any opponent wins (472)",
-    "a tie at the Victory Score wins for nobody (472)":
-        "a tie at the Victory Score wins for nobody (472)",
+        "with every battlefield scored, the final point lands (473.1.b.1)",
+    "reaching the Victory Score wins the game (474)":
+        "the Victory Score with more points than any opponent wins (474)",
+    "a tie at the Victory Score wins for nobody (474)":
+        "a tie at the Victory Score wins for nobody (474)",
     "a finished game refuses to start another turn":
         "a finished game asks no more questions (196)",
     "a win during the Scoring Step stops the turn there (196)":
-        "a win in the Scoring Step stops the turn where it happened (196, 472)",
+        "a win in the Scoring Step stops the turn where it happened (196, 474)",
     "control is lost when no units remain there (190.4.c)":
-        "a player with no units at a battlefield loses control of it (323.6)",
+        "a player with no units at a battlefield loses control of it (323.5)",
     "moving alone onto an empty battlefield takes control and Conquers (466.5.d)":
-        "moving alone onto an empty battlefield takes control and Conquers (469.1)",
+        "moving alone onto an empty battlefield takes control and Conquers (471.1)",
     "a cleanup does not hand control to either side while a combat is staged "
     "(190.4.b)":
         "a cleanup hands control to nobody while a combat is staged there (190.4.b)",
@@ -260,24 +260,24 @@ PORTED = {
     "a raised Victory Score is respected, not overridden by the mode's 8":
         "a raised Victory Score is respected, not overridden by the mode's 8 (485.3)",
     "the raised Victory Score still ends the game when reached":
-        "and the raised Victory Score still ends the game when reached (472)",
+        "and the raised Victory Score still ends the game when reached (474)",
     "battlefield text is surfaced at setup, where it starts applying":
         "N/A: the table prints battlefield text for its reader to apply; the "
         "engine will execute it when battlefield abilities land (issue #25)",
 
     # -- burn out (431) ---------------------------------------------------
-    "drawing from an empty Main Deck reports a Burn Out (431)":
-        "drawing from an empty Main Deck reports a Burn Out (431)",
-    "burning out recycles the trash into the Main Deck (431.2.b)":
-        "and recycles the trash into the Main Deck (431.2.b)",
-    "burning out gives an opponent a point (431.2.c)":
-        "burning out hands an opponent a point (431.2.c)",
-    "the draw that caused the burn out still completes (431.2.d, 315.4.b.2)":
-        "the draw that caused the burn out still completes (431.2.d, 315.4.b.2)",
-    "an empty deck AND an empty trash hands the game to the opponent (431.3.a)":
-        "an empty trash keeps the deck empty, and the points keep coming (431.3)",
-    "that win is immediate, without waiting for a cleanup (431.3.c.1)":
-        "a burn-out win is immediate, without waiting for a cleanup (431.3.c.1)",
+    "drawing from an empty Main Deck reports a Burn Out (432)":
+        "drawing from an empty Main Deck reports a Burn Out (432)",
+    "burning out recycles the trash into the Main Deck (432.2.b)":
+        "and recycles the trash into the Main Deck (432.2.b)",
+    "burning out gives an opponent a point (432.2.c)":
+        "burning out hands an opponent a point (432.2.c)",
+    "the draw that caused the burn out still completes (432.2.d, 315.4.b.2)":
+        "the draw that caused the burn out still completes (432.2.d, 315.4.b.2)",
+    "an empty deck AND an empty trash hands the game to the opponent (432.3.a)":
+        "an empty trash keeps the deck empty, and the points keep coming (432.3)",
+    "that win is immediate, without waiting for a cleanup (432.3.c.1)":
+        "a burn-out win is immediate, without waiting for a cleanup (432.3.c.1)",
 
     # -- privacy (108.7.c) ------------------------------------------------
     "the public log does not name the cards anyone drew (108.7.c)":
@@ -337,10 +337,10 @@ PORTED = {
         "a deck with no battlefields cannot start a game (103.4)",
     "a spell not in hand cannot be played (157)":
         "a card not in the zone it is played from is refused (354)",
-    "a card cannot be discarded from a hand that lacks it (422)":
-        "a card cannot be discarded from a hand that lacks it (422)",
-    "a card cannot be recycled from a zone it is not in (416)":
-        "N/A: the engine has no free-standing recycle verb — 416 runs inside the "
+    "a card cannot be discarded from a hand that lacks it (423)":
+        "a card cannot be discarded from a hand that lacks it (423)",
+    "a card cannot be recycled from a zone it is not in (417)":
+        "N/A: the engine has no free-standing recycle verb — 417 runs inside the "
         "mulligan, the burn out and a rune's Power ability",
     "a card cannot enter play from a zone it is not in":
         "a card in no zone cannot be put into play",
@@ -353,15 +353,15 @@ PORTED = {
         "a location that is not a location is refused",
     "a rune cannot be recycled by the player who does not control it":
         "a rune cannot be recycled by a player who does not control it",
-    "a unit cannot move to where it already is (447)":
-        "a move to where the unit already stands is not a Move (446.3.b)",
+    "a unit cannot move to where it already is (449)":
+        "a move to where the unit already stands is not a Move (448.3.b)",
     "only units have a Standard Move (144)": "only units have a Standard Move (144)",
     "an exhausted unit is refused by the MOVE COST guard, not by exhaust() (144.2)":
         "an exhausted unit cannot pay its move cost (144.2)",
-    "exhausting an already-exhausted object is refused (414)":
-        "exhausting an already-exhausted object is refused (414)",
-    "combat needs units from two players to resolve (461)":
-        "a combat with one side gone skips the Damage Step (465.1)",
+    "exhausting an already-exhausted object is refused (415)":
+        "exhausting an already-exhausted object is refused (415)",
+    "combat needs units from two players to resolve (463)":
+        "a combat with one side gone skips the Damage Step (467.1)",
     "a mulligan cannot set aside a card that is not in hand (117.1)":
         "N/A: the engine offers only the cards in hand as options and `answer` "
         "refuses everything else, so there is no illegal set-aside to guard",

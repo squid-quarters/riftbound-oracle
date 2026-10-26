@@ -125,7 +125,7 @@ Build me an aggressive Irelia list and see how it holds up against the Master Yi
 It is a **table, not a player.** Code owns everything that must not be imagined — the
 shuffle, what you drew, whose turn it is, what a rune pool holds, how much damage a combat
 assigns, who scored and when, and whether the deck is legal under rule 103. Your agent
-owns every decision and every word of card text, because a scripted engine over 1,037
+owns every decision and every word of card text, because a scripted engine over 1,121
 cards is wrong in ways nobody notices — and an agent asked what it drew will produce a
 card that suits its plan.
 

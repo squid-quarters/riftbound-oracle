@@ -150,6 +150,9 @@ def cmd_rule(args):
             print(f"   Example: {ex}")
         if r.get("see_also"):
             print(f"   see also: {', '.join(r['see_also'])}")
+        from source_anomalies import matching as printed_anomalies
+        for anomaly in printed_anomalies(r):
+            print(f"   SOURCE NOTICE: {anomaly['notice']}")
         print()
 
 

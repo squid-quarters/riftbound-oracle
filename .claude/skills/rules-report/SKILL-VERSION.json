@@ -3,8 +3,8 @@
   "version": "1.2.1",
   "built_from": "https://github.com/gear-null/riftbound-oracle",
   "verify": "python3 rules_cli.py selftest",
-  "rules_version": "2026-07-16",
-  "rules": 3316,
-  "cards": 954,
+  "rules_version": "2026-10-09",
+  "rules": 3469,
+  "cards": 1121,
   "cards_awaiting_transcription": 0
 }

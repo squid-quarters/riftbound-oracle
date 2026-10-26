@@ -499,11 +499,11 @@ MUTANTS = [
          find='        return self.is_topic_heading(rule) and not self.topic_block(rule)',
          repl='        return self.is_topic_heading(rule)',
          expect='no heading resolves to nothing at all'),
-    dict(name='The child test uses an id prefix instead of parent equality (mirroring subtree_parts but forgetting the dot), so every rule matches itself, nothing is ever a heading, and 467 Scoring resolves to an empty subtree = "the rules say nothing".',
+    dict(name='The child test uses an id prefix instead of parent equality (mirroring subtree_parts but forgetting the dot), so every rule matches itself, nothing is ever a heading, and 469 Scoring resolves to an empty subtree = "the rules say nothing".',
          file='verify_citations.py',
          find='            r.get("parent") == rule["id"] and r["doc"] == rule["doc"]',
          repl='            r["id"].startswith(rule["id"]) and r["doc"] == rule["doc"]',
-         expect='467 Scoring is recognised as a bare heading'),
+         expect='469 Scoring is recognised as a bare heading'),
     dict(name='is_topic_heading stops consulting the heading heuristic and trusts childlessness alone, so a full-sentence one-line rule (CR:002 "Card text supersedes rules text...") is presented as a heading pointing elsewhere.',
          file='verify_citations.py',
          find='        if rule.get("depth") != 1 or not self._looks_like_heading(rule):\n            return False',
@@ -694,10 +694,13 @@ MUTANTS = [
          repl='        json.dump(rules_list[:-40], open(out, "w", encoding="utf-8"), indent=1)',
          expect='matches the recorded corpus exactly', rebuild=True),
 
-    dict(name='point deep rules at a parent that does not exist, orphaning them',
+    # The source parser now refuses orphaned trees before writing. Corrupt the
+    # serialized artifact after that gate to prove the independent consumer
+    # selftest still rejects an orphan, rather than crediting an early crash.
+    dict(name='serialize deep rules with a parent that does not exist, orphaning them',
          file='parse_rules.py',
-         find='                "parent": parent_of(rid),',
-         repl='                "parent": (parent_of(rid) if rid.count(".") < 2 else rid + ".nonexistent"),',
+         find='        json.dump(rules_list, open(out, "w", encoding="utf-8"), indent=1)',
+         repl='        json.dump([dict(r, parent=(r["parent"] if r["depth"] < 3 else r["id"] + ".nonexistent")) for r in rules_list], open(out, "w", encoding="utf-8"), indent=1)',
          expect='orphaned parents', rebuild=True),
     # ---- the primer document kind -------------------------------------------
     # Two kinds means a new way to verify the wrong thing. These pin the two

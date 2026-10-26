@@ -134,20 +134,20 @@ def swap_seats(text):
 #: nobody verified, and four entries named checks that did not exist.
 TRANSITION_COVER = {
     ("combat", "s1", 0): "a Combat opens at a cleanup, at a battlefield the Turn "
-                         "Player chooses (323.13)",
+                         "Player chooses (323.12)",
     ("combat", "s1", 1): "a Combat that stops being staged before it opens is not "
-                         "resolved (461.2, 323.10)",
-    ("combat", "s2", 0): "combat sums the Might of both sides (465.2.a-b)",
-    ("combat", "s2", 1): "a combat with one side gone skips the Damage Step (465.1)",
+                         "resolved (463.2, 323.9)",
+    ("combat", "s2", 0): "combat sums the Might of both sides (467.2.a-b)",
+    ("combat", "s2", 1): "a combat with one side gone skips the Damage Step (467.1)",
     ("combat", "s3", 0): "the Damage Step cancels the Tasks the Showdown left "
-                         "outstanding (465.3)",
-    ("combat", "s4", 0): "UNREACHABLE: 466.3.d.1 needs BOTH players to still have "
+                         "outstanding (467.3)",
+    ("combat", "s4", 0): "UNREACHABLE: 468.3.d.1 needs BOTH players to still have "
                          "units here after the Combat Cleanup, and 466.1.a.2 has "
                          "just recalled every Attacker if any Defender survived. "
                          "Only an effect that prevents the recall reaches it, and "
                          "that is card text",
     ("combat", "s4", 1): "combat ends by removing the designation from every unit "
-                         "and player (466.7.a)",
+                         "and player (468.7.a)",
     ("hot-fepr", "s1", 0): "a spell opens a window before it resolves (338, 339.1)",
     ("hot-fepr", "s1", 1): "the Chain empties and play returns to an Open State (340.2)",
     ("hot-fepr", "s2", 0): "a Unit resolves the moment it is finalized (337.2)",
@@ -216,7 +216,7 @@ def engine_setup(check):
     check("exactly two battlefields are in play, one provided by each seat (485.4)",
           len(s.battlefields) == 2
           and sorted(b["by"] for b in s.battlefields) == [0, 1])
-    check("each battlefield is one of the three its provider brought (485.5)",
+    check("each battlefield is one of the three its provider brought (487.5)",
           all(b["name"] in g.decks[b["by"]].battlefield_cards() for b in s.battlefields))
     # Read with seat 1 going first, where indexing by seat number and indexing by
     # turn order disagree. At first=0 the two are the same and the check cannot
@@ -450,7 +450,7 @@ def engine_turn(check):
           all(not o["exh"] for o in g2.s.units + g2.s.runes if o["ctrl"] == seat))
 
     g3 = at_main(seed=41)
-    check("a Hold is refused outside the Beginning Phase (469.2)",
+    check("a Hold is refused outside the Beginning Phase (471.2)",
           raises(lambda: scoring.score(g3, 0, 0, method="Hold"), "Beginning Phase"))
 
     # 315.2.b.2: the Scoring Step is where a board advantage turns into points,
@@ -716,7 +716,7 @@ def engine_showdowns(check):
         g4.s.battlefields[i]["contested_by"] = other
     refresh(g4).need_cleanup()
     d = g4.step()
-    check("the Turn Player chooses which staged Showdown opens (323.12)",
+    check("the Turn Player chooses which staged Showdown opens (323.11)",
           d.kind == "target" and d.seat == turn_player and len(d.options) == 2,
           "asked seat %s with %d option(s)" % (d.seat, len(d.options)))
 
@@ -740,8 +740,8 @@ def engine_showdowns(check):
     g5.step()
     opened = [t["text"] for t in g5.log[mark:]
               if "SHOWDOWN opens" in t["text"] or "COMBAT opens" in t["text"]]
-    check("a staged Showdown opens before a staged Combat elsewhere (323.12 before "
-          "323.13)",
+    check("a staged Showdown opens before a staged Combat elsewhere (323.11 before "
+          "323.12)",
           bool(opened) and "SHOWDOWN opens at %s" % g5.s.battlefields[0]["name"]
           in opened[0],
           opened[0][:80] if opened else "nothing opened at all")
@@ -803,10 +803,10 @@ def engine_combat(check):
     bf = s.battlefields[0]
     bf["contested"] = True
     bf["contested_by"] = 1
-    check("the Attacker is whoever's unit applied Contested (464.2.c.1)",
+    check("the Attacker is whoever's unit applied Contested (466.2.c.1)",
           combat.attacker_at(s, bf) == 1)
     bf["contested_by"] = None
-    check("a battlefield nothing contested has no Attacker, and says so (464.2.c.1)",
+    check("a battlefield nothing contested has no Attacker, and says so (466.2.c.1)",
           raises(lambda: combat.attacker_at(s, bf), "no recorded Attacker"))
 
     # Lethal-first assignment (465.2.c.3, 465.2.c.4), on a hand-built board.
@@ -823,10 +823,10 @@ def engine_combat(check):
     # rotation still ends with both units on 2, and a whole pool dumped on the
     # first still leaves it above its lethal. 5 Might onto two 2-Might units has
     # exactly one lethal-first shape.
-    check("damage is assigned lethal-first (465.2.c.3)",
+    check("damage is assigned lethal-first (467.2.c.3)",
           assignment == {defenders[0]["id"]: 2, defenders[1]["id"]: 3},
           "%r" % (assignment,))
-    check("excess lands only once every defender has its lethal (465.2.c.4)",
+    check("excess lands only once every defender has its lethal (467.2.c.4)",
           sum(assignment.values()) == 5 and max(assignment.values()) == 3)
 
     zero = put(g2, 1, a_unit(), loc_bf(1))
@@ -856,7 +856,7 @@ def engine_combat(check):
     striker["might"] = 1
     unassigned = combat.assign_damage(s2, [striker], [shy, ahead]) == {ahead["id"]: 1}
     turn.run_cleanup(g2)
-    check("and assigning nothing at all leaves it alive (465.2.c.2)",
+    check("and assigning nothing at all leaves it alive (467.2.c.2)",
           unassigned and shy["dmg"] == 0
           and shy["id"] in [u["id"] for u in s2.units],
           "Backline keeps the 0-Might unit last, the pool runs out on the other, "
@@ -865,7 +865,7 @@ def engine_combat(check):
 
     g3 = _combat_board(seed=51)
     log = texts(g3)
-    check("combat sums the Might of both sides (465.2.a-b)",
+    check("combat sums the Might of both sides (467.2.a-b)",
           any("Might vs" in t for t in log))
 
     # 466.1.a.1, watched on a SURVIVOR. Asserting "nothing is damaged once the
@@ -889,13 +889,13 @@ def engine_combat(check):
     combat.result_step(g3b, 0)
     check("combat heals every unit before the result is determined (466.1.a.1)",
           hurt == 1 and healed == 0 and tough["id"] in [u["id"] for u in s3b.units],
-          "a 9-Might defender took %d and is on %d when 466.3 reads the board"
+          "a 9-Might defender took %d and is on %d when 468.3 reads the board"
           % (hurt, healed))
-    check("a combat resolves to a named result (466.3)",
+    check("a combat resolves to a named result (468.3)",
           any("combat result at" in t for t in log))
-    check("combat ends and the turn leaves the Showdown State (466.7)",
+    check("combat ends and the turn leaves the Showdown State (468.7)",
           g3.s.showdown is None
-          and any("ends" in t and "466.7" in t for t in log))
+          and any("ends" in t and "468.7" in t for t in log))
 
     # A repel: a defender that survives sends every attacker home (466.1.a.2),
     # and that is No Result (466.3.d).
@@ -914,9 +914,9 @@ def engine_combat(check):
         if d.terminal or s4.showdown is None and not s4.battlefields[0]["contested"]:
             break
         g4.answer(d.options[0])
-    check("a defender that survives keeps the battlefield (466.5)",
+    check("a defender that survives keeps the battlefield (468.5)",
           s4.battlefields[0]["ctrl"] == 0)
-    check("an attacker that dies leaves the board (323.5, 465.2.d)",
+    check("an attacker that dies leaves the board (323.5, 467.2.d)",
           weak["id"] not in [u["id"] for u in s4.units])
 
     g5 = at_main(seed=79)
@@ -941,7 +941,7 @@ def engine_scoring(check):
     s = g.s
     s.battlefields[0]["ctrl"] = 0
     scoring.score(g, 0, 0, method="Conquer")
-    check("a battlefield is scored at most once per turn per player (470)",
+    check("a battlefield is scored at most once per turn per player (472)",
           raises(lambda: scoring.score(g, 0, 0, method="Conquer"), "already scored"))
 
     # 471.1.b.1: a Conquer at one point from the Victory Score takes the final
@@ -952,14 +952,14 @@ def engine_scoring(check):
     hand_before = len(s2.hand[0])
     scoring.score(g2, 0, 0, method="Conquer")
     check("a Conquer at one point short draws instead, without every battlefield "
-          "scored (471.1.b.1)",
+          "scored (473.1.b.1)",
           s2.points[0] == s2.victory_target - 1 and len(s2.hand[0]) == hand_before + 1)
     scoring.score(g2, 0, 1, method="Conquer")
-    check("with every battlefield scored, the final point lands (471.1.b.1)",
+    check("with every battlefield scored, the final point lands (473.1.b.1)",
           s2.points[0] == s2.victory_target and s2.winner is None,
-          "the point lands here; the WIN is 472's, and 472 happens at a cleanup")
+          "the point lands here; the WIN is 474's, and 474 happens at a cleanup")
     turn.run_cleanup(g2)
-    check("and the cleanup that follows is where the game is won (472, 323.1)",
+    check("and the cleanup that follows is where the game is won (474, 323.1)",
           s2.winner == 0)
 
     g3 = at_main(seed=83)
@@ -968,7 +968,7 @@ def engine_scoring(check):
     g3.s.phase = "beginning"
     scoring.score(g3, 0, 0, method="Hold")
     turn.run_cleanup(g3)
-    check("a Hold is not beholden to the final-point restriction (471.1.a.1)",
+    check("a Hold is not beholden to the final-point restriction (473.1.a.1)",
           g3.s.points[0] == g3.s.victory_target and g3.s.winner == 0)
 
     # 315.2.b.2 Holds ALL the battlefields the Turn Player controls. A player on
@@ -990,7 +990,7 @@ def engine_scoring(check):
           and all(held in bf["scored"] for bf in g3b.s.battlefields),
           "%d points, scored %s" % (g3b.s.points[held],
                                     [bf["scored"] for bf in g3b.s.battlefields]))
-    check("and the game is still won, at the cleanup (472, 323.1)",
+    check("and the game is still won, at the cleanup (474, 323.1)",
           g3b.s.winner is None and turn.run_cleanup(g3b) is None
           and g3b.s.winner == held)
 
@@ -999,8 +999,8 @@ def engine_scoring(check):
     g4.s.trash[0] = ["Gust"]
     before = g4.s.points[1]
     actions.draw(g4, 0, 1)
-    check("burning out hands an opponent a point (431.2.c)", g4.s.points[1] == before + 1)
-    check("and recycles the trash into the Main Deck (431.2.b)",
+    check("burning out hands an opponent a point (432.2.c)", g4.s.points[1] == before + 1)
+    check("and recycles the trash into the Main Deck (432.2.b)",
           not g4.s.trash[0] and g4.s.main_deck[0] == [])
 
     g5 = at_main(seed=89)
@@ -1008,16 +1008,16 @@ def engine_scoring(check):
     g5.s.trash[0] = []
     g5.s.points[1] = g5.s.victory_target - 1
     actions.draw(g5, 0, 1)
-    check("an empty trash keeps the deck empty, and the points keep coming (431.3)",
+    check("an empty trash keeps the deck empty, and the points keep coming (432.3)",
           g5.s.winner == 1 and g5.s.end_reason,
           g5.s.end_reason)
-    check("a burn-out win is immediate, without waiting for a cleanup (431.3.c.1)",
-          "431.3.c.1" in g5.s.end_reason, g5.s.end_reason)
+    check("a burn-out win is immediate, without waiting for a cleanup (432.3.c.1)",
+          "432.3.c.1" in g5.s.end_reason, g5.s.end_reason)
 
     g6 = at_main(seed=91)
     g6.s.points = [g6.s.victory_target, 2]
     actions.check_victory(g6)
-    check("the Victory Score with more points than any opponent wins (472)",
+    check("the Victory Score with more points than any opponent wins (474)",
           g6.s.winner == 0)
     frozen = g6.s.points[:]
     actions.gain_point(g6, 1, "a point after the end")
@@ -1027,7 +1027,7 @@ def engine_scoring(check):
 
     g7 = at_main(seed=91)
     g7.s.points = [g7.s.victory_target, g7.s.victory_target]
-    check("a tie at the Victory Score wins for nobody (472)",
+    check("a tie at the Victory Score wins for nobody (474)",
           actions.check_victory(g7) is None)
 
 
@@ -1041,12 +1041,12 @@ def engine_movement(check):
     check("a Standard Move cannot go base -> base (144.4)",
           "base -> battlefield or battlefield -> base"
           in actions.standard_move_legal(s, unit, loc_base(1 - seat)))
-    check("a move to where the unit already stands is not a Move (446.3.b)",
+    check("a move to where the unit already stands is not a Move (448.3.b)",
           "which is not a Move"
           in actions.standard_move_legal(s, unit, unit["loc"]),
           "the outer guard: without it, breaking a 144.4 shape rule leaks the unit's "
           "own location into the option list")
-    check("and `move` refuses it a second time, in its own words (446.3.b)",
+    check("and `move` refuses it a second time, in its own words (448.3.b)",
           raises(lambda: actions.move(g, unit["id"], unit["loc"]), "is already at"),
           "a masking pair, told apart by which message fires")
     actions.standard_move(g, unit["id"], loc_bf(0))
@@ -1082,7 +1082,7 @@ def engine_movement(check):
     g3 = at_main(seed=103)
     g3.s.battlefields[0]["ctrl"] = 0
     turn.run_cleanup(g3)
-    check("a player with no units at a battlefield loses control of it (323.6)",
+    check("a player with no units at a battlefield loses control of it (323.5)",
           g3.s.battlefields[0]["ctrl"] is None)
 
     g4 = at_main(seed=107)
@@ -1098,7 +1098,7 @@ def engine_movement(check):
     g5.s.battlefields[0]["contested_by"] = 1
     g5.s.units.remove(lonely)
     turn.run_cleanup(g5)
-    check("Contested is removed when its applier has no units there (323.11)",
+    check("Contested is removed when its applier has no units there (323.10)",
           not g5.s.battlefields[0]["contested"]
           and g5.s.battlefields[0]["contested_by"] is None)
 
@@ -1237,7 +1237,7 @@ def engine_instruments(check):
     # `all()` over it is vacuously true — the check would have read green at the
     # exact moment nothing worked.
     named = sum(n for reason, n in ends.items()
-                if reason and ("472" in reason or "431" in reason))
+                if reason and ("474" in reason or "432" in reason))
     check("and every game ends by a rule the log names",
           named == 24, "%d of 24 games ended by a named rule: %s"
                        % (named, "; ".join(sorted(ends)) or "none ended at all"))
@@ -1286,7 +1286,7 @@ def engine_instruments_bite(check):
 
     broken = at_main(seed=31)
     broken.s.rune_deck[1].append(broken.s.rune_deck[1][0])
-    check("and it counts runes separately from Main Deck cards (416)",
+    check("and it counts runes separately from Main Deck cards (417)",
           any("runes are not conserved" in v for v in invariants.check(broken)))
 
     broken = at_main(seed=31)
@@ -1297,7 +1297,7 @@ def engine_instruments_bite(check):
     broken = at_main(seed=31)
     broken.s.points[0] = broken.s.victory_target
     broken.s.tasks = [t for t in broken.s.tasks if t[0] != "cleanup"]
-    check("the points invariant names a won game nothing is about to notice (472)",
+    check("the points invariant names a won game nothing is about to notice (474)",
           any("no Cleanup is outstanding" in v for v in invariants.check(broken)),
           "; ".join(invariants.check(broken))[:90])
 
@@ -1459,7 +1459,7 @@ def _primers_agree_detail(vendored):
 def _open_combat(g, index=0, attacker=1):
     """Open a Combat Showdown at a battlefield the caller has already filled.
 
-    Straight to 464.2 without the Showdown window, because what most of these
+    Straight to 466.2 without the Showdown window, because what most of these
     checks are about is what happens after it closes. `closed` is what
     `chain.close_showdown` sets, and the Steps of Combat read it.
     """
@@ -1485,7 +1485,7 @@ def _run_damage(g, index=0, pick=0):
 
 
 def _resolution(g, index=0):
-    """466.1 through 466.7, as the Tasks `chain.close_showdown` queues them."""
+    """468.1 through 468.7, as the Tasks `chain.close_showdown` queues them."""
     turn.run_cleanup(g, "combat")
     combat.result_step(g, index)
     combat.control_step(g, index)
@@ -1552,15 +1552,15 @@ def _every_assignment(defenders, pool):
 
 
 def engine_designations(check):
-    """464.2.c, 323.2 and 466.7.a — the designations combat is read through."""
+    """466.2.c, 323.2 and 468.7.a — the designations combat is read through."""
     g, a1, d1, d2 = _two_on_two(seed=103)
     check("every unit at the battlefield takes its controller's designation "
-          "(464.2.c.3)",
+          "(466.2.c.3)",
           a1["role"] == "attacker" and d1["role"] == "defender"
           and d2["role"] == "defender",
           "%s / %s / %s" % (a1["role"], d1["role"], d2["role"]))
     check("the Attacking and Defending units are read by designation, not by side "
-          "(465.2.a-b)",
+          "(467.2.a-b)",
           [u["id"] for u in combat.attacking_units(g.s, 0)] == [a1["id"]]
           and [u["id"] for u in combat.defending_units(g.s, 0)]
           == [d1["id"], d2["id"]])
@@ -1591,7 +1591,7 @@ def engine_designations(check):
     g2, a2, d3, _d4 = _two_on_two(seed=107)
     _fight(g2)
     check("combat ends by removing the designation from every unit and player "
-          "(466.7.a)",
+          "(468.7.a)",
           all(u["role"] is None for u in g2.s.units) and g2.s.combat_attacker is None,
           "attacker was seat %r" % g2.s.combat_attacker)
 
@@ -1611,10 +1611,10 @@ def engine_designations(check):
     s3.battlefields[0]["cb_staged"] = True
     turn.cleanup_once(g3)
     check("a Showdown that becomes a Combat Showdown keeps whoever has Focus "
-          "(464.2.c.1.b)",
+          "(466.2.c.1.b)",
           s3.showdown["focus"] == 0 and s3.showdown["combat"],
           "focus %r" % (s3.showdown or {}).get("focus"))
-    check("and it still establishes the designations (323.14, 464.2.c.3)",
+    check("and it still establishes the designations (323.13, 466.2.c.3)",
           s3.combat_attacker == 1 and holder["role"] == "defender")
 
     # The invariant, audited: shown a designation that 323.2 would not have
@@ -1628,25 +1628,25 @@ def engine_designations(check):
     g5, a5, _d5, _e5 = _two_on_two(seed=111)
     _fight(g5)
     a5["role"] = "attacker"
-    check("and a designation left behind once combat is over (466.7.a)",
+    check("and a designation left behind once combat is over (468.7.a)",
           any("no Combat in progress" in v for v in invariants.check(g5)),
           "; ".join(invariants.check(g5))[:90])
 
 
 def engine_assignment(check):
-    """465.2.c as a decision, and the validation that any answer obeys it."""
+    """467.2.c as a decision, and the validation that any answer obeys it."""
     g, a1, d1, d2 = _two_on_two(seed=113)
     combat.damage_step(g, 0)
     decision = g.step()
     check("the damage assignment is a decision when more than one unit can take "
-          "it (465.2.c)",
+          "it (467.2.c)",
           decision.kind == "assign_damage"
           and sorted(o.key[1] for o in decision.options) == sorted(
               [d1["id"], d2["id"]]),
           "%s with %d option(s)" % (decision.kind, len(decision.options)))
-    check("and it is asked of the Attacker first (465.2.c)", decision.seat == 1)
+    check("and it is asked of the Attacker first (467.2.c)", decision.seat == 1)
     check("the first option is the engine's own lethal-first assignment "
-          "(465.2.c.3)",
+          "(467.2.c.3)",
           decision.options[0].key[1:] == (d1["id"],
                                           combat.assign_damage(g.s, [a1],
                                                                [d1, d2])[d1["id"]]),
@@ -1660,7 +1660,7 @@ def engine_assignment(check):
     _run_damage(g2, 0, pick=0)
     by_first_option = dict((u["id"], u["dmg"]) for u in (e1, e2) if u["dmg"])
     check("taking the first option at every step reproduces `assign_damage` "
-          "exactly (465.2.c.7)",
+          "exactly (467.2.c.7)",
           by_first_option == want, "%r vs %r" % (by_first_option, want))
 
     g3, a3, f1, f2 = _two_on_two(seed=113)
@@ -1671,7 +1671,7 @@ def engine_assignment(check):
     _run_damage(g3, 0, pick=1)
     landed = tuple(sorted((u["id"], u["dmg"]) for u in (f1, f2) if u["dmg"]))
     check("and a different answer is a different, still legal, assignment "
-          "(465.2.c.7)",
+          "(467.2.c.7)",
           landed in legal and landed != tuple(sorted(
               combat.assign_damage(g3.s, [a3], [f1, f2]).items())),
           "%r, out of %d legal assignment(s)" % (landed, len(legal)))
@@ -1683,7 +1683,7 @@ def engine_assignment(check):
     lone = put(g4, 1, a_unit(), loc_bf(0))
     lone["might"] = 2
     check("no more than the minimum lethal lands while it is the only target "
-          "(465.2.c.4)",
+          "(467.2.c.4)",
           combat.assign_damage(g4.s, [big], [lone]) == {lone["id"]: 4},
           "the excess has nowhere else to go, so it stays on the last unit")
 
@@ -1692,19 +1692,19 @@ def engine_assignment(check):
     spare = put(g4, 1, a_unit(), loc_bf(0))
     spare["might"] = 2
     check("an assignment naming a unit that is not in this combat is refused "
-          "(465.2.c)",
+          "(467.2.c)",
           any("not a unit on the other side" in v for v in
               combat.validate_assignment(s4, [big], [lone], {spare["id"]: 2})))
-    check("an assignment of zero damage is refused (465.2.c)",
+    check("an assignment of zero damage is refused (467.2.c)",
           any("a positive amount" in v for v in
               combat.validate_assignment(s4, [big], [lone, spare],
                                          {lone["id"]: 0})))
-    check("assigning more than the summed Might is refused (465.2.a-c)",
+    check("assigning more than the summed Might is refused (467.2.a-c)",
           any("summed Might" in v for v in
               combat.validate_assignment(s4, [big], [lone, spare],
                                          {lone["id"]: 2, spare["id"]: 9})))
     check("leaving damage unassigned while a unit could take it is refused "
-          "(465.2.c.6)",
+          "(467.2.c.6)",
           any("had somewhere to go" in v for v in
               combat.validate_assignment(s4, [big], [lone, spare],
                                          {lone["id"]: 2})))
@@ -1719,7 +1719,7 @@ def engine_assignment(check):
     huge = put(g4, 0, a_unit(), loc_bf(0))
     huge["might"] = 7
     check("and so is stopping early once every unit happens to be lethal "
-          "(465.2.c)",
+          "(467.2.c)",
           any("had somewhere to go" in v for v in
               combat.validate_assignment(s4, [huge], [lone, spare],
                                          {lone["id"]: 2, spare["id"]: 2})),
@@ -1730,16 +1730,16 @@ def engine_assignment(check):
     # different clause and would let this check pass for the wrong reason.
     small = put(g4, 0, a_unit(), loc_bf(0))
     small["might"] = 2
-    check("two units left short of lethal is refused (465.2.c.3)",
-          any("465.2.c.3" in v for v in
+    check("two units left short of lethal is refused (467.2.c.3)",
+          any("467.2.c.3" in v for v in
               combat.validate_assignment(s4, [small], [lone, spare],
                                          {lone["id"]: 1, spare["id"]: 1})))
     check("piling the excess on one unit while another is untouched is refused "
-          "(465.2.c.4)",
-          any("465.2.c.4" in v for v in
+          "(467.2.c.4)",
+          any("467.2.c.4" in v for v in
               combat.validate_assignment(s4, [big], [lone, spare],
                                          {lone["id"]: 4})))
-    check("the engine's own assignment passes its own validator (465.2.c.6)",
+    check("the engine's own assignment passes its own validator (467.2.c.6)",
           not combat.validate_assignment(
               s4, [big], [lone, spare],
               combat.assign_damage(s4, [big], [lone, spare])))
@@ -1772,7 +1772,7 @@ def engine_assignment(check):
                 disagreed.append("%s: %r %s" % (shape["name"], candidate,
                                                 "accepted" if accepted else "refused"))
     check("the validator accepts exactly the assignments the option list "
-          "generates (465.2.c)",
+          "generates (467.2.c)",
           not disagreed,
           "; ".join(disagreed[:2]) if disagreed
           else "%d board(s), every assignment of the pool brute-forced" % boards)
@@ -1782,7 +1782,7 @@ def engine_assignment(check):
                      "pool": 5, "onto": [(g1["id"], 1), (g2u["id"], 1)],
                      "first": None}
     check("an assignment built outside the option list is still refused "
-          "(465.2.c.6)",
+          "(467.2.c.6)",
           raises(lambda: combat.assignment_done(g5), "not legal"))
 
 
@@ -1882,7 +1882,7 @@ def engine_keywords(check):
     check("and it becomes one once nothing else can (826.4.b)",
           [u["id"] for u in combat.eligible_targets(
               s2, [plain, back], {plain["id"]: 2})] == [back["id"]])
-    check("so the whole assignment runs Tank, then plain, then Backline (465.2.c.6)",
+    check("so the whole assignment runs Tank, then plain, then Backline (467.2.c.6)",
           combat.assign_damage(s2, [hitter], order)
           == {tank["id"]: 2, plain["id"]: 2, back["id"]: 2})
     check("jumping a Tank is refused (815.1.c.2)",
@@ -1903,14 +1903,14 @@ def engine_keywords(check):
     both["might"] = 1
     other = put(g2, 1, a_unit(), loc_bf(1))
     other["might"] = 1
-    check("a unit with both Tank and Backline is assigned as a Tank (465.2.c.8)",
+    check("a unit with both Tank and Backline is assigned as a Tank (467.2.c.8)",
           [u["id"] for u in combat.eligible_targets(s2, [both, other], {})]
           == [both["id"]],
-          "465.2.c.8's choice of which requirement applies is a declared gap")
+          "467.2.c.8's choice of which requirement applies is a declared gap")
 
 
 def engine_combat_steps(check):
-    """The three steps, their windows, and what each one does (464-466)."""
+    """The three steps, their windows, and what each one does (466-468)."""
     # 465.1: with one side gone the Damage Step's Tasks never become outstanding.
     g = at_main(seed=137, auto_trivial=False)
     s = g.s
@@ -1924,8 +1924,8 @@ def engine_combat_steps(check):
             actions.to_trash(g, unit["id"], reason="a test removes it")
     mark = len(g.log)
     combat.damage_step(g, 0)
-    check("a combat with one side gone skips the Damage Step (465.1)",
-          any("465.1" in e["text"] for e in g.log[mark:]) and s.choosing is None,
+    check("a combat with one side gone skips the Damage Step (467.1)",
+          any("467.1" in e["text"] for e in g.log[mark:]) and s.choosing is None,
           "no assignment is asked and no damage is dealt")
 
     # 465.3: the Damage Step cancels what the Showdown left outstanding.
@@ -1934,7 +1934,7 @@ def engine_combat_steps(check):
                   ("cleanup", "")]
     _run_damage(g2, 0)
     check("the Damage Step cancels the Tasks the Showdown left outstanding "
-          "(465.3)",
+          "(467.3)",
           ("draw", None) not in g2.s.tasks and ("cleanup", "") not in g2.s.tasks
           and ("cleanup", "combat") in g2.s.tasks,
           "%r" % (g2.s.tasks,))
@@ -1949,7 +1949,7 @@ def engine_combat_steps(check):
     s3.passes = 2
     turn.run_task(g3, "combat_fepr", 0)
     check("the Resolution Step's window re-queues itself while the Chain has "
-          "something on it (466.2)",
+          "something on it (468.2)",
           ("combat_fepr", 0) in s3.tasks)
     for _ in range(8):
         if not s3.chain:
@@ -1958,11 +1958,11 @@ def engine_combat_steps(check):
         s3.passes = 2
         turn.run_task(g3, "combat_fepr", 0)
     check("and it resolves that item before the next step of Combat runs "
-          "(466.2, 340.1)",
+          "(468.2, 340.1)",
           not s3.chain and name in s3.trash[0])
     s3.tasks = [t for t in s3.tasks if t[0] != "combat_fepr"]
     turn.run_task(g3, "combat_fepr", 0)
-    check("with an empty Chain the window passes straight through (466.4, 466.6)",
+    check("with an empty Chain the window passes straight through (468.4, 468.6)",
           ("combat_fepr", 0) not in s3.tasks)
 
     # 460: a Combat opens in a Cleanup, at a battlefield the Turn Player picks.
@@ -1976,7 +1976,7 @@ def engine_combat_steps(check):
     refresh(g4)
     turn.run_cleanup(g4)
     check("a Combat opens at a cleanup, at a battlefield the Turn Player chooses "
-          "(323.13)",
+          "(323.12)",
           s4.showdown is not None and s4.showdown["combat"]
           and s4.showdown["bf"] == 0
           and any("COMBAT opens" in e["text"] for e in g4.log))
@@ -2000,7 +2000,7 @@ def engine_combat_steps(check):
     intruder["loc"] = loc_base(1)
     turn.cleanup_once(g5)
     check("a Combat that stops being staged before it opens is not resolved "
-          "(461.2, 323.10)",
+          "(463.2, 323.9)",
           staged and not s5.battlefields[0]["cb_staged"] and s5.showdown is None,
           "staged=%r" % staged)
 
@@ -2015,7 +2015,7 @@ def engine_combat_steps(check):
     refresh(g5)
     _open_combat(g5, 0, 1)
     _fight(g5)
-    check("equal Might trades both units simultaneously (465.2.c.1.a)",
+    check("equal Might trades both units simultaneously (467.2.c.1.a)",
           not s5.units_at(loc_bf(0))
           and s5.trash[0].count(mine["name"]) + s5.trash[1].count(theirs["name"]) >= 2,
           "neither survived to establish control")
@@ -2047,7 +2047,7 @@ def engine_combat_steps(check):
     # already settled. That is the whole point of doing 466.5 in the step.
     turn.run_cleanup(g6)
     check("and the battlefield is left with nothing staged, so no second "
-          "Showdown opens over it (466.5.a, 323.8)",
+          "Showdown opens over it (468.5.a, 323.8)",
           not s6.battlefields[0]["sd_staged"]
           and not s6.battlefields[0]["cb_staged"]
           and s6.showdown is None,
@@ -2094,7 +2094,7 @@ def engine_combat_steps(check):
 
 
 def engine_resources(check):
-    """Runes, the pool, and paying a printed cost (163-168, 356-357, 429-430)."""
+    """Runes, the pool, and paying a printed cost (163-168, 356-357, 430-431)."""
     g = at_main(seed=163)
     s = g.s
     seat = 0
@@ -2110,7 +2110,7 @@ def engine_resources(check):
     actions.tap_for_energy(g, seat, 1)
     check("exhausting a rune adds 1 Energy (164.2.a)",
           s.energy[seat] == 1 and sum(1 for r in mine if r["exh"]) == 1)
-    check("exhausting an already-exhausted object is refused (414)",
+    check("exhausting an already-exhausted object is refused (415)",
           raises(lambda: actions.exhaust(g, next(r["id"] for r in mine if r["exh"])),
                  "already exhausted"))
 
@@ -2188,7 +2188,7 @@ def engine_resources(check):
     check("Power can be recycled from an EXHAUSTED rune (164.2.b)",
           actions.can_pay(g4, 0, powered)[0], powered)
     actions.pay(g4, 0, powered)
-    check("and paying that way actually recycles the rune (416)",
+    check("and paying that way actually recycles the rune (417)",
           spent["id"] not in [r["id"] for r in s4.runes]
           and spent["name"] in s4.rune_deck[0])
 
@@ -2257,9 +2257,9 @@ def engine_turn_steps(check):
     s4.hand[0] = s4.hand[0][1:]
     hand_before = len(s4.hand[0])
     actions.draw(g4, 0, 1)
-    check("drawing from an empty Main Deck reports a Burn Out (431)",
+    check("drawing from an empty Main Deck reports a Burn Out (432)",
           any("BURNS OUT" in e["text"] for e in g4.log))
-    check("the draw that caused the burn out still completes (431.2.d, 315.4.b.2)",
+    check("the draw that caused the burn out still completes (432.2.d, 315.4.b.2)",
           len(s4.hand[0]) == hand_before + 1)
 
 
@@ -2270,7 +2270,7 @@ def engine_guards(check):
     check("a card not in the zone it is played from is refused (354)",
           raises(lambda: chain.play_card(g, 0, "A CARD NOBODY HOLDS", "hand"),
                  "is not in seat"))
-    check("a card cannot be discarded from a hand that lacks it (422)",
+    check("a card cannot be discarded from a hand that lacks it (423)",
           raises(lambda: actions.discard(g, 0, "A CARD NOBODY HOLDS"),
                  "is not in seat"))
     check("a card in no zone cannot be put into play",
@@ -2366,11 +2366,11 @@ def engine_privacy(check):
 
 
 def engine_control(check):
-    """188-192 and 323.6/323.7 — who holds what, and what goes home."""
+    """188-192 and 323.5/323.7 — who holds what, and what goes home."""
     g = _contest(seed=227)
     s = g.s
     check("moving alone onto an empty battlefield takes control and Conquers "
-          "(469.1)",
+          "(471.1)",
           s.battlefields[0]["ctrl"] == 1 and s.points[1] >= 1
           and not s.battlefields[0]["contested"],
           "seat 1 walked in, nothing contested it back")
@@ -2417,7 +2417,7 @@ def engine_control(check):
 
 
 def engine_victory(check):
-    """467-472 and 196 — the point, the target, and where the game stops."""
+    """469-474 and 196 — the point, the target, and where the game stops."""
     g = at_main(seed=239)
     s = g.s
     s.battlefields[0]["ctrl"] = 0
@@ -2435,7 +2435,7 @@ def engine_victory(check):
           "(485.3)", s2.winner is None)
     s2.points[0] = 9
     actions.check_victory(g2)
-    check("and the raised Victory Score still ends the game when reached (472)",
+    check("and the raised Victory Score still ends the game when reached (474)",
           s2.winner == 0)
 
     # 196: the game ends where it is won.
@@ -2454,7 +2454,7 @@ def engine_victory(check):
     runes_before = len([r for r in s3.runes if r["ctrl"] == held])
     hand_before = len(s3.hand[held])
     decision = g3.step()
-    check("a win in the Scoring Step stops the turn where it happened (196, 472)",
+    check("a win in the Scoring Step stops the turn where it happened (196, 474)",
           decision.terminal and s3.winner == held
           and len([r for r in s3.runes if r["ctrl"] == held]) == runes_before
           and len(s3.hand[held]) == hand_before,
@@ -2496,7 +2496,7 @@ def engine_parity(check):
           "Chain, Focus and combat-step positions the table cannot be in"
           % (counts["states"], counts["answers"]))
     check("and it compares BOTH sides' damage assignments, not just the "
-          "Attacker's (465.2.c)",
+          "Attacker's (467.2.c)",
           counts["assignments"] >= 2 * _COMBATS_IN_SCENARIOS,
           "%d comparison(s) over %d combat(s) — one per side"
           % (counts["assignments"], _COMBATS_IN_SCENARIOS))

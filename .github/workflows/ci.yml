@@ -277,6 +277,12 @@ jobs:
       - name: Tests
         run: npx vitest run
 
+      - name: Source extraction and provenance regressions
+        run: |
+          python3 scripts/pdf-extract_test.py
+          python3 .claude/skills/rules-report/lib/parse_rules_test.py
+          python3 .claude/skills/rules-report/lib/source_anomalies_test.py
+
       - name: Build
         run: npm run build
 

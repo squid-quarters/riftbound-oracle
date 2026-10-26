@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "anomalies": [
+    {
+      "doc": "CR",
+      "rule": "133.7.b",
+      "kind": "missing_cross_reference",
+      "target": "103.2.d",
+      "version": "2026-10-09",
+      "text_sha256": "01f6ce12dd6df458dba381051b8a5eae1f04d5dd8c52ea959ddfe294355ea14d",
+      "source": {
+        "url": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news_live/5c7946f7c3b8c6e0faff85ab6dadc6d2e721ea94.pdf",
+        "sha256": "94d41fee86f88b61c4157c0389c0595d990b98e5b42555c99d9f649ee64d1fec",
+        "page": 12
+      },
+      "notice": "Official source anomaly: the printed CR 133.7.b refers to missing rule 103.2.d. Printed text and numbering are retained."
+    },
+    {
+      "doc": "TR",
+      "rule": "702.13.d.2.a",
+      "kind": "missing_parent",
+      "target": "702.13.d.2",
+      "version": "2026-10-09",
+      "text_sha256": "1e764e9f5e65065bd98b073203a9a5972b32206da81b04f991fc87044e81f8ec",
+      "source": {
+        "url": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news_live/861752822d217edf37d9febaeaf77a7d924c1bb6.pdf",
+        "sha256": "ce07da4fb632526afbbce7f058287a57e7444fa6bde17b0938ff52ce3fab3d07",
+        "page": 41
+      },
+      "notice": "Official source anomaly: the printed TR 702.13.d.2.a has no printed parent 702.13.d.2. Printed text and numbering are retained."
+    }
+  ]
+}
