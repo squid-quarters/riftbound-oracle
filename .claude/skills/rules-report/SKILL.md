@@ -137,7 +137,7 @@ refused; there is no partial export, because a partial one looks exactly like a 
 {
   "question": "verbatim as asked",
   "reframe": "the same question in rules vocabulary (the report prefixes \"As the rules see it:\" — do not repeat it)",
-  "corpus": {"CR": "2026-07-16", "TR": "2026-07-16", "generated": "YYYY-MM-DD"},
+  "corpus": {"CR": "2026-10-09", "TR": "2026-10-09", "generated": "YYYY-MM-DD"},
   "holding": {
     "disposition": "YES | NO | DEPENDS | UNSETTLED | ANSWER",
     "line": "one sentence",
@@ -231,7 +231,7 @@ describes half a procedure, which is worse than describing none.
   "topic": "HOT FEPR",
   "question": "verbatim as asked",
   "reframe": "the same question in rules vocabulary",
-  "corpus": {"CR": "2026-07-16", "TR": "2026-07-16", "generated": "YYYY-MM-DD"},
+  "corpus": {"CR": "2026-10-09", "TR": "2026-10-09", "generated": "YYYY-MM-DD"},
   "in_one_line": "what the whole thing does, in one sentence — no verdict word",
   "steps": [{
     "id": "s1",
@@ -314,8 +314,8 @@ document.
 Both look identical to a careless reader: an empty result. Neither is silence.
 
 **A heading's rules can be its siblings, not its children.** Riot writes some topics as
-`467. Scoring` followed by sections 468-472 — so 467 has an empty subtree even though five
-sections of rules sit directly under it, and `194.1.a` cheerfully says "see rule 467. Scoring".
+`469. Scoring` followed by sections 470-474 — so 469 has an empty subtree even though five
+sections of rules sit directly under it, and `194.1.a` cheerfully says "see rule 469. Scoring".
 `section` prints the sibling block for you, but if you reach such a heading another way, keep
 reading forward instead of concluding nothing is there.
 

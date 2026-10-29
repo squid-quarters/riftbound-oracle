@@ -42,7 +42,7 @@ def _cards_conserved(game, bad):
     """Every card a seat brought is in exactly one of that seat's zones.
 
     The Main Deck pool and the Rune Deck pool are counted separately, because
-    416 sends a recycled rune to the RUNE deck and a recycled card to the Main
+    417 sends a recycled rune to the RUNE deck and a recycled card to the Main
     Deck — a single pool would hide a rune that came back as a spell.
     """
     s = game.s
@@ -75,17 +75,17 @@ def _cards_conserved(game, bad):
 
 
 def _points(game, bad):
-    """A player who meets 472 never goes unnoticed.
+    """A player who meets 474 never goes unnoticed.
 
     NOT "points never exceed the Victory Score" — they can, and the rules say
-    so. 472 decides the win "when a cleanup occurs", and 315.2.b.2 Holds ALL the
+    so. 474 decides the win "when a cleanup occurs", and 315.2.b.2 Holds ALL the
     battlefields a Turn Player controls, so a player on 7 controlling both
     finishes the Scoring Step on 9. The old cap was really asserting that the
     win was decided inside the Score, which is what made the second Hold
     impossible.
 
     What must hold instead is that the position is never *quietly* won: if
-    somebody meets 472's condition and no winner has been declared, a Cleanup
+    somebody meets 474's condition and no winner has been declared, a Cleanup
     has to be outstanding to declare it.
     """
     s = game.s
@@ -99,7 +99,7 @@ def _points(game, bad):
     if s.points[leader] >= s.victory_target and s.points[leader] > s.points[other]:
         if not any(task[0] == "cleanup" for task in s.tasks):
             bad.append("seat %d meets the Victory Score at %d-%d and no Cleanup is "
-                       "outstanding to notice it (472, 323.1)"
+                       "outstanding to notice it (474, 323.1)"
                        % (leader, s.points[leader], s.points[other]))
 
 
@@ -157,9 +157,9 @@ def _designations(game, bad):
     """323.2: during a Combat every Unit's designation agrees with its controller.
 
     The whole of combat reads sides by designation and not by who is standing
-    where (465.2.a-b), so a unit that slipped past 323.2 does not crash anything
+    where (467.2.a-b), so a unit that slipped past 323.2 does not crash anything
     — it silently stops being in the combat, and its Might stops counting. And
-    outside a Combat nothing may carry a designation at all, because 466.7.a
+    outside a Combat nothing may carry a designation at all, because 468.7.a
     removes them and a leftover one would make the next combat's Assault live
     for a unit that is not attacking.
     """
@@ -168,11 +168,11 @@ def _designations(game, bad):
         stray = [u["id"] for u in s.units if u["role"] is not None]
         if stray:
             bad.append("%s still carry an Attacker/Defender designation with no Combat "
-                       "in progress (466.7.a)" % ", ".join(sorted(stray)))
+                       "in progress (468.7.a)" % ", ".join(sorted(stray)))
         return
     if s.showdown is None:
         bad.append("a Combat has an Attacker (seat %s) but no Showdown to be part of "
-                   "(464.2)" % s.combat_attacker)
+                   "(466.2)" % s.combat_attacker)
         return
     here = "%s:%d" % ("bf", s.showdown["bf"])
     for unit in s.units:

@@ -1,0 +1,147 @@
+{
+  "source": "https://playriftbound.com/en-us/card-gallery/",
+  "source_snapshot_sha256": "f3525e832ed70a0af4a2fa39f1362b62cbbf60d3d1f8acae45a379e42c0b5dce",
+  "gallery_html_sha256": "99ea5fcdf39db8e645c6ff53a36d0fbf75f67b5cd9f71adbb64752f8be36ed42",
+  "normalized_sha256": "5d7a16f225b3b96897e2b864e9b2a0320d08ceb81d068cd056f0198c09513324",
+  "metadata_evidence_sha256": "a5214cfeb5ba9fa3e4f710efa3d91bd53749c765c855239442167d12b41e8133",
+  "context_sha256": "76a8a1a7438b7705fd7539b05d3f7b3f8b32162a2ecbb84b302016ceefd65d74",
+  "source_updated_at": "2026-10-26T10:48:40.578544352Z",
+  "extraction_repairs": [
+    {
+      "record_id": "rad-127-167",
+      "removed_trailing_artifact": "disa"
+    }
+  ],
+  "reprint_cross_checks": [
+    {
+      "record_id": "rad-179-167",
+      "existing_card": "Aphelios - Exalted",
+      "fields": [
+        "type",
+        "supertype",
+        "domain",
+        "tags",
+        "energy",
+        "might",
+        "power"
+      ]
+    },
+    {
+      "record_id": "rad-180-167",
+      "existing_card": "Ezreal - Dashing",
+      "fields": [
+        "type",
+        "supertype",
+        "domain",
+        "tags",
+        "energy",
+        "might",
+        "power"
+      ]
+    },
+    {
+      "record_id": "rad-181-167",
+      "existing_card": "Yone - Blademaster",
+      "fields": [
+        "type",
+        "supertype",
+        "domain",
+        "tags",
+        "energy",
+        "might",
+        "power"
+      ]
+    },
+    {
+      "record_id": "rad-182-167",
+      "existing_card": "Kayn - Unleashed",
+      "fields": [
+        "type",
+        "supertype",
+        "domain",
+        "tags",
+        "energy",
+        "might",
+        "power"
+      ]
+    },
+    {
+      "record_id": "rad-183-167",
+      "existing_card": "Sett - Kingpin",
+      "fields": [
+        "type",
+        "supertype",
+        "domain",
+        "tags",
+        "energy",
+        "might",
+        "power"
+      ]
+    }
+  ],
+  "coverage": {
+    "records": 219,
+    "base_ids": 167,
+    "numbered_over_167": 17,
+    "a_suffix": 18,
+    "runes": 12,
+    "sp": 5,
+    "embedded_gallery_records": 1408,
+    "advertised_gallery_records": 1416,
+    "variants_complete": false
+  },
+  "article_sources": [
+    {
+      "url": "https://playriftbound.com/en-us/news/announcements/core-rules-radiance-patch-notes-effective-october-16-2026/",
+      "path": "rule-context/core-rules-radiance-patch-notes-effective-october-16-2026.html",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-26T11:09:00.636414+00:00",
+      "bytes": 200435,
+      "sha256": "5446d0e23e0624e9a559b2aa8a53352edbf6a56bddfdab304f6d9047e7e120cc"
+    },
+    {
+      "url": "https://playriftbound.com/en-us/news/announcements/radiance-errata-updates/",
+      "path": "rule-context/radiance-errata-updates.html",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-26T11:09:00.528691+00:00",
+      "bytes": 143290,
+      "sha256": "3b29c346a278e9b1d92f4a290f6c428a4ead75d728866412164ff18da254b79e"
+    },
+    {
+      "url": "https://playriftbound.com/en-us/news/announcements/october-2026-tournament-rules-changelog/",
+      "path": "rule-context/october-2026-tournament-rules-changelog.html",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-26T11:09:00.863911+00:00",
+      "bytes": 155290,
+      "sha256": "28afd9793ba883985c5a8d4b24dead46607a417dadde7925299bf93c2e483e4e"
+    },
+    {
+      "url": "https://playriftbound.com/en-us/news/announcements/preparing-for-the-radiance-pre-rift/",
+      "path": "rule-context/preparing-for-the-radiance-pre-rift.html",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-26T11:09:00.684128+00:00",
+      "bytes": 163823,
+      "sha256": "9d3dd231470aed21b7b798f87168de2e23ccb2ce73a983af384f2189d1e420e5"
+    }
+  ],
+  "rule_documents": [
+    {
+      "doc": "CR",
+      "path": "output/core-rules.pdf",
+      "source_url": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news_live/5c7946f7c3b8c6e0faff85ab6dadc6d2e721ea94.pdf",
+      "sha256": "94d41fee86f88b61c4157c0389c0595d990b98e5b42555c99d9f649ee64d1fec",
+      "source_version": "2026-10-09",
+      "effective_date": "2026-10-16",
+      "retrieved": "2026-10-26"
+    },
+    {
+      "doc": "TR",
+      "path": "output/tournament-rules.pdf",
+      "source_url": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news_live/861752822d217edf37d9febaeaf77a7d924c1bb6.pdf",
+      "sha256": "ce07da4fb632526afbbce7f058287a57e7444fa6bde17b0938ff52ce3fab3d07",
+      "source_version": "2026-10-09",
+      "effective_date": "2026-10-16",
+      "retrieved": "2026-10-26"
+    }
+  ]
+}

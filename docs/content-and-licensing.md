@@ -19,6 +19,12 @@ Riot.**
 | **Card artwork as a file** | **never committed** — see the screenshot note below |
 | **Community Q&A** | **never committed, and no longer crawled** |
 
+Radiance also has a processed JSON set in `output/cards-rad.json`, derived from the public
+official Card Gallery. Its source URLs/hashes and separate printed-image metadata corrections
+live in `manifests/radiance-source.json` and `radiance-metadata-overlays.json`. Raw HTML/JSON
+captures and locally inspected artwork stay in the ignored `sources/` directory. Public
+access does not grant an open-data or artwork license; no relicensing grant is claimed.
+
 ## Card artwork is referenced, never redistributed
 
 No artwork asset is tracked here. `data/cards.json` holds `image` URLs pointing at Riot's

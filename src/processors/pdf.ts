@@ -15,10 +15,11 @@ function getPython(): string {
 
 export function extractPdfText(
   absolutePath: string,
-  onProgress: (message: string) => void = () => {}
+  onProgress: (message: string) => void = () => {},
+  includeTables = false
 ): Promise<string> {
   return new Promise((resolve, reject) => {
-    const child = spawn(getPython(), [PYTHON_SCRIPT, absolutePath]);
+    const child = spawn(getPython(), [PYTHON_SCRIPT, absolutePath, ...(includeTables ? ["--include-tables"] : [])]);
 
     const stdoutChunks: Buffer[] = [];
 
@@ -62,7 +63,8 @@ export async function processPdf(opts: ProcessOptions): Promise<string> {
 
   const rawText = await extractPdfText(
     absolutePath,
-    opts.onProgress ?? (() => {})
+    opts.onProgress ?? (() => {}),
+    opts.category !== "rules"
   );
 
   const markdown = normalize(rawText, opts.category);

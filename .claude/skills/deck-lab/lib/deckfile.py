@@ -87,7 +87,7 @@ class Deck:
         return out
 
     def domain_identity(self):
-        """The legend's domains — what every other card must fit inside (103.1.b)."""
+        """The legend's domains — what every other card must fit inside (103.2.b)."""
         return set(cards.domains(self.legend)) if cards.find(self.legend) else set()
 
     def to_json(self):
@@ -187,33 +187,33 @@ def check(deck, mode=MODE):
         return r
 
     if cards.card_type(deck.legend) != cards.LEGEND:
-        r.errors.append(f"{deck.legend} is not a Legend (103.1)")
+        r.errors.append(f"{deck.legend} is not a Legend (103.2)")
 
     # 103.2 — main deck size. The Chosen Champion sits in the Champion Zone but
     # is still one of the deck's cards for construction purposes.
     total_main = sum(q for _, q in deck.main)
     if total_main < mode["main_deck_min"]:
-        r.errors.append(f"Main Deck has {total_main} cards, minimum is {mode['main_deck_min']} (103.2)")
+        r.errors.append(f"Main Deck has {total_main} cards, minimum is {mode['main_deck_min']} (103.3)")
 
     # 103.2.b — at most 3 copies of a name, counted across every entry naming it.
     for name, qty in sorted(_tally(deck.main).items()):
         if qty > mode["max_copies"]:
-            r.errors.append(f"{qty}x {name} exceeds the {mode['max_copies']}-copy limit (103.2.b)")
+            r.errors.append(f"{qty}x {name} exceeds the {mode['max_copies']}-copy limit (103.3.b)")
 
     # 103.3.a — exactly 12 runes.
     total_runes = sum(q for _, q in deck.runes)
     if total_runes != mode["rune_deck_size"]:
-        r.errors.append(f"Rune Deck has {total_runes} runes, must be {mode['rune_deck_size']} (103.3.a)")
+        r.errors.append(f"Rune Deck has {total_runes} runes, must be {mode['rune_deck_size']} (103.4.a)")
 
     # 103.4 — battlefield count, and no duplicate names.
     total_bf = sum(q for _, q in deck.battlefields)
     if total_bf != mode["battlefields_per_deck"]:
         r.errors.append(
-            f"{total_bf} battlefields, mode requires {mode['battlefields_per_deck']} (103.4.a)"
+            f"{total_bf} battlefields, mode requires {mode['battlefields_per_deck']} (103.5.a)"
         )
     for name, qty in sorted(_tally(deck.battlefields).items()):
         if qty > 1:
-            r.errors.append(f"{qty}x {name}: battlefields must have distinct names (103.4.c)")
+            r.errors.append(f"{qty}x {name}: battlefields must have distinct names (103.5.c)")
 
     # 103.1.b — domain identity. A card with two domains needs both of them.
     identity = deck.domain_identity()
@@ -223,7 +223,7 @@ def check(deck, mode=MODE):
             outside = ", ".join(sorted(card_domains - identity))
             r.errors.append(
                 f"{name} is {'/'.join(sorted(card_domains))}, outside the deck's "
-                f"{'/'.join(sorted(identity)) or 'empty'} identity — {outside} (103.1.b.4)"
+                f"{'/'.join(sorted(identity)) or 'empty'} identity — {outside} (103.2.b.4)"
             )
 
     # 103.2.d — at most 3 Signature cards, all bearing the legend's champion tag.
@@ -233,36 +233,36 @@ def check(deck, mode=MODE):
     signatures = [(n, q) for n, q in deck.main if cards.is_signature(n)]
     sig_total = sum(_tally(signatures).values())
     if sig_total > mode["max_signature"]:
-        r.errors.append(f"{sig_total} Signature cards, limit is {mode['max_signature']} (103.2.d.1)")
+        r.errors.append(f"{sig_total} Signature cards, limit is {mode['max_signature']} (103.3.d.1)")
     for name, _ in signatures:
         if legend_tags and not (cards.champion_tags_of(name) & legend_tags):
             r.errors.append(
                 f"{name} is a Signature card without the legend's champion tag "
-                f"({'/'.join(sorted(legend_tags))}) (103.2.d.2)"
+                f"({'/'.join(sorted(legend_tags))}) (103.3.d.2)"
             )
 
     # 103.2.a — the Chosen Champion.
     if not deck.chosen_champion:
-        r.errors.append("no chosen_champion set — the Champion Zone would start empty (103.2.a.1)")
+        r.errors.append("no chosen_champion set — the Champion Zone would start empty (103.3.a.1)")
     else:
         cc = deck.chosen_champion
         if not cards.find(cc):
             r.errors.append(f"chosen_champion {cc!r} is not in the card pool")
         else:
             if not cards.is_champion(cc) or cards.card_type(cc) != cards.UNIT:
-                r.errors.append(f"{cc} is not a champion unit (103.2.a.2)")
+                r.errors.append(f"{cc} is not a champion unit (103.3.a.2)")
             if legend_tags and not (cards.champion_tags_of(cc) & legend_tags):
                 r.errors.append(
                     f"{cc} does not carry the legend's champion tag "
-                    f"({'/'.join(sorted(legend_tags))}) (103.2.a.2)"
+                    f"({'/'.join(sorted(legend_tags))}) (103.3.a.2)"
                 )
             if not any(_same(n, cc) for n, _ in deck.main):
-                r.errors.append(f"{cc} is the Chosen Champion but is not in the Main Deck (103.2)")
+                r.errors.append(f"{cc} is the Chosen Champion but is not in the Main Deck (103.3)")
 
     # What this data cannot decide is listed, so it is not mistaken for a pass.
-    r.unchecked.append("card legality for a specific Format (103.2.e) — no ban list in the corpus")
+    r.unchecked.append("card legality for a specific Format (103.3.e) — no ban list in the corpus")
     r.unchecked.append(
-        "cards added irrespective of Domain by a game effect (103.1.b.5) — the "
+        "cards added irrespective of Domain by a game effect (103.2.b.6) — the "
         "deck file records no such grant, so any card outside the identity is "
         "reported as an error rather than allowed"
     )

@@ -192,6 +192,7 @@ describe("buildSkillData", () => {
       const out = join(dir, "cards.json");
       const opts = {
         outputPaths: [out],
+        additionalCards: [],
         listSets: async () => [{ set_id: "VEN", name: "Vendetta", card_count: 2 }] as never,
         listCards: async () => [
           card({ name: "Zed - Shadow" }),
@@ -218,6 +219,7 @@ describe("buildSkillData", () => {
       const out = join(dir, "nested", "deeper", "cards.json");
       await buildSkillData({
         outputPaths: [out],
+        additionalCards: [],
         listSets: async () => [{ set_id: "VEN", name: "Vendetta", card_count: 1 }] as never,
         listCards: async () => [card({ name: "Astral Heron" })],
       });
@@ -263,7 +265,8 @@ describe("card data fan-out", () => {
     const b = join(dir, "b/cards.json");
     await buildSkillData({
       outputPaths: [a, b],
-      listSets: async () => [{ set_id: "OGN", label: "Origins" }] as never,
+      additionalCards: [],
+        listSets: async () => [{ set_id: "OGN", label: "Origins" }] as never,
       listCards: async () => [card({ name: "Stellacorn Herder" })] as never,
     });
     expect(existsSync(a)).toBe(true);
@@ -291,6 +294,7 @@ describe("card data fan-out", () => {
     await expect(
       buildSkillData({
         outputPaths: [good, join(blocker, "nested/cards.json")],
+        additionalCards: [],
         listSets: async () => [{ set_id: "OGN", label: "Origins" }] as never,
         listCards: async () => [card({ name: "Stellacorn Herder" })] as never,
       })

@@ -19,6 +19,7 @@ import { parse as parseYaml } from "yaml";
 import { normaliseCardName, loadErrata, sameWording, type Erratum } from "./errata.js";
 import { fetchSets, fetchCardsBySet, type RiftcodexCard } from "./riftcodex.js";
 import { decodeEntities } from "./normalize.js";
+import { readProcessedRadiance } from "./official-gallery.js";
 
 export const SKILL_DATA_DIR = ".claude/skills/rules-report/data";
 export const DECK_LAB_DATA_DIR = ".claude/skills/deck-lab/data";
@@ -165,6 +166,7 @@ export interface CardStats {
 }
 
 export interface SkillCard {
+  source?: RiftcodexCard["source"];
   name: string;
   /** Printed rules text only. Stats live in `stats`, not glued on as markdown. */
   text: string;
@@ -463,6 +465,10 @@ export function buildCardIndex(
     const setA = a.set?.set_id ?? "";
     const setB = b.set?.set_id ?? "";
     if (setA !== setB) return setA < setB ? -1 : 1;
+    // Official RAD SP/alternate records use their own collector sequences.
+    // A showcase numbered SP1 must not displace the reviewed base printing.
+    if (setA === "RAD" && !!a.metadata?.alternate_art !== !!b.metadata?.alternate_art)
+      return a.metadata?.alternate_art ? 1 : -1;
     const nA = a.collector_number ?? 0;
     const nB = b.collector_number ?? 0;
     if (nA !== nB) return nA - nB;
@@ -478,6 +484,7 @@ export function buildCardIndex(
     if (stripped.removed) artifacts.push(`${display}: "${stripped.removed}"`);
     const body = stripped.text;
     let entry: SkillCard = { name: display, text: body, stats: cardStats(card) };
+    if (card.source) entry.source = card.source;
     const gap = missingText(card, body);
     if (gap) entry.incomplete = gap;
     // Errata first: it is the authoritative text. An overlay then adds what no
@@ -532,6 +539,8 @@ export function buildCardIndex(
 }
 
 export interface BuildSkillDataOptions {
+  /** Explicit supplemental cards for isolated callers/tests; defaults to the reviewed local set. */
+  additionalCards?: RiftcodexCard[];
   /** Defaults to every skill that vendors card data. */
   outputPaths?: string[];
   onProgress?: (message: string) => void;
@@ -547,11 +556,14 @@ export async function buildSkillData(opts: BuildSkillDataOptions = {}) {
   const outputPaths = (opts.outputPaths ?? CARD_DATA_TARGETS).map((p) => resolve(p));
 
   const sets = await listSets();
+  const officialRadiance = opts.additionalCards ?? readProcessedRadiance();
   const all: RiftcodexCard[] = [];
   for (const set of sets) {
+    if (set.set_id === "RAD" && officialRadiance.length) continue;
     onProgress(`${set.set_id}`);
     all.push(...(await listCards(set.set_id)));
   }
+  all.push(...officialRadiance);
 
   const overlays = loadOverlays();
   const errata = loadErrata();

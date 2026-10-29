@@ -88,7 +88,7 @@ export function parseErrata(markdown: string): Map<string, Erratum> {
     // CARD TEXT, so 17 cards shipped `#### ▲ #####` under a banner asserting it
     // was Riot's corrected wording.
     const m = body.match(
-      /\*\*\\\[NEW TEXT\\\]\*\*([\s\S]*?)(?:\n#{0,6}[ \t]*\*{0,2}▲|\*\*\\\[OLD TEXT)/
+      /\*{0,2}\\?\[NEW TEXT\\?\]\*{0,2}([\s\S]*?)(?:\n#{0,6}[ \t]*\*{0,2}▲|\*{0,2}\\?\[OLD TEXT)/
     );
     if (!m) continue;
     const text = unescapeMarkdown(m[1]);
@@ -111,7 +111,7 @@ export function parseErrata(markdown: string): Map<string, Erratum> {
  * number on its own.
  */
 export function countErrataMarkers(markdown: string): number {
-  return (markdown.match(/\\\[NEW TEXT\\\]/g) ?? []).length;
+  return (markdown.match(/\\?\[NEW TEXT\\?\]/g) ?? []).length;
 }
 
 export function loadErrata(path = RULES_MD): Map<string, Erratum> {

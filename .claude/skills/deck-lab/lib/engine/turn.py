@@ -120,7 +120,7 @@ def begin_turn(g):
         # 431.2.c hands over on each burn out until someone passes it. A game
         # that runs past this bound has found a way not to, and that is a
         # finding, not a timeout.
-        raise RulesError("turn %d: this game is not ending by any rule (472, 431.3)"
+        raise RulesError("turn %d: this game is not ending by any rule (474, 432.3)"
                          % s.turn)
     for bf in s.battlefields:
         # 470 is per turn: the record of who has scored what resets here.
@@ -316,7 +316,7 @@ def cleanup_once(g, special=""):
         if s.showdown is not None and s.showdown["bf"] == bf["i"]:
             continue
         if not s.units_at(loc_bf(bf["i"]), bf["ctrl"]):
-            g.note("seat %d loses control of %s (323.6)" % (bf["ctrl"], bf["name"]),
+            g.note("seat %d loses control of %s (323.5)" % (bf["ctrl"], bf["name"]),
                    seat=bf["ctrl"])
             bf["ctrl"] = None
             changed = True
@@ -358,7 +358,7 @@ def cleanup_once(g, special=""):
         ongoing = s.showdown is not None and s.showdown["bf"] == bf["i"]
         if ongoing or s.units_at(loc_bf(bf["i"]), bf["contested_by"]):
             continue
-        g.note("%s stops being contested (323.11)" % bf["name"])
+        g.note("%s stops being contested (323.10)" % bf["name"])
         bf["contested"] = False
         bf["contested_by"] = None
         bf["sd_staged"] = False
@@ -370,7 +370,7 @@ def cleanup_once(g, special=""):
             if seat != bf["ctrl"] and s.units_at(loc_bf(bf["i"]), seat):
                 bf["contested"] = True
                 bf["contested_by"] = seat
-                g.note("%s becomes CONTESTED by seat %d (323.11.a)" % (bf["name"], seat),
+                g.note("%s becomes CONTESTED by seat %d (323.10.a)" % (bf["name"], seat),
                        seat=seat)
                 break
 
@@ -404,7 +404,7 @@ def cleanup_once(g, special=""):
         bf = s.battlefield(s.showdown["bf"])
         if bf["cb_staged"]:
             s.showdown["combat"] = True
-            g.note("the Showdown at %s becomes a Combat Showdown (323.14)" % bf["name"])
+            g.note("the Showdown at %s becomes a Combat Showdown (323.13)" % bf["name"])
             # 464.2.c runs for this way in too (464.1's second opening). The one
             # difference is Focus: 464.2.c.1.b leaves it with whoever already
             # has it, so nothing here touches `focus`.
@@ -415,7 +415,7 @@ def cleanup_once(g, special=""):
 
 
 def _combat_inserts(g):
-    """466.1.a: "3c. Heal all Units" and "3d. Recall Attackers ... if Defenders
+    """468.1.a: "3c. Heal all Units" and "3d. Recall Attackers ... if Defenders
     are still present"."""
     from . import combat
     s = g.s
@@ -462,7 +462,7 @@ def _ending_inserts(g):
 
 def _open_at(g, candidates, combat):
     """Open a Showdown or a Combat, asking the Turn Player which if there is a
-    choice (323.12, 323.13)."""
+    choice (323.11, 323.12)."""
     from .decisions import Option
     s = g.s
     if len(candidates) == 1:
@@ -474,11 +474,11 @@ def _open_at(g, candidates, combat):
                for i in candidates]
     g.ask(s.turn_player, "target", options,
           prompt="the Turn Player chooses where %s opens (%s)"
-                 % ("combat" if combat else "a showdown", "323.13" if combat else "323.12"))
+                 % ("combat" if combat else "a showdown", "323.12" if combat else "323.11"))
 
 
 def open_showdown(g, index, combat):
-    """344/345, and 464.2 when it is a Combat Showdown."""
+    """344/345, and 466.2 when it is a Combat Showdown."""
     s = g.s
     bf = s.battlefield(index)
     # 345: the player who applied Contested gains Focus. 464.2.c.1.a says the
@@ -492,7 +492,7 @@ def open_showdown(g, index, combat):
                   "passes": 0, "closed": False}
     if combat:
         g.note("COMBAT opens at %s as a Combat Showdown; seat %d is the Attacker "
-               "and takes Focus (464.1, 464.2.c.1, 464.2.d)" % (bf["name"], focus),
+               "and takes Focus (466.1, 466.2.c.1, 466.2.c.1.a)" % (bf["name"], focus),
                seat=focus)
         # 464.2.c: establish who is Attacker and who is Defender, and designate
         # their units here. Step 2 of 464.2.a, before 464.2.d's Focus, which

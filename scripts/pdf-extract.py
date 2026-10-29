@@ -3,14 +3,14 @@
 Extract text from a PDF file and output it to stdout.
 Progress is reported to stderr so the parent process can update its spinner.
 
-Usage: python3 pdf-extract.py <path-to-pdf>
+Usage: python3 pdf-extract.py <path-to-pdf> [--include-tables]
 """
 
 import sys
 import pdfplumber
 
 
-def extract_text(pdf_path: str) -> str:
+def extract_text(pdf_path: str, include_tables: bool = False) -> str:
     pages: list[str] = []
 
     with pdfplumber.open(pdf_path) as pdf:
@@ -23,8 +23,12 @@ def extract_text(pdf_path: str) -> str:
             if text:
                 pages.append(text)
 
-            # Also extract tables if present
-            tables = page.extract_tables()
+            # extract_text already includes text inside table cells. Appending
+            # a second rendering duplicates that prose; multiline table cells
+            # then leak into unrelated rules/examples in the rule parser.
+            # Rules therefore use one representation. Generic PDF conversions
+            # may explicitly request the legacy additional table rendering.
+            tables = page.extract_tables() if include_tables else []
             for table in tables:
                 if table:
                     # Convert table to markdown format
@@ -43,13 +47,13 @@ def extract_text(pdf_path: str) -> str:
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 pdf-extract.py <path-to-pdf>", file=sys.stderr)
+        print("Usage: python3 pdf-extract.py <path-to-pdf> [--include-tables]", file=sys.stderr)
         sys.exit(1)
 
     pdf_path = sys.argv[1]
 
     try:
-        text = extract_text(pdf_path)
+        text = extract_text(pdf_path, include_tables="--include-tables" in sys.argv[2:])
         print(text)
     except FileNotFoundError:
         print(f"Error: File not found: {pdf_path}", file=sys.stderr)

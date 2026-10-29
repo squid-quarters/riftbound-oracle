@@ -4,25 +4,25 @@
   "hot-fepr": {
    "topic": "HOT FEPR",
    "corpus": {
-    "CR": "2026-07-16",
-    "TR": "2026-07-16",
-    "generated": "2026-08-26"
+    "CR": "2026-10-09",
+    "TR": "2026-10-09",
+    "generated": "2026-10-26"
    }
   },
   "showdowns": {
    "topic": "Showdowns",
    "corpus": {
-    "CR": "2026-07-16",
-    "TR": "2026-07-16",
-    "generated": "2026-08-26"
+    "CR": "2026-10-09",
+    "TR": "2026-10-09",
+    "generated": "2026-10-26"
    }
   },
   "combat": {
    "topic": "Combat",
    "corpus": {
-    "CR": "2026-07-16",
-    "TR": "2026-07-16",
-    "generated": "2026-08-26"
+    "CR": "2026-10-09",
+    "TR": "2026-10-09",
+    "generated": "2026-10-26"
    }
   }
  },
@@ -257,7 +257,7 @@
    "when": "a Cleanup arrives with the Chain empty and nothing ongoing elsewhere — the Steps of Combat begin",
    "goto": "s2",
    "cites": [
-    "CR:460"
+    "CR:462"
    ]
   },
   {
@@ -268,7 +268,7 @@
    "when": "the Combat stops being Staged first — the units move or die before the steps start, and nothing is resolved at all",
    "goto": null,
    "cites": [
-    "CR:461.2"
+    "CR:463.2"
    ]
   },
   {
@@ -279,8 +279,8 @@
    "when": "the Showdown closes with both Attacking and Defending units still at the Battlefield",
    "goto": "s3",
    "cites": [
-    "CR:465.1",
-    "CR:465.2"
+    "CR:467.1",
+    "CR:467.2"
    ]
   },
   {
@@ -291,7 +291,7 @@
    "when": "one side no longer has units here when the Showdown closes — there is nothing to resolve damage between, so the Damage Step's tasks never become Outstanding and the Combat goes straight to Resolution",
    "goto": "s4",
    "cites": [
-    "CR:465.1"
+    "CR:467.1"
    ]
   },
   {
@@ -302,7 +302,7 @@
    "when": "damage has been dealt — the FEPR process is skipped and any outstanding tasks are cancelled",
    "goto": "s4",
    "cites": [
-    "CR:465.3"
+    "CR:467.3"
    ]
   },
   {
@@ -313,7 +313,7 @@
    "when": "No Result was reached and both players still have units here — a Showdown and a Combat are staged at this Battlefield all over again",
    "goto": "s1",
    "cites": [
-    "CR:466.3.d.1"
+    "CR:468.3.d.1"
    ]
   },
   {
@@ -324,9 +324,9 @@
    "when": "the Battlefield is settled — designations are stripped, end-of-combat effects happen, and every \"this combat\" effect expires",
    "goto": null,
    "cites": [
-    "CR:466.7",
-    "CR:466.7.a",
-    "CR:466.7.c"
+    "CR:468.7",
+    "CR:468.7.a",
+    "CR:468.7.c"
    ]
   }
  ]

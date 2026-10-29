@@ -1,15 +1,35 @@
 {
   "question": "I play Death Mark from my trash for its Flow cost. My opponent counters it with Defy. Death Mark's Flow cost is [1][A][A], which is more Power than Defy allows — can Defy even target it? And if it resolves, does Death Mark go to my trash (so I could Flow it again) or is it banished?",
   "reframe": "two questions: does Defy's cost restriction read Death Mark's base cost or the Flow cost actually paid, and does Counter's \"placed in the trash\" or Flow's delayed banish win when a Flow spell is cleared from the chain?",
-  "corpus": { "CR": "2026-07-16", "TR": "2026-07-16", "generated": "2026-08-12" },
+  "corpus": {
+    "CR": "2026-10-09",
+    "TR": "2026-10-09",
+    "generated": "2026-10-26"
+  },
   "holding": {
     "disposition": "YES",
     "line": "Yes, Defy can counter it — cost restrictions read the base cost, not the Flow cost you paid — and Death Mark is then banished rather than trashed, so you cannot Flow it a second time.",
     "spans": [
-      { "text": "Defy can counter it", "basis": "grounded", "note": "n1" },
-      { "text": "cost restrictions read the base cost, not the Flow cost you paid", "basis": "grounded", "note": "n2" },
-      { "text": "banished rather than trashed", "basis": "structural", "note": "n4" },
-      { "text": "you cannot Flow it a second time", "basis": "structural", "note": "n5" }
+      {
+        "text": "Defy can counter it",
+        "basis": "grounded",
+        "note": "n1"
+      },
+      {
+        "text": "cost restrictions read the base cost, not the Flow cost you paid",
+        "basis": "grounded",
+        "note": "n2"
+      },
+      {
+        "text": "banished rather than trashed",
+        "basis": "structural",
+        "note": "n4"
+      },
+      {
+        "text": "you cannot Flow it a second time",
+        "basis": "structural",
+        "note": "n5"
+      }
     ]
   },
   "notes": [
@@ -42,15 +62,21 @@
       "basis": "grounded",
       "claim": "Countering clears the spell from the chain and would put it in the trash.",
       "cites": [
-        { "rule": "CR:425.1.a", "quote": "A card or ability that is Countered does nothing and is cleared from the chain." },
-        { "rule": "CR:425.1.a.1", "quote": "Cards that are cleared from the chain in this way are placed in the trash." }
+        {
+          "rule": "CR:426.1.a",
+          "quote": "A card or ability that is Countered does nothing and is cleared from the chain."
+        },
+        {
+          "rule": "CR:426.1.a.1",
+          "quote": "Cards that are cleared from the chain in this way are placed in the trash."
+        }
       ]
     },
     {
       "id": "n4",
       "basis": "structural",
       "claim": "Flow's banish is a delayed replacement effect, so it replaces that trip to the trash.",
-      "detail": "Death Mark became a finalized chain item when it was played, and Counter — not Death Mark's own execution — is what removes it. Both conditions in 829.1.b.1 are met, so \"banish it instead\" replaces 425.1.a.1's trash placement. No single rule states the outcome for a countered Flow spell; it follows from the replacement applying to this exact departure.",
+      "detail": "Death Mark became a finalized chain item when it was played, and Counter — not Death Mark's own execution — is what removes it. Both conditions in 829.1.b.1 are met, so \"banish it instead\" replaces 426.1.a.1's trash placement. No single rule states the outcome for a countered Flow spell; it follows from the replacement applying to this exact departure.",
       "crux": true,
       "if_false": "If the banish only applied to a spell that resolves, a countered Death Mark would sit in the trash and could be Flowed again on a later turn. The first half of the answer is unaffected either way.",
       "cites": [
@@ -85,8 +111,14 @@
     }
   ],
   "considered_rejected": [
-    { "rule": "CR:425.1.c", "why": "Confirms the Flow cost is not refunded, but says nothing about where the card ends up." }
+    {
+      "rule": "CR:426.1.c",
+      "why": "Confirms the Flow cost is not refunded, but says nothing about where the card ends up."
+    }
   ],
   "open_questions": [],
-  "cards": ["Death Mark", "Defy"]
+  "cards": [
+    "Death Mark",
+    "Defy"
+  ]
 }

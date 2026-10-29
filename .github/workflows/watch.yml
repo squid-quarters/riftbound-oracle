@@ -48,12 +48,13 @@ jobs:
           cache: npm
       - run: npm ci && npm run build
 
-      # Exits 0 when upstream is unreachable and says so, rather than failing:
-      # being unable to look is not a defect in this repository.
+      # A blocked source is a failed refresh, not evidence that nothing moved.
+      # The CLI retains the last snapshot and reports the upstream diagnosis.
       - id: check
         run: npm run oracle watch
 
       - name: Report
+        if: always()
         env:
           SUMMARY: ${{ steps.check.outputs.summary }}
         run: echo "$SUMMARY" >> "$GITHUB_STEP_SUMMARY"
@@ -94,9 +95,14 @@ jobs:
         continue-on-error: true
         run: |
           cd .claude/skills/rules-report/lib
-          python3 rules_cli.py selftest 2>&1 | tail -40 > /tmp/selftest.log
-          echo "result=$?" >> "$GITHUB_OUTPUT"
-          cat /tmp/selftest.log
+          # Keep the verifier's status, not tail's. The full log survives a
+          # failure and the PR body below reports the actual step outcome.
+          set +e
+          python3 rules_cli.py selftest > /tmp/selftest.log 2>&1
+          result=$?
+          set -e
+          tail -40 /tmp/selftest.log
+          exit "$result"
 
       - name: Record the upstream state this was built against
         run: npm run oracle watch -- --write

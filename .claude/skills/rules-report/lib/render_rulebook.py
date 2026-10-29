@@ -17,6 +17,7 @@ import json
 import os
 import re
 from collections import defaultdict
+from source_anomalies import matching as printed_anomalies
 
 DOC_TITLE = {"CR": "Comprehensive Rules", "TR": "Tournament Rules"}
 # Hoisted: the ordering below indexed into a fresh list(DOC_TITLE) per comparison.
@@ -83,13 +84,15 @@ def _rule_block(rule, known):
     # depth 1 is a section heading; give it real heading semantics so the
     # document is navigable by screen reader and by browser find-as-you-type.
     tag = "h2" if depth == 1 else "div"
+    notices = "".join(f'<div class="see source-notice">{esc(a["notice"])}</div>'
+                      for a in printed_anomalies(rule))
     return (
         f'<section class="r d{min(depth, 6)}" id="{esc(anchor(doc, rid))}">'
         f'<{tag} class="rt">'
         f'<a class="rid" href="#{esc(anchor(doc, rid))}" title="link to {esc(rid)}">{esc(rid)}</a>'
         f'<span class="rtext">{body}</span>'
         f"</{tag}>"
-        f"{examples}{xrefs}"
+        f"{examples}{xrefs}{notices}"
         f"</section>"
     )
 

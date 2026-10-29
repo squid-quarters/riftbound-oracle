@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { mkdtempSync, readFileSync, rmSync, existsSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, existsSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { JSDOM } from "jsdom";
@@ -198,6 +198,32 @@ describe("extractArticleBody", () => {
 });
 
 describe("processRulesHub", () => {
+  for (const failure of ["second PDF", "article"]) {
+    it(`preserves all prior sources when the ${failure} fetch fails`, async () => {
+      const dir = mkdtempSync(join(tmpdir(), "rules-hub-preserve-"));
+      const outputPath = join(dir, "rules.md");
+      const prior = new Map([
+        [outputPath, "curated existing rules"],
+        [join(dir, "core-rules.pdf"), "verified old core PDF"],
+        [join(dir, "tournament-rules.pdf"), "verified old tournament PDF"],
+      ]);
+      for (const [path, contents] of prior) writeFileSync(path, contents);
+      try {
+        await expect(processRulesHub({
+          hubUrl: HUB_URL, category: "rules", outputPath,
+          fetchHtml: async url => {
+            if (url === HUB_URL) return makeHubHtml();
+            throw new Error("article connection reset");
+          },
+          fetchPdf: async url => {
+            if (failure === "second PDF" && url.endsWith("tournament.pdf")) throw new Error("PDF 403");
+            return new TextEncoder().encode("new PDF").buffer;
+          },
+        })).rejects.toThrow(failure === "article" ? /connection reset/ : /403/);
+        for (const [path, contents] of prior) expect(readFileSync(path, "utf-8")).toBe(contents);
+      } finally { rmSync(dir, { recursive: true, force: true }); }
+    });
+  }
   it("downloads PDFs to sibling files, writes a clean articles-only markdown, returns pdfOutputs", async () => {
     const dir = mkdtempSync(join(tmpdir(), "rules-hub-test-"));
     const outputPath = join(dir, "rules.md");

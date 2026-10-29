@@ -1,9 +1,8 @@
-import { writeFileSync } from "node:fs";
-import { writeFile } from "node:fs/promises";
 import { basename, dirname, join, resolve } from "node:path";
 import { JSDOM } from "jsdom";
 import TurndownService from "turndown";
 import { normalize } from "../normalize.js";
+import { writeFileGroup } from "../write-files.js";
 
 const turndown = new TurndownService({
   headingStyle: "atx",
@@ -244,6 +243,7 @@ export async function processRulesHub(
 
   const outputDir = dirname(resolve(opts.outputPath));
   const pdfOutputs: string[] = [];
+  const pdfContents: Buffer[] = [];
 
   // Download PDFs to sibling files; `oracle extract` turns them into markdown.
   for (let i = 0; i < pdfs.length; i++) {
@@ -252,7 +252,7 @@ export async function processRulesHub(
     const slug = slugify(pdf.text) || `rules-pdf-${i}`;
     const localPath = join(outputDir, `${slug}.pdf`);
     const buf = await fetchPdf(pdf.url);
-    await writeFile(localPath, Buffer.from(buf));
+    pdfContents.push(Buffer.from(buf));
     pdfOutputs.push(localPath);
   }
 
@@ -303,7 +303,11 @@ export async function processRulesHub(
 
   const combined = sections.join("\n");
   const finalMd = normalize(combined, opts.category);
-  writeFileSync(resolve(opts.outputPath), finalMd, "utf-8");
+  // Fetch every input before changing any prior source. In particular, a
+  // blocked article must not leave new PDFs beside an old errata corpus.
+  const writes = new Map<string, string | Buffer>(pdfOutputs.map((path, i) => [path, pdfContents[i]]));
+  writes.set(resolve(opts.outputPath), finalMd);
+  writeFileGroup(writes);
 
   return { pdfOutputs };
 }

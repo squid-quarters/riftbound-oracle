@@ -2,9 +2,9 @@
   "question": "How much energy does Vi - Hotheaded cost?",
   "reframe": "As the rules see it: what numeral sits in the Cost element of Vi - Hotheaded, and is that the whole price of playing her?",
   "corpus": {
-    "CR": "2026-07-16",
-    "TR": "2026-07-16",
-    "generated": "2026-08-12"
+    "CR": "2026-10-09",
+    "TR": "2026-10-09",
+    "generated": "2026-10-26"
   },
   "holding": {
     "disposition": "ANSWER",
@@ -80,7 +80,7 @@
   ],
   "considered_rejected": [
     {
-      "rule": "CR:444",
+      "rule": "CR:445",
       "why": "Pay covers how a resource leaves the Rune Pool; the question is what the cost is, not how it is paid."
     }
   ],

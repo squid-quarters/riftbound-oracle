@@ -1,4 +1,4 @@
-"""Game Actions (407-444) and Movement (445-458) — the physical operations.
+"""Game Actions (408-445) and Movement (447-460) — the physical operations.
 
 Everything here is something that happens to cards and objects: a draw, a
 channel, a move, a recall, a payment. Nothing here decides anything; the
@@ -23,7 +23,7 @@ from .state import (BASE, RulesError, bf_index, is_bf, loc_base, new_rune,
 # -- drawing and running out (413, 431) ---------------------------------
 
 def draw(g, seat, n=1, reason=""):
-    """Draw n (413), burning out where the deck runs short (431.1.a)."""
+    """Draw n (414), burning out where the deck runs short (432.1.a)."""
     s = g.s
     drawn = []
     remaining = n
@@ -51,16 +51,16 @@ def draw(g, seat, n=1, reason=""):
 
 
 def burn_out(g, seat):
-    """Run the Burn Out sequence (431.2).
+    """Run the Burn Out sequence (432.2).
 
-    431.2.c is a point award, and 431.3.a's "burning out repeatedly, giving 1
+    432.2.c is a point award, and 432.3.a's "burning out repeatedly, giving 1
     point to an opponent each time, until an opponent passes the Victory Score"
     is the only way a game between two empty decks ever ends. Left as a log line
     and nothing else, a decked-out player is immortal.
     """
     s = g.s
     other = 1 - seat
-    g.note("seat %d BURNS OUT (431)" % seat, seat=seat)
+    g.note("seat %d BURNS OUT (432)" % seat, seat=seat)
 
     # 431.2.b: recycle the trash into the Main Deck, randomised.
     if s.trash[seat]:
@@ -68,18 +68,18 @@ def burn_out(g, seat):
         s.main_deck[seat].extend(s.trash[seat])
         s.trash[seat] = []
         s.seat_rng[seat] = g.shuffle(seat, s.main_deck[seat])
-        g.note("  seat %d recycles %d card(s) from trash into their Main Deck (431.2.b)"
+        g.note("  seat %d recycles %d card(s) from trash into their Main Deck (432.2.b)"
                % (seat, recycled), seat=seat)
     else:
-        g.note("  seat %d's trash is empty; the Main Deck stays empty (431.3)" % seat,
+        g.note("  seat %d's trash is empty; the Main Deck stays empty (432.3)" % seat,
                seat=seat)
 
     # 431.2.c: an opponent gains a point. Not a Score — 471.1's restrictions are
     # about Scoring, and this is a plain point gain, so the final-point rule
     # does not apply to it (471.1.a.1).
-    gain_point(g, other, "the burn out (431.2.c)")
+    gain_point(g, other, "the burn out (432.2.c)")
     # 431.3.c.1: a win from this is immediate, without waiting for a cleanup.
-    check_victory(g, "431.3.c.1")
+    check_victory(g, "432.3.c.1")
     return s.points[other]
 
 
@@ -91,8 +91,8 @@ def gain_point(g, seat, reason):
     return s.points[seat]
 
 
-def check_victory(g, rule="472"):
-    """472: a player at or past the Victory Score with more points than any
+def check_victory(g, rule="474"):
+    """474: a player at or past the Victory Score with more points than any
     opponent wins. Checked at every cleanup, and immediately after a burn out."""
     s = g.s
     if s.winner is not None:
@@ -107,8 +107,8 @@ def check_victory(g, rule="472"):
         # the moment it was noticed. A reason naming only the moment reads, in a
         # thousand-game soak, as if the game ended for a different reason each
         # time.
-        s.end_reason = "seat %d reached the Victory Score (472, noticed at %s)" % (best, rule)
-        g.note("seat %d WINS with %d points (472, at %s)" % (best, s.points[best], rule),
+        s.end_reason = "seat %d reached the Victory Score (474, noticed at %s)" % (best, rule)
+        g.note("seat %d WINS with %d points (474, at %s)" % (best, s.points[best], rule),
                seat=best)
     return s.winner
 
@@ -116,7 +116,7 @@ def check_victory(g, rule="472"):
 # -- runes and the pool (163-168, 429, 430) -----------------------------
 
 def channel(g, seat, n=1, exhausted=False):
-    """Channel n runes from the top of the Rune Deck onto the board (430)."""
+    """Channel n runes from the top of the Rune Deck onto the board (431)."""
     s = g.s
     out = []
     for _ in range(n):
@@ -243,7 +243,7 @@ def pay(g, seat, name):
 
 
 def tap_for_energy(g, seat, count=1):
-    """Exhaust readied runes for Energy — [E]: Add [1] (164.2.a, 429)."""
+    """Exhaust readied runes for Energy — [E]: Add [1] (164.2.a, 430)."""
     s = g.s
     available = [r for r in s.runes if r["ctrl"] == seat and not r["exh"]]
     if len(available) < count:
@@ -256,7 +256,7 @@ def tap_for_energy(g, seat, count=1):
 
 
 def recycle_rune_for_power(g, seat, oid):
-    """Recycle a rune from the board for Power of its domain (164.2.b, 416)."""
+    """Recycle a rune from the board for Power of its domain (164.2.b, 417)."""
     s = g.s
     rune = next((r for r in s.runes if r["id"] == oid), None)
     if rune is None or rune["ctrl"] != seat:
@@ -298,7 +298,7 @@ def put_into_play(g, seat, name, location, exhausted, from_zone):
 
 
 def to_trash(g, oid, reason="killed"):
-    """Move a permanent from the Board to its owner's trash (428)."""
+    """Move a permanent from the Board to its owner's trash (429)."""
     s = g.s
     unit = s.unit(oid)
     s.units.remove(unit)
@@ -308,7 +308,7 @@ def to_trash(g, oid, reason="killed"):
 
 
 def banish(g, oid):
-    """Banish a permanent (427)."""
+    """Banish a permanent (428)."""
     s = g.s
     unit = s.unit(oid)
     s.units.remove(unit)
@@ -318,7 +318,7 @@ def banish(g, oid):
 
 
 def discard(g, seat, name):
-    """Discard from hand to the trash (422)."""
+    """Discard from hand to the trash (423)."""
     s = g.s
     if name not in s.hand[seat]:
         raise RulesError("%s is not in seat %d's hand" % (name, seat))
@@ -356,7 +356,7 @@ def _object(s, oid):
 # -- movement (445-458) -------------------------------------------------
 
 def move(g, oid, destination):
-    """Move a permanent (420, 446). The Standard Move's cost is not charged here.
+    """Move a permanent (421, 446). The Standard Move's cost is not charged here.
 
     144.2 makes exhausting the unit the cost of a Standard Move, but a spell or
     ability can move a unit without it — so the caller says which happened by
@@ -406,7 +406,7 @@ def standard_move_legal(s, unit, destination):
     # own location into the option list and the game dies on `move` instead of
     # failing a check that names the rule.
     if destination == unit["loc"]:
-        return "%s is already at %s, which is not a Move (446.3.b)" % (
+        return "%s is already at %s, which is not a Move (448.3.b)" % (
             unit["name"], destination)
 
     # 144.4 lists exactly two legal shapes: base -> battlefield (144.4.a) and
@@ -436,7 +436,7 @@ def standard_move(g, oid, destination):
 
 
 def recall(g, oid):
-    """Return a permanent to its controller's base (454-458). Not a Move."""
+    """Return a permanent to its controller's base (456-460). Not a Move."""
     s = g.s
     unit = s.unit(oid)
     unit["loc"] = loc_base(unit["ctrl"])
@@ -461,7 +461,7 @@ def deflect_surcharge(obj, seat):
 
 
 def apply_contested(g, unit):
-    """190.3.a.1 / 450: a UNIT becoming present contests a battlefield."""
+    """190.3.a.1 / 452: a UNIT becoming present contests a battlefield."""
     s = g.s
     # Gear moving to a battlefield does not contest it — 190.3.a says Contested
     # is applied by a Unit.

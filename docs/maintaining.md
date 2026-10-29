@@ -35,6 +35,62 @@ The PR reports whether the corpus verified. A new set usually ships equipment wh
 effect the API omits, which fails the selftest by design — that failure is reported rather than
 suppressed, and it is the signal to run `oracle gear-gaps`.
 
+An unreachable source now exits nonzero. `watch` never records a snapshot it could not
+read; `skill-data`, `process`, and `extract` report failed work through their exit status.
+The workflow also retains the verifier's exit code rather than the status of `tail`.
+
+## Radiance recovery from the official gallery
+
+On October 26, 2026 the hosted run received HTTP 403 and Riftcodex's local catalogue still
+listed only eight pre-Radiance sets. The reviewed fallback is Riot's public Card Gallery,
+captured through an ordinary unauthenticated request. No proxy, cookie, or access-control
+workaround is involved. Raw HTML/JSON and the four article snapshots remain unchanged in
+`sources/official-radiance/package/`, which is local and ignored by git.
+
+After the pinned October 9 PDFs have been extracted and the rule index rebuilt:
+
+```bash
+npm run build
+npm run oracle import-radiance -- --source=sources/official-radiance/package
+```
+
+This command verifies every bundled hash, checks that the RAD JSON agrees with the gallery
+HTML, requires all 167 base collector IDs, and imports 219 printing records. These comprise
+167 base IDs, 17 numbered-over-167 records, 18 `a` variants, 12 runes and five SP records.
+This does **not** establish complete variant coverage: the page embeds 1,408 records while
+its asynchronous metadata advertises 1,416. The combined lookup pool has 1,121 distinct
+cards. Earlier printings and custom card fields are preserved; new ambiguous aliases are
+flagged instead of selecting a different champion silently.
+
+The public gallery's structured metadata is imperfect. A separate visual audit covers
+every base image and six named rune references. `manifests/radiance-metadata-overlays.json`
+pins those image hashes and printed type/domain/tag observations, including 119 base records
+with differences from the raw fields. No absent Power value is inferred to be zero.
+Equipment's `effect` and `mightBonus` are granted effects, never the gear's base Might.
+Raw variant wording is retained, while canonical card lookup prefers the reviewed base
+printing. The small trailing artifact removed by the existing text normalizer is recorded
+in `manifests/radiance-source.json`.
+
+`output/cards-rad.json` is the normalized, committed supplemental set. `skill-data` retains
+it on later rebuilds; missing or altered supplemental bytes fail against the provenance
+manifest rather than silently dropping Radiance. `output/cards-rad.md` is its readable view.
+The importer updates both skills from one result and adds four hash-pinned official articles
+to a managed section of `output/rules.md`. Other annotations remain intact; changes inside
+that managed section stop a re-import for review. Radiance errata takes precedence over
+explanatory prose, including Neeko's **up to three** additional legends.
+
+`manifests/rules-documents.json` records the official PDF URLs, hashes, October 9 source
+dates and October 16 effective date. Two defects visibly printed in those PDFs are retained:
+CR 133.7.b references absent 103.2.d, and TR 702.13.d.2.a has no printed parent 702.13.d.2.
+`source-anomalies.json` recognizes only their exact document/date/text and PDF hashes; it
+never invents a rule or repairs Riot's words. CLI and rulebook views show source notices.
+All other broken references, missing parents, empty rules, and out-of-order IDs block the
+rebuild while preserving the prior JSON. Rules extraction emits page text once, so the
+new table-based PDFs cannot duplicate their text into another rule or example.
+
+The source package is an input to maintenance, not a release artifact. Publication remains
+a separate reviewed act. A merge touching the corpus also triggers GitHub Pages.
+
 ## The update run
 
 ```bash
@@ -89,8 +145,9 @@ update renumbers IDs.
 Equipment gear prints its granted effect — a "+N Might" badge, sometimes rules text — in a
 band at the foot of the card. None of it reaches the Riftcodex API: `text.plain`,
 `text.rich` and `media.accessibility_text` all stop after the `[Equip]` clause,
-`attributes.might` is null, the OpenAPI schema has no other field, and Riot's Sanity dataset
-is private. It exists only on the artwork. No alternative API was found.
+`attributes.might` is null, and the Riftcodex OpenAPI schema has no other field. The official
+Radiance gallery fallback above carries separate `effect` and `mightBonus` fields for its
+equipment; that does not change the older API-only sets' transcription requirements.
 
 It is therefore transcribed once, by hand, into `manifests/card-overlays.yaml`, and folded in
 by `skill-data`. **The pipeline itself stays deterministic and model-free** — regeneration

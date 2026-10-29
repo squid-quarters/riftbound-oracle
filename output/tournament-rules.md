@@ -1,11 +1,11 @@
 ---
 category: rules
-generated: 2026-08-11
+generated: 2026-10-26
 generator: riftbound-oracle
 ---
 
 Riftbound Tournament Rules
-Last Updated 7/16/2026
+Last Updated October 9, 2026
 000. Golden Rule
 001. The tournament rules exist to ensure anyone who attends a Riftbound organized play event has a
 fun, equitable, fair, safe and consistent experience. They aim to empower competitors and judges to
@@ -37,12 +37,6 @@ specific competitions. In all such cases, those addenda take precedence.
 105. Alteration: Riot Games or its official Riftbound partners reserve the right to alter this document, or
 any subsequent competition-specific addenda, at any time without prior notice.
 200. Definitions
-
-| 103. | Responsibility: |
-| --- | --- |
-
-| 104. | Precedence: |
-| --- | --- |
 
 201. Competition Types: Riftbound competitions come in three types.
 201.1. Premier: A competition that is run by Riot Games or an official competition organizer and
@@ -80,45 +74,6 @@ document.
 204.2.a. Judges equally serve as both rules arbiters and ambassadors of a healthy and
 welcoming environment for all players.
 
-| 201. | Competition Types: Riftbound competitions come in three types. |
-| --- | --- |
-
-| 202. | Tournament Modes: |
-| --- | --- |
-
-| Limited: A limited competition is one where all product needed for play is provided |
-| --- |
-| during the competition. |
-
-| Constructed: A constructed competition is one where players compete using decks |
-| --- |
-| they prepare beforehand. |
-
-| Swiss: A competition or component of a competition where players are paired each |
-| --- |
-| round against players they haven’t already played in the competition who, if |
-| possible, share the same current record. |
-
-| Power Pairing: When the final round of a swiss competition is paired in |
-| --- |
-| exact order of the current standings of the competition. For example: Seed |
-| 1 plays against seed 2, seed 3 plays against seed 4, etc. |
-
-| Playoff: A competition or component of a competition where players are initially |
-| --- |
-| paired based on their standing and are subsequently eliminated by losses. |
-
-| Multiple: Some competitions may consist of multiple formats and/or structures within the |
-| --- |
-| same competition. |
-
-| 203. | Units of Play: |
-| --- | --- |
-
-| 204. | Competition Roles: Every attendee at a competition has at least one of the
-following roles. |
-| --- | --- |
-
 204.3. Competition Organizer (CO): The CO is responsible for all competition logistics, including:
 204.3.a. Sanctioning the event by registering it with Riot Games or its official partners.
 204.3.b. Providing a site for the event (the venue) that meets the competition’s needs,
@@ -135,7 +90,7 @@ final authority on competition rules and regulations, and their responsibilities
 204.4.a. Ensuring that rules, procedures and regulations are followed.
 204.4.b. Ensuring that all game or policy violations are dealt with and any appropriate
 corrective action taken.
-204.4.c. Responding to floor judges who bring matters to their attention.
+204.4.c. Responding to floor judges who bring matters to their attention.deck
 204.4.d. Coordinating and delegating responsibilities to floor judges as necessary.
 204.4.e. Determining corrective action for errors or violations of the scorekeeper or floor
 judges.
@@ -156,13 +111,14 @@ score you the winning point?”
 appropriate where possible.
 204.5.b. Provide rulings related to game and policy violations brought to their attention.
 
-| At high OPL, judges may not answer direct questions about the results of |
-| --- |
-| game actions a player has not yet taken. In these situations, players must |
-| ask questions about the rules. Examples: |
-
-204.5.c. Assist with translation if able.
-204.5.d. Assist players in technically precise play (at low OPL). (This should generally not
+204.5.c. Intervening in games when they see an error occur to apply the appropriate fixes
+and penalties. This does not apply to Missed Trigger errors. See 702.2. For more
+information on Missed Trigger errors.
+204.5.c.1. Judges should intervene AFTER an error occurs and should not attempt to
+prevent a player from erroring. This does not apply to proactively
+intervening in cases of Unsporting Conduct.
+204.5.d. Assist with translation if able.
+204.5.e. Assist players in technically precise play (at low OPL). (This should generally not
 include strategic advice.)
 204.6. Scorekeeper: All sanctioned competitions require a scorekeeper. Scorekeepers are
 responsible for correct competition logistics as it relates to games and game records,
@@ -192,12 +148,12 @@ manner.
 204.7.b.7. Obeying eligibility rules.
 204.7.b.8. Familiarizing themselves with this document and any addenda.
 204.7.b.9. Presenting themselves physically for the competition for its duration.
+
 204.7.c. Even if officials assist, the player remains ultimately responsible for the above.
 204.7.d. Individual members of a team in a team competition are each individually
 responsible for the above.
 204.7.d.1. Teammates are responsible for calling to the attention of a judge any rules
 or policy violations they observe in each others’ matches.
-
 204.7.e. Violations of the above responsibilities may be subject to penalties, suspension, or
 revocation of that player’s eligibility.
 204.8. Spectator
@@ -228,16 +184,12 @@ expectations to players and judges.
 procedures as violations and what penalty those violations warrant.
 205.2. Casual (low): Most competitions are casual and are focused on fun and social interaction,
 not rules enforcement.
+
 205.2.a. Players are expected to know most of the rules as defined in the Core Rules.
 205.2.b. Players are responsible for playing according to the rules in the Core Rules and this
 document, but:
 205.2.b.1. The focus of judges and competition officials is on education and
 sportsmanship.
-
-| 205. | Organized Play Level (OPL): OPL is shorthand that helps communicate
-expectations to players and judges. |
-| --- | --- |
-
 205.2.b.2. There is no priority placed on technically precise play.
 205.2.c. Generally, violations at this level have lower penalties which are covered below in
 section 700.
@@ -268,11 +220,11 @@ below in section 700.
 301.4. Under 13 years of age and do not have a parent’s or guardian’s permission.
 301.5. Prohibited by law, the rules or policy of the Competition Organizer, or by the venue’s rules or
 policy.
+
 301.6. Restricted by competition addenda regarding age, as long as those restrictions are
 messaged ahead of time (at low OPL).
 302. Anyone is eligible to participate as a competition official, unless the player is:
 302.1. Suspended.
-
 302.2. A player in that same competition, unless the competition explicitly allows it (non-premier
 competitions only).
 303. If a competition official for an event participates in that event, it must be run at Casual OPL.
@@ -297,9 +249,17 @@ otherwise eligible to compete.
 401.1. Players in competitions are required to register their decks and sideboards (if applicable to
 the format) at high OPL.
 401.1.a. The Head Judge may require deck registration at low OPL.
+401.1.b. Even when a low OPL constructed event does not require deck registration, players
+are expected to use the same deck throughout the event unless given permission by
+the tournament organizer.
 401.2. A registered decklist must have a complete, unambiguous record of the player’s Champion
 Legend, battlefields, Main Deck including Chosen Champion, Rune Deck, and sideboard (if
 applicable to the format).
+
+401.2.a. They must also include registered records of any cards selected for special
+additional deckbuilding rules. (Example: The three Legends selected for Neeko,
+Blending In must be registered on a player’s decklist and can’t be changed once
+they are submitted.)
 401.3. Once a decklist has been registered and delivered to a competition official, it can’t be
 changed.
 401.4. In a constructed event, a player’s deck must be registered prior to the start of the first
@@ -307,17 +267,13 @@ round of competition.
 401.5. Other player’s decklists are normally considered private information. The head judge of an
 event may run that event or the final rounds of that event using an open decklist policy. In
 this case, all players’ decklists will be considered public information.
-
-| 401. | Deck Registration |
-| --- | --- |
-
 401.5.a. In an open decklist competition, each round players are provided with their
 opponent’s decklist to review at the start of the match and in between games of the
 match. Players may not review decklists during gameplay.
 401.5.b. Typically, professional OPL competitions should be run with open decklists, but it is
 ultimately up to the discretion of the head judge regardless of the event level.
 402. Deck Size
-402.1. In a constructed event, players must register a Main Deck of exactly 40 cards (including a
+402.1. In a constructed event, players must use a Main Deck of exactly 40 cards (including a
 chosen champion), 1 Legend, 12 runes, and exactly 3 battlefields each with a unique name.
 402.2. Otherwise, deck construction is defined in the Core Rules.
 403. Sideboard
@@ -327,8 +283,8 @@ based on competition formats.
 403.2. Sideboard size and contents are dictated by the competition format.
 403.3. Limits on copies of named cards as defined by competition format apply to the combination
 of Main Deck and sideboard.
-403.4. Players may use sideboard cards to modify their deck in between games of a match.
-Sideboard cards must be exchanged 1 for 1 with Main Deck cards.
+403.4. Players may use sideboard cards to modify their deck in between games of a match. In
+constructed, sideboard cards must be exchanged 1 for 1 with Main Deck cards.
 403.4.a. During that time, a player may change their Chosen Champion to one from their
 sideboard or Main Deck that meets the deckbuilding rules of the competition
 format.
@@ -338,6 +294,7 @@ Battlefields at any point after deck registration.
 requirements dictated by the competition format.
 403.5. Players may not use sideboard cards in the first game of a match.
 403.6. Players may count the cards in their opponents’ sideboards at any time.
+
 403.7. A player may look at their own sideboard at any time, but must keep it distinguishable from
 other cards.
 403.8. A player’s deck and sideboard must be returned to their registered states before the first
@@ -348,16 +305,6 @@ for the following game.
 403.11. If a game restarts due to an in-game effect or due to corrective action by judges, the state
 of each player’s deck and sideboard must remain the same in the restarted game.
 404. Match
-
-| 402. | Deck Size |
-| --- | --- |
-
-| 403. | Sideboard |
-| --- | --- |
-
-| 404. | Match |
-| --- | --- |
-
 404.1. A match of Riftbound consists of a series of games that are played until one side has won a
 predetermined number of games.
 404.2. Most matches of Riftbound are “best of 3,” meaning the predetermined number of games to
@@ -378,41 +325,38 @@ their main deck and their sideboard after each game of a match. See 403 for more
 information on sideboards.
 406.1.b. If a game ends in a draw, players must use the same battlefields for the following
 game.
-406.1.c. Each player must shuffle their Main Deck and their Rune Deck. See 420 for more
+406.1.c. If a game ends due to a game loss penalty after players have selected and
+revealed their battlefields, players must use different battlefields for any following
+games in the match.
+406.1.d. Each player must shuffle their Main Deck and their Rune Deck. See 421 for more
 information on shuffling.
-406.1.d. Each player must present their Main Deck, Rune Deck, and sideboard (if applicable
+406.1.e. Each player must present their Main Deck, Rune Deck, and sideboard (if applicable
 to the format) to their opponents.
-406.1.e. Each player may shuffle the Main Deck and Rune Deck of each of their opponents.
-406.1.e.1. In team competitions, each player may shuffle the Main Deck and Rune
+
+406.1.f. Each player may shuffle the Main Deck and Rune Deck of each of their opponents.
+406.1.f.1. In team competitions, each player may shuffle the Main Deck and Rune
 Deck of one of their team’s opponents.
-406.1.e.2. At Professional OPL, this is required.
-406.1.e.3. A player may request a judge shuffle their deck in lieu of an opponent, to
+406.1.f.2. At Professional OPL, this is required.
+406.1.f.3. A player may request a judge shuffle their deck in lieu of an opponent, to
 be honored at judge discretion.
-406.1.f. For the first game of a match, start of game procedures may be performed as soon
+406.1.g. For the first game of a match, start of game procedures may be performed as soon
 as both players reach their assigned seat, even before the start of the round clock.
 Gameplay must wait for the round clock to begin.
-406.1.g. For competitions run using a “best of 1” format instead of a “best of 3” format, the
+406.1.h. For competitions run using a “best of 1” format instead of a “best of 3” format, the
 head judge may opt to use the altered initial setup process listed below to closer
 mirror the “best of 3” experience:
-
-| 405. | Start of Match Procedure |
-| --- | --- |
-
-| 406. | Start of Game Procedure |
-| --- | --- |
-
-406.1.g.1. Each player separates their Champion Legend and places it in the Legend
+406.1.h.1. Each player separates their Champion Legend and places it in the Legend
 Zone.
-406.1.g.2. Each player randomly selects one of their three Battlefields, and places it
+406.1.h.2. Each player randomly selects one of their three Battlefields, and places it
 into the Battlefield Zone.
-406.1.g.3. Players use the Play First Rule listed below to determine the designated
+406.1.h.3. Players use the Play First Rule listed below to determine the designated
 player. See 407 for more information on the Play First Rule.
-406.1.g.4. The designated player chooses if they would like to go first or last.
-406.1.g.5. Players then have the opportunity to sideboard as if they were in between
+406.1.h.4. The designated player chooses if they would like to go first or last.
+406.1.h.5. Players then have the opportunity to sideboard as if they were in between
 games of a “best of 3” match. See 403 for more information on sideboards.
-406.1.g.6. After sideboarding is complete, each player separates their Chosen
+406.1.h.6. After sideboarding is complete, each player separates their Chosen
 Champion and places it in the Champion Zone.
-406.1.g.7. Players perform shuffling steps 406.1.c.-406.1.e.3. listed above, then proceed
+406.1.h.7. Players perform shuffling steps 406.1.d.-406.1.f.3. listed above, then proceed
 to CR 110. Setup Process.
 407. Play First Rule
 407.1. For the first game of a match, a designated player decides whether they wish to play first or
@@ -427,6 +371,7 @@ procedure. See CR 115. Determine turn order.
 407.4. For games after the first game of a match, the loser of the previous game gets to choose if
 they play first or last. If the previous game was a draw, the starting play from the previous
 game is maintained.
+
 407.5. For alterations to this rule for 2v2, see 603.7.
 408. End of Match Procedure
 408.1. A match is complete once a match result is recorded by players or a tournament official.
@@ -439,17 +384,6 @@ winner of the game if they have a point lead of two or more. If no player has a
 point lead of two or more, the game is a draw.
 408.2.c. Additional turns are untimed, but at professional OPL a judge must be present to
 ensure a reasonable pace of play.
-
-| Players perform shuffling steps 406.1.c.-406.1.e.3. listed above, then proceed |
-| --- |
-| to CR 110. Setup Process. |
-
-| 407. | Play First Rule |
-| --- | --- |
-
-| 408. | End of Match Procedure |
-| --- | --- |
-
 408.2.d. If the players are between games when the round time ends, no new game is
 started.
 408.3. The winner of a match is the first player who reaches the appropriate game win score.
@@ -476,6 +410,7 @@ match is tied, players continue to play until the next point is scored. The
 player who scores that point wins the match. This does not remove normal
 scoring restrictions if the next point is the Final Point. See CR 469.1.a. for
 Final Point details.
+
 408.4.d. If the game score is tied and a new game needs to be started, players start the new
 game and act as though time immediately runs out, beginning the process of
 408.4.a., except with five additional turns following the first player's turn before
@@ -488,17 +423,6 @@ two players with equal match records.
 409.2.a. The player with higher opponents’ mean (average) match win percentage.
 409.2.b. The player with higher game win percentage.
 409.2.c. The player with higher opponents’ mean (average) game win percentage.
-
-| If the point score of the current game is tied and the game score of the |
-| --- |
-| match is tied, players continue to play until the next point is scored. The |
-| player who scores that point wins the match. This does not remove normal |
-| scoring restrictions if the next point is the Final Point. See CR 469.1.a. for |
-| Final Point details. |
-
-| 409. | Tiebreakers |
-| --- | --- |
-
 409.3. If after all tiebreakers are applied, two players are still of equal standing in the competition,
 the scorekeeper should use a random method to break the tie.
 410. Concessions and Intentional Draws
@@ -509,17 +433,22 @@ may mutually agree to draw it.
 410.3. Players can’t agree to concessions or draws in exchange for anything. See 704.5 for more
 information on bribery.
 410.4. Players can’t scout other match results before deciding to concede or draw their match and
-need to remain in their seats while their match is in progress.
+need to remain in their seats while their match is in progress. Violating this policy is
+considered an unsporting minor penalty. (See 704.2. for Unsporting Minor penalties.)
 410.5. If a player refuses to play, tournament officials should treat that as conceding the match.
 411. Deck Checks
 411.1. At high OPL, judges should perform deck checks during the course of the competition.
 411.2. When deck checks are performed, at least 10% of all decks, chosen at random, should be
 checked during the course of the competition.
-411.3. Deck checks for the players in a match should occur after players have randomized and
-presented their decks, but before opening hands are drawn.
-411.3.a. If a deck check is performed within a match, judges should grant a time extension
+411.3. Random deck checks should occur at the start of a round, after players have randomized
+and presented their decks, but before opening hands are drawn and should verify all
+elements of the registered decks.
+411.3.a. A deck check can be performed after the mulligan procedure is complete as long as
+play has not begun and each player’s hand is preserved.
+411.3.b. If a deck check is performed within a match, judges should grant a time extension
 to that match sufficient to cover the logistical time needed to perform the check.
 412. Judge Calls
+
 412.1. At any point during a match, a player may pause to flag a floor judge. See 204.4 for floor
 judge responsibilities.
 412.2. Time extensions should be granted if the total time of a judge call is more than 1 minute.
@@ -533,22 +462,6 @@ uniforms matching the head judge’s uniform.
 413.5. If a penalty is applied outside the scope of a competition, the appeals process should follow
 what’s laid out on the official Riot Games website. [citation needed]
 414. Dropping
-
-| 410. | Concessions and Intentional Draws |
-| --- | --- |
-
-| 411. | Deck Checks |
-| --- | --- |
-
-| 412. | Judge Calls |
-| --- | --- |
-
-| 413. | Appeals |
-| --- | --- |
-
-| 414. | Dropping |
-| --- | --- |
-
 414.1. Players may drop from a competition at any time.
 414.2. If a player drops before the competition begins, they never participated in the competition.
 414.3. Players who wish to drop must inform the scorekeeper before pairings for the next round of
@@ -570,6 +483,7 @@ activity was required.
 game.
 415.2. Changes to score should be announced and acknowledged by all players.
 415.3. Scores must be tracked, displayed, and updated legibly in writing.
+
 415.3.a. At low OPL, an electronic device, dice, or similar methods can be used to track
 score.
 415.3.b. If any player notices a score discrepancy, they must immediately make all players
@@ -585,35 +499,16 @@ called.
 416. Taking Notes
 416.1. Players may take written notes during a match and refer to those notes during games in the
 same match.
-
-| 415. | Tracking Score & Resources |
-| --- | --- |
-
-| Players must track their own resources such as XP and unspent Energy/Power they have |
-| --- |
-| floating. They are not required to be written down, but they must be represented in a way |
-| that is clear and understandable to all players, such as with dice or counters. |
-
-| Resources being immediately spent need to be communicated, but do not need to |
-| --- |
-| be tracked in this way. |
-
-| If any player notices a resource discrepancy, they must immediately make all |
-| --- |
-| players aware of it. If it can’t be resolved easily by the players, a judge must be |
-| called. |
-
-| 416. | Taking Notes |
-| --- | --- |
-
 416.2. At the beginning of each match, each player’s written note sheet must be empty and visible
 to all opponents and tournament officials.
 416.3. Players do not have to reveal their written notes to opponents. Judges may ask players to
 reveal and/or explain their notes.
-416.4. Players may not refer to notes from outside the current match, including notes from
+416.4. Players may not refer to notes from outside the current match, including written notes from
 previous matches, during games.
-416.5. Between games, players may refer to notes they made prior to the match. They do not have
-to reveal these notes to opponents.
+416.5. Between games, players may refer to written notes they made prior to the match. They do
+not have to reveal these notes to opponents. Players may consult such notes during
+sideboarding and after battlefields are revealed, but must stop once opening hands are
+drawn (before mulligans).
 417. Electronic Devices
 417.1. Players may use electronic devices during competitions, but can’t use them during matches.
 417.2. At low OPL, digital devices may take the place of written note sheets.
@@ -625,6 +520,7 @@ to reveal these notes to opponents.
 respectfully toward all participants.
 418.4. Spectators are permitted to record matches using video capture, provided they do so
 without interfering with the match.
+
 418.5. At Professional OPL, the head judge may consult video capture to help make rulings during
 a match.
 418.6. Judges should never honor a player's request to consult video capture.
@@ -635,19 +531,10 @@ a match.
 to replace a card deemed unusable.
 419.3. An alter is an official Riftbound card that has been modified in some way.
 419.4. Alters are allowed in competition only if the modifications do not:
-419.4.a. Modify or obscure the card name or cost, or make the art unrecognizable.
+419.4.a. Modify or obscure the card name, Might/Might Bonus, or cost, or make the art
+unrecognizable.
 419.4.b. Contain substantial strategic advice.
 419.4.c. Contain offensive images or text.
-
-| 417. | Electronic Devices |
-| --- | --- |
-
-| 418. | Coverage |
-| --- | --- |
-
-| 419. | Proxies and Alters |
-| --- | --- |
-
 419.5. By judge discretion, alters may not be allowed to be used during matches that are streamed
 or otherwise broadcast.
 419.5.a. Players using altered cards are responsible for having official unaltered versions of
@@ -670,6 +557,7 @@ language of their preference.
 cards or tournament officials require it.
 421.2. Random is defined as a state where no player could have any information about the order
 or position of cards in any part of the deck.
+
 421.3. Shuffling by methodically placing cards into distinct piles (informally known as “pile
 shuffling”) may be used as a method to count the deck, but can’t solely be used to make a
 deck random.
@@ -685,21 +573,6 @@ the above procedures 1-7 should be followed for that group of cards to properly 
 them before recycling them.
 422. Sleeves
 422.1. Players may use plastic sleeves or other protective devices on their cards.
-
-| 420. | Card Language |
-| --- | --- |
-
-| 421. | Shuffling |
-| --- | --- |
-
-| When two or more cards are recycled to the player’s Main Deck as part of a single action, |
-| --- |
-| the above procedures 1-7 should be followed for that group of cards to properly randomize |
-| them before recycling them. |
-
-| 422. | Sleeves |
-| --- | --- |
-
 422.2. If a player chooses to do this, all such sleeves must be identical and all cards in a deck must
 be placed in sleeves in the same manner. Cards in decks must have the same number of
 layers and be the same orientation at all times.
@@ -707,8 +580,8 @@ layers and be the same orientation at all times.
 decks (Main, Rune).
 422.2.b. Players may use a unique sleeve or additional layer to distinguish their Chosen
 Champion during game setup, but must change its sleeve to match their Main Deck
-if it would enter a zone whose information level is private during gameplay. See CR
-128. Privacy for information types.
+if it would enter a zone whose information level is private or secret during
+gameplay. See CR 128. Privacy for information types.
 422.3. Sleeves must have opaque backs.
 422.4. During a match, a player may request that a judge inspect an opponent’s sleeves.
 422.5. Judges may disallow any specific sleeve or the sleeves generally if they believe they are
@@ -721,6 +594,7 @@ At low OPL, using sleeves can be required at the discretion of the head judge.
 423. Marked Cards
 423.1. Players are responsible during competitions to make sure their cards and/or sleeves are not
 marked.
+
 423.2. Marked is defined as bearing something that makes it possible to identify the card without
 seeing its face.
 423.3. If cards are sleeved, they should be inspected for marking while in the sleeves.
@@ -734,23 +608,6 @@ being revealed accidentally. See CR 128. Privacy for information types.
 424.3. Players may reveal private information unless specifically prohibited by the Core Rules.
 424.4. At high OPL, players don’t need to inform opponents of accidentally revealed private
 information.
-
-| Players may use a unique sleeve or additional layer to distinguish their Chosen |
-| --- |
-| Champion during game setup, but must change its sleeve to match their Main Deck |
-| if it would enter a zone whose information level is private during gameplay. See CR |
-| 128. Privacy for information types. |
-
-| 423. | Marked Cards |
-| --- | --- |
-
-| 424. | Display |
-| --- | --- |
-
-| Players are responsible for making reasonable effort to prevent secret information from |
-| --- |
-| being revealed accidentally. See CR 128. Privacy for information types. |
-
 500. Communication
 501. Requirements
 501.1. Players are required to communicate honestly about the state of the game with their
@@ -770,31 +627,24 @@ or calculation.
 502.2.b. Players are not required to assist opponents in determining derived information.
 502.3. Like cards, other relevant information about the game state can be public, derived, private,
 or secret.
+
 502.4. The additional relevant public information includes:
 502.4.a. The current turn player, phase, step, state of the turn, and who has priority and
 focus.
-502.4.b. Rune Pools and the number and quantity of resources in them.
-502.4.c. All players’ current scores.
-502.4.d. A permanent’s current state, as distinct from its printed ones.
-502.4.e. Spells and abilities on the Chain, their order, and play choices made for them.
-502.4.f. Spells and abilities that resolved previously in the turn, and the sources of them are
+502.4.b. If the end of match procedure has entered additional turns and where in the
+additional turns players are. Players must announce and acknowledge additional
+turns as they occur. (See 408 for more information on End of Match Procedure.)
+502.4.c. Rune Pools and the number and quantity of resources in them.
+502.4.d. All players’ current scores.
+502.4.e. A permanent’s current state, as distinct from its printed ones.
+502.4.f. Spells and abilities on the Chain, their order, and play choices made for them.
+502.4.g. Spells and abilities that resolved previously in the turn, and the sources of them are
 themselves public.
 502.5. The additional relevant derived information includes:
 502.5.a. Which public cards have been recycled.
 502.5.b. The order of runes in a Rune Deck.
 502.5.c. Consequences of actions that might happen in the future, such as a unit receiving a
 Might bonus from the Shield ability if a player attacks.
-
-| 501. | Requirements |
-| --- | --- |
-
-| 502. | Information |
-| --- | --- |
-
-| Cards have a level of privacy as specified in CR 128. Privacy. These apply to levels of |
-| --- |
-| information accessible to the players as well. |
-
 502.6. Players must acknowledge changes to public information that result from their cards and
 effects as those effects would have an observable impact on the game. See 506.3.e. for
 examples of observable impact.
@@ -808,9 +658,12 @@ upon by all players in the game.
 502.9. Players must point out discrepancies between announced and recorded public information.
 502.10. Judges are encouraged to help players determine public information, but not derived
 information.
-502.11. In 2v2, teammates may share Private information, including directly showing each other the
+502.11. Players are not required to share private information, and may bluff in regards to their
+private information.
+502.12. In 2v2, teammates may share Private information, including directly showing each other the
 cards in their hand as defined by 484.8.e. in the Core Rules.
 503. Shortcuts
+
 503.1. In competitions, players may take actions that skip parts of the technically precise play
 sequence without explicitly announcing that sequence.
 503.2. The most common type of shortcut is skipping one or more parts of a turn, phase, or step to
@@ -833,22 +686,6 @@ priority unless they explicitly announce they intend to retain it.
 503.9.c. When a player puts a spell or ability on the chain and announces choices for it that
 are normally made upon resolution, they must adhere to those choices unless their
 opponents react.
-
-| Players must acknowledge changes to public information that result from their cards and |
-| --- |
-| effects as those effects would have an observable impact on the game. See 506.3.e. for |
-| examples of observable impact. |
-
-| As part of acknowledging changes to public information, the accountable player |
-| --- |
-| must communicate the change to all other players in an understandable and |
-| observable way. Examples include verbally announcing the change, physically |
-| indicating the change, or other means of communication understood and agreed |
-| upon by all players in the game. |
-
-| 503. | Shortcuts |
-| --- | --- |
-
 503.9.d. When a player asks about choices normally made upon resolution, they are
 assumed to be passing priority and allowing the spell or ability to resolve.
 504. Sequencing
@@ -864,12 +701,29 @@ might affect decisions later in that sequence.
 deck.
 504.4.a. Example: A player may not keep their recycled runes facedown on the board to
 track Energy.
+
 504.4.b. Failure to recycle in this way is a Communication Violation. See 703.5 for more
 information on Communication Violations.
 505. Loops
 505.1. Some sequences of actions can be repeated and are shortcutted as a loop.
-505.2. Players performing a loop must have each iteration of the loop be identical with no
-conditional actions.
+505.2. Each iteration of a loop must contain identical, non-conditional actions performed on the
+same set of cards. To establish a loop, the looping player must be able to say with certainty
+exactly what each step of the loop will be, not just the outcome.
+505.2.a. Loops must be fully deterministic; they may not rely on probability, decision trees,
+or conditional actions. Example:
+505.2.a.1. Legal Loop: With enough Energy available, playing Grim Apothecary to a
+battlefield then using its trigger to return itself to hand 100 times.
+505.2.a.2. Illegal Loop: A card reads "Recycle 3 cards from your trash: Ready a unit." A
+player with enough Energy available wants to use this to recycle 2 copies of
+Stupefy from their trash and 1 copy of Downstage Dramatics with an
+additional copy of Dramatics in hand, planning to play the Downstage
+Dramatics from hand, and then play each card as they draw it until there
+are 3 cards in the trash for them to recycle.
+505.2.a.2.a. This is a non-deterministic loop because the order you play the
+cards is not guaranteed. If the loop only included copies of the
+same exact card draw spell, it would be deterministic.
+505.2.b. Players can manually execute non-deterministic loops, but must do so in a timely
+fashion. Failure to do so is Slow Play. See 703.2 for more information on Slow Play.
 505.3. To decide how to proceed with a loop, determine how many players are needed to maintain
 it (who must take actions or make decisions to sustain the loop):
 505.3.a. No players
@@ -887,12 +741,6 @@ either gains priority (if a maintaining player) or breaks the loop.
 505.8. If a player intervenes to break a loop, they may choose to interrupt a partially completed
 iteration.
 
-| 504. | Sequencing |
-| --- | --- |
-
-| 505. | Loops |
-| --- | --- |
-
 505.9. If a sequence of actions is non-deterministic, it may not be shortcut and iterations must be
 performed manually.
 505.10. Some loops are maintained by decisions rather than actions. In these cases, apply
@@ -901,6 +749,9 @@ performed manually.
 continue a loop when secret information is involved.
 505.12. Players who try to opt-out of shortcutting or propose incorrect shortcutting to use up time
 are cheating. See 704.8 for more information about cheating.
+505.13. Players cannot use loops to stall. When other actions are available, attempting to perform a
+loop that doesn’t change the game state is cheating. See 704.8 for more information about
+cheating.
 506. Triggered Abilities
 506.1. Accountable Player: The player responsible for putting a triggered ability on the chain, as
 defined by the core rules. See CR 383. Triggered Abilities for more information on
@@ -931,28 +782,9 @@ acknowledge the trigger before it's considered forgotten, regardless of its
 observable impact. (Example cards: Obelisk of Power and The Arena’s Greatest.)
 506.3.e. Examples of observable impact:
 506.3.e.1. The trigger would change a point total. (Example card: Ahri, Alluring)
+
 506.3.e.2. The trigger would change a rune total. (Example card: Startipped Peak)
 506.3.e.3. The trigger would add a Buff token to a unit. (Example card: Sett, Brawler)
-
-| 506. | Triggered Abilities |
-| --- | --- |
-
-| Accountable Player: The player responsible for putting a triggered ability on the chain, as |
-| --- |
-| defined by the core rules. See CR 383. Triggered Abilities for more information on |
-| triggered abilities. |
-
-| The accountable player for triggers sourced from battlefields depends on control of |
-| --- |
-| the battlefield and is not automatically the player who brought the battlefield to the |
-| game. See CR 190.6. For more information on battlefield abilities. |
-
-| As part of acknowledging a trigger, the accountable player must communicate the |
-| --- |
-| trigger to all other players in an understandable and observable way. Examples |
-| include verbally announcing the trigger, physically indicating the trigger, or other |
-| means of communication understood and agreed upon by all players in the game. |
-
 506.3.e.4. The trigger would impact combat or other game procedures. A card that
 reads “When you play a spell, give me +1 Might this turn.” does NOT have
 an immediate observable impact. It has an observable impact once it’s
@@ -966,6 +798,12 @@ card: Miss Fortune, Captain)
 See 502 for more information on public information.
 506.3.e.9. A player would be required to make a choice of whether or not to place an
 optional trigger on the chain. (Example: Overzealous Fan)
+506.3.e.10. A trigger would require a player to choose something, such as a unit or
+gear, even if there is only one legal choice. (Example: Abandoned Hall)
+506.3.e.11. A trigger would cause a player to gain resources, such as XP or floating
+Power/Energy. (Example: Jhin, Murderous Artist)
+506.3.e.12. A trigger would cause a card to change zones, such as a unit taking lethal
+damage. (Non-lethal damage is not an observable impact.)
 506.4. A triggered ability that was forgotten never goes on the chain.
 506.5. A triggered ability that was forgotten is still considered to have triggered for the purpose of
 non-optional “First time” or similarly restricted triggers.
@@ -981,26 +819,16 @@ playing can’t communicate with that teammate for the remainder of that match. 
 508.3. Nonrunes must be closer to the player’s opponent than the player’s runes.
 508.4. Main Deck and trash must be together on either the left side or the right side of the board.
 508.5. Rune Deck should be on the other side (right or left) of the board from the Main Deck.
+
 508.6. Legend must be between nonrunes and Chosen Champion, and both legend and Chosen
 Champion must be together on either the left side or the right side of the board.
 508.7. Each card or indicator that attaches to another card must be clearly associated with it
 physically.
-508.8. Tokens must be represented by card objects that show all relevant information including
-ready state.
+508.8. Tokens must be represented by card objects that are able to represent ready state. They
+must be understandable and discernible by all players in the game where they are being
+used.
 508.9. Buffs must be represented by an object that unambiguously represents a buff in game
 terms.
-
-| 507. | Teams in Separate Matches |
-| --- | --- |
-
-| Players that acquire secret or private information about a match in which a teammate is |
-| --- |
-| playing can’t communicate with that teammate for the remainder of that match. See CR |
-| 128. Privacy for information types. |
-
-| 508. | Layout |
-| --- | --- |
-
 508.10. Ready objects must be oriented facing the controller. Exhausted objects must be oriented at
 a 90 degree rotation to ready objects, either clockwise or counterclockwise, but all
 exhausted objects must be rotated consistently.
@@ -1028,24 +856,32 @@ such as moving a unit to a location or discarding a card. Example:
 509.4.c.1. A player moves Pouty Poro to Void Gate. They immediately change their
 mind and choose to move an additional unit there as well, or they decide
 not to move at all.
-509.4.d. The player wants to undo a decision to exhaust or recycle runes.
-509.4.d.1. A player exhausts two Calm runes. Before taking a new game action, the
-player decides they do not want to exhaust them, and readies them.
-509.5. Intentionally attempting to reverse decisions to gain information from an opponent is
+509.5. Players can always ready runes they just exhausted for Energy or unrecycle runes they just
+recycled for Power as long as no new action has been taken and focus has not been passed.
+509.5.a. When changing decisions as described in 509.3. - 509.4., players can
+ready/unrecycle runes used for those decisions.
+
+509.5.a.1. Example: A player exhausts two runes and plays Pouty Poro from hand to
+their base, then immediately decides they do not want to play it. They may
+return it to their hand and ready those two runes.
+509.6. At high OPL, flexibility on gameplay decisions is not intended as a tool to allow players to
+reverse decisions after an opponent is required to indicate information that reveals that
+decision to be a tactical error.
+509.6.a. Example: Player A moves their 3 Might unit to a battlefield and passes focus. Player
+B indicates their 2 Might unit at that battlefield is now at 4 Might due to their
+legend, Wuju Bladesman. Player A can no longer change their decision to move to
+that battlefield and pass focus.
+509.6.b. Decisions made based on inaccurately represented public information may still be
+rewound at the discretion of the head judge. Inaccurately representing information
+to try to get a rewind is cheating.
+509.7. Intentionally attempting to reverse decisions to gain information from an opponent is
 considered angle shooting. Players may not change their decisions based on an opponent’s
 physical reaction or as a response to an opponent starting to take a game action. See 704.4.
 for more information on angle shooting.
-509.6. While changing decisions as described above is allowed, players must still maintain an
+509.8. While changing decisions as described above is allowed, players must still maintain an
 appropriate pace of play. See 703.2 for more information on Slow Play.
 600. Competition Formats
 601. Constructed
-
-| 509. | Gameplay Decisions |
-| --- | --- |
-
-| 601. | Constructed |
-| --- | --- |
-
 601.1. Deck Construction
 601.1.a. The rules for constructing a Riftbound deck are found in CR 101. Deck
 Construction, except where modified here below for the competition Constructed
@@ -1063,6 +899,7 @@ allowed.
 601.1.d. In some competitions, the legal battlefields are different from the format-legal
 battlefields. If this is the case, it will be communicated to players via specific event
 addenda.
+
 601.2. Card Legality
 601.2.a. A card may only be included in a deck if it is from a set that is legal in that format
 or it has the same name as a card from a set that is legal in that format.
@@ -1084,7 +921,6 @@ allowed to use the banned cards in the deck, such as Fight or
 Flight, Scrapheap and Reaver’s Row. If the player makes any
 changes or adds a sideboard, they can no longer include the
 banned cards.
-
 601.3. Standard
 601.3.a. Standard is a format consisting of the most recent 5-8 sets.
 601.3.b. Each Standard consists of the current year’s sets plus the previous year’s sets.
@@ -1094,10 +930,11 @@ banned cards.
 601.3.c.3. Spiritforged (SFD)
 601.3.c.4. Unleashed (UNL)
 601.3.c.5. Vendetta (Ven)
-601.3.c.5.a. Release Date: July 31st, 2026
-601.3.c.4.b. Rest of world legal date - 5/8/26
+601.3.c.6. Radiance (RAD)
+601.3.c.6.a. Release Date: October 23rd, 2026
 602. Limited
 602.1. Legality
+
 602.1.a. A limited competition is one where all product needed for play is provided during
 the competition.
 602.1.a.1. A card may only be included in a limited deck if it is provided to the player
@@ -1107,7 +944,7 @@ promotional cards that the head judge will specify are not part of
 that player’s limited card pool and can’t be used for that event.
 602.1.a.2. Players may utilize any number of the 6 basic Runes from any source, even
 if they are not in the player’s provided card pool.
-Players may utilize as many “blank” battlefields as they need for limited
+602.1.a.3. Players may utilize as many “blank” battlefields as they need for limited
 gameplay. See 602.3.d. below for more information on “blank” battlefields.
 602.1.b. Even if a card is banned in constructed, it is legal to use in a limited deck as long as
 it is not also banned in that limited format.
@@ -1120,18 +957,6 @@ a pack and what is opened, they must notify a judge.
 602.2.d. In some cases, competition officials may allow players to provide their own
 product, but in such cases player-brought products must be pooled and distributed
 amongst participants randomly.
-
-|  |
-| --- |
-| 601.3.c.4.b. |
-
-|  |
-| --- |
-| Rest of world legal date - 5/8/26 |
-
-| 602. | Limited |
-| --- | --- |
-
 602.3. Building From a Limited Pool
 602.3.a. 602.1.a. The rules for constructing a Riftbound deck are found in CR 101. Deck
 Construction, except where modified here below for limited formats.
@@ -1147,6 +972,7 @@ Otherwise, they adhere to all other normal battlefield rules as defined in
 the Core Rules.
 602.3.d.2. At low OPL, “Blank” battlefields can be represented by anything agreed
 upon by all players in the game.
+
 602.3.d.2.a. At high OPL, “Blank” battlefields must be represented by any
 official Riftbound card, put in an opaque card sleeve with the
 cardback facing outwards.
@@ -1170,17 +996,11 @@ freely change the composition of their starting deck and sideboard between games
 and matches unless otherwise specified by the head judge. Players may still only
 use a specific copy of a battlefield once per match, but may use the same named
 battlefield as many times as they have copies of it in their provided card pool.
-602.3.g. For card pool generation and deck construction rules specific to each limited
+602.3.g. The sideboard process described in 406.1.h. does not apply to “best of 1” limited
+competitions.
+602.3.h. For card pool generation and deck construction rules specific to each limited
 format, see Limited Formats below.
 602.4. Limited Formats
-
-| At low OPL, starting configuration registration is not required and players may |
-| --- |
-| freely change the composition of their starting deck and sideboard between games |
-| and matches unless otherwise specified by the head judge. Players may still only |
-| use a specific copy of a battlefield once per match, but may use the same named |
-| battlefield as many times as they have copies of it in their provided card pool. |
-
 602.4.a. Sealed
 602.4.a.1. Sealed is a limited format where players are each provided with 6
 unopened Riftbound booster packs to open and use to construct their deck.
@@ -1194,6 +1014,7 @@ one).
 602.4.a.3.b. A sealed deck may contain any signature spells that are fully
 included in its domain identity, even if the deck does not include
 the corresponding champion.
+
 602.4.a.3.b.1. Example: A sealed deck with a domain identity of
 Fury/Body/Order could use signature spells that are
 Fury/Order or Body/Order, but not signature spells that
@@ -1222,7 +1043,6 @@ resulting deck still meets 602.4.a.2-602.4.a.4.
 602.4.a.8. Sealed Pool Registration & Deck Construction
 602.4.a.8.a. At high OPL, the head judge must require registration of the sealed
 pool prior to deck construction.
-
 602.4.a.8.b. Each player receives the unopened product at their seat.
 602.4.a.8.c. Players on one side of the table (A) open their product, observed
 by players on the other side (B).
@@ -1235,6 +1055,7 @@ those cards are placed next to B.
 (A) observing.
 602.4.a.8.g. Each player now sorts and registers the contents of the pool placed
 next to them.
+
 602.4.a.8.h. After registration is complete, each player returns the pool and
 registration sheet to the other player.
 602.4.a.8.i. Each player verifies that their own pool has been registered
@@ -1260,7 +1081,6 @@ above.
 Riftbound booster packs to open and draft amongst other players.
 602.4.b.2. Draft groups consist of as close to eight players as possible, seated
 randomly around a table. Draft process is as follows:
-
 602.4.b.2.a. Each player opens one of their boosters, removes the Rune or
 token, then looks through the remaining contents to ensure there
 are thirteen undamaged cards in the pack with a correct rarity
@@ -1277,6 +1097,7 @@ cards remaining.
 602.4.b.2.b.1. Once the first pack is completed, repeat
 602.4.b.2.a-602.4.b.2.b with the second pack, except
 passing cards to the right.
+
 602.4.b.2.b.2. Once the second pack is completed, repeat
 602.4.b.2.a-602.4.b.2.b with the third pack, again passing
 cards to the left.
@@ -1303,7 +1124,6 @@ cheating.
 602.4.b.2.g.1. It is not cheating for a player to see card backs of cards
 other players are viewing or of cards players have added
 to the facedown pile in front of them.
-
 602.4.b.2.h. At high OPL, players can’t look at the cards they have already
 drafted, except during intervals designated by a judge between
 packs. At low OPL, this is allowed at any time as long as the player
@@ -1321,6 +1141,7 @@ one).
 602.4.b.4.b. A draft deck may contain any signature spells that are fully
 included in its domain identity, even if the deck does not include
 the corresponding champion.
+
 602.4.b.4.b.1. Example: A draft deck with a domain identity of
 Fury/Body/Order could use signature spells that are
 Fury/Order or Body/Order, but not signature spells that
@@ -1346,10 +1167,6 @@ otherwise specified. See 403 for more information on sideboards.
 Legend, and Chosen Champion while sideboarding as long as the
 resulting deck still meets 602.4.b.3-602.4.b.5.
 603. 2v2
-
-| 603. | 2v2 |
-| --- | --- |
-
 603.1. A 2v2 team consists of 2 players who enter a competition together and register together as
 a team to play congruently in a single match as described in the Core Rules.
 603.2. Each player must provide their individual registration information to enter the competition.
@@ -1364,6 +1181,7 @@ single product pool of 8 packs.
 603.7. During matches, teammates sit next to each other in their registered AB order. The setup
 process for a game of Riftbound is defined in the Core Rules, with these additional
 exceptions for 2v2:
+
 603.7.a. Turn order is as follows:
 603.7.a.1. The first team’s A player.
 603.7.a.2. The second team’s A player.
@@ -1385,10 +1203,6 @@ can play their games to a natural conclusion. If single elimination rounds must 
 604.2.a. Players are still expected to play at a reasonable pace. See 703.2 the Slow Play
 penalty.
 700. Enforcement and Penalties
-
-| 604. | Event and Round Time Limits |
-| --- | --- |
-
 701. General
 701.1. Philosophy
 701.1.a. Errors are assumed to be committed unintentionally. If the judge believes it was
@@ -1401,6 +1215,7 @@ have occurred.
 701.1.d. Judges should not intervene in games unless:
 701.1.d.1. They believe a violation has occurred.
 701.1.d.2. A player requested assistance.
+
 701.1.d.3. They observe a situation related to Unsporting Conduct.
 701.1.e. Judges should model fair play, sporting conduct, and diplomatic behavior.
 701.1.f. Judges should not account for a player’s history or skill when determining whether
@@ -1423,10 +1238,6 @@ player, the head judge can downgrade the penalty.
 judge can rewind the game to account for it, even if there were no other errors.
 701.2. Definitions of Penalties
 701.2.a. Warning: An indication that an error occurred that provides a record of the error.
-
-| 701. | General |
-| --- | --- |
-
 701.2.a.1. Time extensions should be granted if the total time to rule and correct is
 more than 1 minute.
 701.2.b. Game Loss: A game loss causes the erroring player and any of their teammates to
@@ -1441,6 +1252,7 @@ game ends in a draw. All game losses are recorded but do not affect the
 match score.
 701.2.c. Match Loss: A severe penalty that’s issued when the entire match has been
 compromised by the error.
+
 701.2.c.1. Match losses are applied to the current match, or to the player’s next match
 in the competition if their previous match has ended.
 701.2.d. Disqualification: A penalty issued for errors that damage the integrity of the
@@ -1467,15 +1279,19 @@ involved players.
 competition officials from accusations of bias.
 701.3.d. If a single error leads to multiple related penalties, judges should issue only the one
 with the most severe penalty.
-
 701.4. Shuffling
 701.4.a. Some remedies require shuffling the randomized portion of the deck.
 701.4.b. Many cards recycle cards to the bottom of a deck. The judge should do what they
 can using information available from the game state and from the players to
 determine which portion of the deck is knowable by one or more players, and
 separate those before shuffling that deck.
+701.4.b.1. If no randomized portion of the deck exists and it is possible, judges may
+complete remedies without shuffling.
+701.4.b2. If judges can’t confidently determine the full randomized portion of a deck,
+they may shuffle as much of the deck as needed to perform a remedy.
 701.4.c. Once the deck has been shuffled, any cards set aside in this way should be returned
 to their proper locations in the deck.
+
 701.4.d. Shuffles performed by a judge in this way are not considered shuffles in game
 terms.
 701.5. Rewinding
@@ -1489,6 +1305,9 @@ game.
 before the action began, such as before a played card would be put on the
 chain. The player may then opt not to take the action, or take the action
 making different decisions.
+701.5.b.3. When performing a simple rewind, if the action being rewound required the
+player to recycle/exhaust runes for payment, instruct that player to
+unrecycle/ready those runes.
 701.5.c. For rewinds more complicated than a simple rewind, only the head judge or
 designated appeals judges (at high OPL) may authorize rewinding in this way.
 701.5.d. To rewind:
@@ -1505,20 +1324,20 @@ into that player and patterns of behavior that might impact their eligibility in
 competitions.
 701.6.b. Investigations may also occur at a judge's discretion following the application of a
 penalty if cheating is suspected. See 704.8 for more information about cheating.
-
 701.6.c. The result of an investigation can be suspension of the player from Riftbound
 competitions.
 701.6.d. Suspended players may not enter Riftbound competitions. If a suspended player is
 found to have registered for a competition, the organizer reserves the right to issue
 a disqualification at any time.
 702. Game Play Errors
+
 702.1. Overview
 702.1.a. A game play error is caused by incorrect and inaccurate play of the game that
 violates the Core Rules.
-702.1.b. Repeated game play error [Warnings] can upgrade to [Game Loss].
-702.1.b.1. Except for 702.17, if a player commits the same exact category of game
-play error [Warning] 3 or more times in the same event, the penalty is
-upgraded to [Game Loss].
+702.1.b. Except for 702.17, repeated game play error [Warnings] can upgrade to [Game
+Loss].
+702.1.b.1. If a player commits the same exact category of game play error [Warning]
+3 or more times in the same event, the penalty is upgraded to [Game Loss].
 702.1.b.2. At competitive OPL, if a player commits a total of 6 or more of any
 category of game play error [Warning] in the same event, the penalty is
 upgraded to [Game Loss].
@@ -1533,23 +1352,28 @@ even if the erroring player gains an information advantage.
 702.1.c.1. At low OPL, penalties that require an opponent of the erroring player to
 make a choice are made at random by a judge when they can’t be avoided
 by a rewind.
+702.1.d. Certain penalties, such as Forgetting to Draw Cards, that would usually be
+disadvantageous to the erroring player can upgrade in severity if they occur in a
+situation where the error is obviously advantageous for them.
+702.1.d.1. Judges should only upgrade these penalties when the advantage is
+obvious. If it is ambiguous, judges should not upgrade.
+702.1.e. Certain penalties, such as Channeling Too Few Runes, refer to a “full round cycle”. A
+full round cycle completes when the player whose turn the error occurred on begins
+their next turn.
 702.2. Missed Trigger [No Penalty]: The accountable player for a triggered ability doesn’t
 demonstrate awareness of the trigger before the first time it would have an observable
 impact on the game.
 702.2.a. See 506 for definition of triggered abilities.
 702.2.b. After the initial point at which a triggered ability is missed, any further errors
-related to that trigger are considered a General Error instead. See 702.15 for more
+related to that trigger are considered a General Error instead. See 702.16 for more
 information about General Errors.
 702.2.c. Players may not attempt to cause triggered abilities where an opponent is the
 accountable player to be missed by taking game actions or otherwise prematurely
 advancing the game, including through otherwise acceptable shortcuts.
+
 702.2.d. A triggered ability is considered to have triggered even if it was subsequently
 missed. Effects that count or restrict the number of times that ability can trigger
 will count the missed one.
-
-| 702. | Game Play Errors |
-| --- | --- |
-
 702.2.e. If a mandatory trigger is missed by its accountable player and missing that trigger
 is advantageous for them, this penalty is a [Warning] instead.
 702.2.f. Remedies:
@@ -1585,10 +1409,10 @@ touched a new group, this is instead a Looking at Secret Information error. See
 702.5.b.1. For example, if a player plays a Stacked Deck and adds a fourth card to the
 private set of cards they are looking at, it is Looking at Extra Cards. If they
 correctly look at the top three, but knock the top card of their Main Deck
+
 over without adding it to the private group, it is Looking at Secret
 Information.
 702.5.c. Remedies:
-
 702.5.c.1. If the error is caught while the erroring player is looking at the extra cards,
 the next opponent in turn order of the erroring player looks at the private
 group and chooses the appropriate number of extra cards to shuffle back
@@ -1625,13 +1449,13 @@ the appropriate number of runes.
 is a [Warning] instead.
 702.8. Overpayment for Cost [No Penalty]: A player pays a cost overpaying its power or energy
 cost.
+
 702.8.a. Errors of this sort are generally public, and all players are expected to be mindful of
 game state.
 702.8.b. Remedies:
-
-702.8.b.1. If a cost is overpaid and it is still the turn where the cost was paid, the
-overpaying player is considered to have the extra resources floating in their
-resource pool.
+702.8.b.1. If possible, perform a simple rewind to before the card or ability was put on
+the chain. If a simple rewind is not possible, instruct the players to continue
+playing.
 702.8.b.1.a. If overpaying a cost was advantageous to the erroring player, this
 penalty is a [Warning] instead.
 702.8.b.1.b. If overpaying a cost caused a result that would not otherwise have
@@ -1647,7 +1471,7 @@ the chain.
 702.9.b.2. If a simple rewind is not possible, correct the cost paid if possible.
 702.9.b.2.a. If runes were incorrectly recycled as part of the cost, rewind if
 possible.
-702.9.b.3. If rewinding is not possible, instruct the players to continue playing.
+702.9.b.3. If neither is possible, instruct the players to continue playing.
 702.10. Looking at Secret Information [Warning]: A player looks at information that is not
 available to any player. See CR 128. Privacy for information types.
 702.10.a. Players should not be penalized via a remedy for errors their opponents make.
@@ -1664,23 +1488,11 @@ information that is private to their opponent. See CR 128. Privacy for informati
 702.11.a. Players should not be penalized via a remedy for errors their opponents make.
 Example: If one of your opponents inappropriately drops a card from their hand on
 the table, you do not receive a penalty if you see it.
+
 702.11.b. Remedies:
 702.11.b.1. The opponent whose private information it is may decide whether to take
 involved cards in the now-known private information and re-randomize
 them with the original randomized source of appropriate cards.
-
-| Mispayment for Cost |
-| --- |
-| using the incorrect requirements. See CR 201. Costs for more detail on costs. |
-
-| Looking at Secret Information [ | Warning | ]: A player looks at information that is not |
-| --- | --- | --- |
-| available to any player. See CR 128. Privacy for information types. |  |  |
-
-| Looking at Opponent Private Information [ | Warning | ]: A player accidentally looks at |
-| --- | --- | --- |
-| information that is private to their opponent. See CR 128. Privacy for information types. |  |  |
-
 702.11.b.2. If they decide not to, instruct the players to proceed.
 702.12. Drawing Extra Cards [Warning]: A player draws more cards than they are entitled to
 under the Core Rules as the result of a limited action or a player draws cards when they are
@@ -1701,27 +1513,35 @@ player looks at that player’s hand and chooses the appropriate number of
 cards to shuffle into the main deck appropriately.
 702.12.b.4. If at a later stage in the game it is determined a player has more cards in
 hand than they should, the remedy should be applied at this time.
-702.13. Facedown Card Error [Warning]: A player places a card into a facedown zone in a manner
-other than how they are entitled to under the Core Rules.
+702.13. Facedown Card Error [Warning]: A player adds a card to a facedown zone or removes a
+card from a facedown zone in a manner other than how they are entitled to under the Core
+Rules.
 702.13.a. Example: Hiding a card that does not have the Hidden keyword.
-702.13.b. Remedies:
-702.13.b.1. If the error is caught by the erroring player immediately and before any
+702.13.b. Example: Moving a hidden card from a battlefield to a hand or Main Deck illegally.
+702.13.c. Remedies for illegally added cards:
+702.13.c.1. If the error is caught by the erroring player immediately and before any
 additional game actions have been taken, return the card to the zone it
 came from and resume play.
-702.13.b.2. If the error is caught after additional game actions have been taken but
-before any cards have been added to the zone where the illegal card came
-from (such as a new card being drawn), return the illegal card to that zone
-and replace it with a random card from that zone that is legal for the
-facedown zone and resume play.
-702.13.b.2.a. If there is no available legal replacement, this penalty upgrades to
+702.13.c.2. If the error is caught after additional game actions have been taken but
+before any unknown cards have been added to the zone where the illegal
+card came from (such as a new card being drawn), return the illegal card to
+the zone it came from and replace it with a random card from that zone
+that is legal for the facedown zone and resume play.
+702.13.c.2.a. If there is no available legal replacement, this penalty upgrades to
 [Game Loss].
-702.13.b.2.b. If the error is caught after cards have been added to the zone
-where the illegal card came from, this penalty upgrades to [Game
-Loss].
+
+702.13.c.2.b. If the error is caught after unknown cards have been added to the
+zone where the illegal card came from, this penalty upgrades to
+[Game Loss].
+702.13.d. Remedies for illegally removed cards:
+702.13.d.1. If the error is caught during the turn it occurred, and the card is easily
+identifiable and recoverable, return the card to the zone it came from and
+resume play.
+702.13.d.2.a. If the error is caught on a later turn or the card is not easily
+identifiable and recoverable, this penalty upgrades to[Game Loss].
 702.14. Mulligan Procedure Error [Warning]: A player performs the mulligan procedure
 incorrectly.
 702.14.a. Remedies:
-
 702.14.a.1. If a player recycled and replaced more than 2 cards during their mulligan,
 the next opponent in turn order of the erroring player looks at that player’s
 hand and may choose cards up to the number of extra cards mulliganed to
@@ -1748,10 +1568,12 @@ game state.
 702.16.c. Remedies:
 702.16.c.1. Rewind if possible.
 702.16.c.2. Otherwise, instruct the players to continue playing.
+
 702.17. Failure to Maintain Game State [Warning]: A player does not call out another player’s
 failure to maintain the proper game state, including missed scoring from hold and conquer.
 702.17.a. Generally this error occurs when a player’s opponent commits a game play error
-and the player doesn’t call a judge immediately.
+(excluding missed beneficial triggers) and the player doesn’t call a judge
+immediately.
 702.17.b. Unlike other Game Play Errors, this error is primarily for tracking and never
 upgrades unless specifically instructed by the head judge.
 703. Tournament Errors
@@ -1759,10 +1581,6 @@ upgrades unless specifically instructed by the head judge.
 703.1.a. A tournament error is caused by actions in or around a tournament match that
 violate tournament procedure expectations.
 703.1.b. Repeated tournament error [Warnings] can upgrade to [Game Loss].
-
-| 703. | Tournament Errors |
-| --- | --- |
-
 703.1.b.1. If a player commits the same category of tournament error [Warning] 3 or
 more times in the same event, the penalty is upgraded to [Game Loss].
 703.1.b.2. At competitive OPL, if a player commits a total of 6 or more of any
@@ -1789,6 +1607,7 @@ information about cheating.
 703.3. Decklist Error [Game Loss]: A player submits a decklist for registration that contains illegal
 elements.
 703.3.a. Examples:
+
 703.3.a.1. More or fewer cards than appropriate deck size. See 402 for more
 information about deck size.
 703.3.a.2. Cards not legal in the format of the tournament.
@@ -1800,11 +1619,6 @@ information about deck size.
 703.3.b.1. If the player’s registered decklist is illegal, the player must correct their
 decklist to a legal state making as little change as possible and ensure that
 their deck matches the newly registered deck.
-
-|  | Warning |
-| --- | --- |
-| Game Loss |  |
-
 703.3.b.2. If the player’s presented decks do not match their registered decklist but
 their presented decks are legal, the player must change their registered
 decklist to match their presented deck.
@@ -1827,52 +1641,65 @@ from a previous game.)
 registered contents of their decklist. Promotional cards given out as part of
 the event, tokens, and damaged cards replaced with official proxies are
 allowed to be stored this way and do not warrant this error.
-703.4.a.5.a. At Professional OPL, extra cards stored in the deck box this way
-upgrades to a [Game Loss].
-703.4.b. Remedies:
-703.4.b.1. If the error is caught by any player before opening hands have been
-drawn, restore the deck to its correct state if possible and instruct players
-to proceed.
-703.4.b.2. If the error is caught by the erroring player after opening hands have been
+703.4.b. Remedies when a player forgets to select their Chosen Champion during setup:
+If the error is caught before the start of the first player’s turn, restore the
+deck to its correct state and instruct players to proceed.
+
+703.4.b.1. At Casual OPL, if the error is caught after the start of the first player’s turn,
+instruct the erroring player to search the randomized portion of their main
+deck, their hand and sideboard for a legal chosen champion and place it in
+their chosen champion zone, then shuffle the randomized portion of their
+main deck. If the champion came from their hand, instruct them to draw a
+card.
+703.4.b.1.a. If none are found, instruct players to continue playing with the
+erroring player’s chosen champion zone empty.
+703.4.b.2. At Competitive OPL, if the error is caught after the start of the first player’s
+turn, a judge searches the randomized portion of the erroring player’s main
+deck and hand for a copy of their registered game one chosen champion
+and move it to their chosen champion zone, then shuffle the randomized
+portion of their main deck. If the champion came from their hand, instruct
+them to draw a card.
+703.4.b.2.a. If none are found, instruct players to proceed with the erroring
+player’s chosen champion zone empty.
+At Professional OPL, if the error is caught after the start of the first player’s
+turn, instruct players to proceed with the erroring player’s chosen
+champion zone empty.
+703.4.b.3. Purposely leaving your Chosen Champion zone empty during setup to gain
+an advantage is cheating. See 704.8 for more information about cheating.
+703.4.c. Other Remedies:
+703.4.c.1. If the error is caught before opening hands have been drawn, restore the
+deck to its correct state if possible and instruct players to proceed.
+703.4.c.2. If the error is caught by the erroring player after opening hands have been
 drawn and it is easily possible, restore the deck to its correct state and
 instruct players to proceed. For example:
-703.4.b.2.a. In game one of a match a player realizes they forgot to restore
+703.4.c.2.a. In game one of a match a player realizes they forgot to restore
 their deck to a pre-sideboard state.
-703.4.b.2.a.1. A judge can restore their deck to the appropriate state by
+703.4.c.2.a.1. A judge can restore their deck to the appropriate state by
 returning cards to the main deck and sideboard as needed.
-703.4.b.2.a.1.a. If sideboard cards are in the player's hand, they
+703.4.c.2.a.1.a. If sideboard cards are in the player's hand, they
 are replaced randomly by main deck cards that
 were incorrectly in the sideboard.
-703.4.b.2.a.2. Shuffle the randomized portion of the main deck once this
+703.4.c.2.a.2. Shuffle the randomized portion of the main deck once this
 process is complete.
-
-703.4.b.3. If the error is caught by a player other than the erroring player after
+703.4.c.3. If the error is caught by anyone other than the erroring player after
 opening hands have been drawn, the penalty is upgraded to [Game Loss].
-703.4.b.3.a. At casual or competitive OPL, if the error is a player forgetting to
-move their Chosen Champion from their Main Deck to the chosen
-champion zone at setup, the judge may downgrade the penalty to
-a [Warning] and restore the gamestate if possible, regardless of
-who caught the error or at which stage of the game it occurred.
-703.4.b.3.b. Players may request a judge check an opponent’s deck for legality.
-(Example: A player believes an opponent has a sideboard card in
-the first game.)
-703.4.b.4. If restoring the deck to its correct state is not possible, the penalty is
-upgraded to [Game Loss].
-703.4.b.4.a. When applying a remedy for a missing Chosen Champion is
-applicable, if it occurs at any point after opening hands have been
-drawn and no copies of the Chosen Champion are available in the
-Main Deck to move to the Chosen Champion zone to restore the
-gamestate, the penalty may be downgraded to a [Warning] and
-gameplay can continue without the erroring player having a
-champion in the Chosen Champion zone.
-703.4.b.4.b. Example: A player has two total copies of Traveling Merchant on
+703.4.c.4. In either case, if restoring the deck to its correct state is not possible, the
+penalty is upgraded to [Game Loss].
+703.4.c.4.a. Example: A player has two total copies of Traveling Merchant on
 their registered decklist, one in their Main Deck and one in their
+
 Sideboard. During game one of a match a player draws and plays
 one Traveling Merchant. On a later turn, they draw the second copy
-and realize they forgot to de-sideboard. At this point, restoring the
-deck is not possible.
-703.4.b.5. If the cards required to correct the deck cannot be acquired in a timely
-manner, the head judge can issue a proxy.
+and realize they forgot to de-sideboard. At this point, since both
+Traveling Merchants have been drawn, restoring the deck is not
+possible as there is no easy 1 to 1 swap that can be made to restore
+the correct deck state.
+703.4.c.5. At Professional OPL, extra cards in a player’s deck box as described in
+703.4.a.5. upgrades this penalty to [Game Loss].
+703.4.d. For all deck presentation errors, if the cards required to correct the deck cannot be
+acquired in a timely manner, the head judge can issue a proxy.
+703.4.e. During matches, players may request a judge check an opponent’s deck for legality.
+(Example: A player believes an opponent has a sideboard card in the first game.)
 703.5. Communication Violation [Warning]: A player does not effectively communicate with their
 opponents during gameplay.
 703.5.a. This error includes any unintentional violation of the communication policies listed
@@ -1887,7 +1714,6 @@ face.
 703.6.a. This includes but is not limited to scratches, discoloration, and bends.
 703.6.b. If a player’s cards are sleeved, the cards must be examined while in the sleeves to
 determine if they are marked.
-
 703.6.c. The Head Judge has the authority to determine if a card in a player’s deck is
 marked.
 703.6.d. Remedies
@@ -1900,6 +1726,7 @@ manner, the head judge can issue a proxy.
 when required to.
 703.7.a. If a player believes an opponent has not sufficiently randomized their Main Deck or
 Rune Deck before presenting them, they may call a judge.
+
 703.7.b. Pile shuffling is not a sufficient randomization method and should only be used as a
 counting method.
 703.7.c. Remedies:
@@ -1927,7 +1754,6 @@ penalty does not apply if the head judge deems the advice was delivered
 maliciously.
 703.9.b. If the player receiving the advice solicited the advice, it is cheating. See 704.8 for
 more information about cheating.
-
 703.9.c. If the spectator giving the outside assistance is also a player in the event, this
 penalty is also applied to them.
 703.9.d. Spectators providing advice may be barred from the tournament venue if the
@@ -1937,14 +1763,19 @@ format or in other team formats when specified.
 703.9.f. At a judge’s discretion, a player may receive assistance with the physical logistics
 of the competition, including game actions such as shuffling or card movement.
 This is not considered outside assistance.
+703.9.g. Violating electronic devices policies will result in an outside assistance [Warning].
 703.10. Improperly Determining a Winner [Match Loss]: Games and matches of Riftbound must
 be decided by playing Riftbound appropriate to the tournament format.
+
 703.10.a. Other methods, including but not limited to flipping a coin, rolling dice, or playing
 other games, may not be used to determine a winner.
 703.10.b. Playing other formats of Riftbound other than the one designated for the
-tournament with the appropriate registered decklist may not be used to determine
-a winner.
+tournament with the appropriate decklist may not be used to determine a winner.
 703.10.c. Offering or accepting such offers is considered improperly determining a winner.
+703.10.d. A Professional OPL, the penalty is upgraded to [Disqualification]. This should be
+clearly communicated to all players at the start of a Professional OPL event.
+703.10.e. Knowingly attempting to improperly determine a winner or attempting to goad an
+opponent into doing so is cheating. See 704.8 for more information about cheating.
 704. Unsporting Conduct
 704.1. Overview
 704.1.a. Riftbound does not tolerate unsporting conduct. Tournament attendees and
@@ -1965,16 +1796,13 @@ they deem appropriate for unsporting conduct, up to and including
 704.2.a.4. Offensive play materials
 704.3. Unsporting Major [Disqualification]:
 704.3.a. Examples include but are not limited to:
-
-| 704. | Unsporting Conduct |
-| --- | --- |
-
 704.3.a.1. Use of racial slurs
 704.3.a.2. Physical violence or the threat of physical violence
 704.3.a.3. Displaying aggression
 704.3.a.4. Intentionally misgendering an event attendee
 704.3.b. This penalty often comes with ejection from the venue at the discretion of
 tournament officials.
+
 704.4. Angle Shooting [Warning]: A player intentionally uses the technical precision of the rules to
 gain an advantage where the spirit of the rules would not have garnered that advantage.
 704.4.a. Examples include but are not limited to:
@@ -2006,19 +1834,6 @@ the outcome of a game or match, any in-game action, or a player dropping from
 the tournament.
 704.5.c. It is not bribery when players in the single-elimination portion of a tournament
 offering only items such as cash, store credit, and/or unopened product, with the
-
-| Angle Shooting |
-| --- |
-| gain an advantage where the spirit of the rules would not have garnered that advantage. |
-
-| Attempting to mislead an opponent during gameplay based on cards that |
-| --- |
-| have rules errata. |
-
-| It is not bribery when players in the single-elimination portion of a tournament |
-| --- |
-| offering only items such as cash, store credit, and/or unopened product, with the |
-
 competition organizer’s permission, agree to divide the subsequent tournament
 prizes evenly. All players still in the tournament must agree to the arrangement.
 704.5.c.1. Players may end their participation in the tournament at this point or
@@ -2027,6 +1842,7 @@ play for final rankings.
 704.5.d. It is not bribery when, in the final round of the single-elimination portion of a
 tournament, with the competition organizer’s permission, players mutually agree on
 a winner and how to divide the remaining prizes. In such cases, one player must
+
 agree to drop from the tournament. Prizes are then awarded based on each
 player’s final standing.
 704.6. Wagering [Disqualification]: Tournament attendees may not wager on any portion of a
@@ -2058,34 +1874,6 @@ in any Regional Championship, Regional Qualifier, Showdown Series, or any
 equivalent events.
 705.1.c. Players also accept and agree that the Competition Organizer and Riot Games
 have the right to:
-
-| competition organizer’s permission, agree to divide the subsequent tournament |
-| --- |
-| prizes evenly. All players still in the tournament must agree to the arrangement. |
-
-| It is not bribery when, in the final round of the single-elimination portion of a |
-| --- |
-| tournament, with the competition organizer’s permission, players mutually agree on |
-| a winner and how to divide the remaining prizes. In such cases, one player must |
-| agree to drop from the tournament. Prizes are then awarded based on each |
-| player’s final standing. |
-
-| 705. | Disciplinary Code |
-| --- | --- |
-
-| All players participating in a premier or qualifier Riftbound competition are subject |
-| --- |
-| to this Disciplinary Code. |
-
-| Players accept and agree to be bound by these Riftbound Tournament Rules |
-| --- |
-| including this Disciplinary Code by: a) signing a contract or registration form in |
-| which these Riftbound Tournament Rules are incorporated, linked, referenced, o |
-| attached, b) clicking “Accept” when given the option to do so in an online |
-| registration process (or through a similar method of acceptance); or c) participating |
-| in any Regional Championship, Regional Qualifier, Showdown Series, or any |
-| equivalent events. |
-
 705.1.c.1. Monitor compliance with these Riftbound Tournament Rules, other
 Riftbound competition policies, the Riot Games Terms of Service, and any
 other competition-specific rules.
@@ -2094,6 +1882,7 @@ of the foregoing, and/or possible violations of applicable law.
 705.1.c.3. Where appropriate, impose sanctions for violations of these Riftbound
 Tournament Rules or other regulations referenced above, as further
 described below.
+
 705.1.d. This Disciplinary Code applies globally anywhere Riftbound competitions are held.
 It may also apply to circumstances that occur outside of competition play entirely,
 if the alleged conduct could have an adverse impact on Riftbound competitions or
@@ -2129,61 +1918,6 @@ and trophies)
 competitions in progress and/or exclusion from future competitions)
 705.2.d.5. Replaying a game or match
 705.2.d.6. Forfeiture of points or rankings in any competitive ranking system
-
-| Monitor compliance with these Riftbound Tournament Rules, other |
-| --- |
-| Riftbound competition policies, the Riot Games Terms of Service, and any |
-| other competition-specific rules. |
-
-| Investigate (or have a representative investigate) possible violations of any |
-| --- |
-| of the foregoing, and/or possible violations of applicable law. |
-
-| Where appropriate, impose sanctions for violations of these Riftbound |
-| --- |
-| Tournament Rules or other regulations referenced above, as further |
-| described below. |
-
-| This Disciplinary Code applies globally anywhere Riftbound competitions are held. |
-| --- |
-| It may also apply to circumstances that occur outside of competition play entirely, |
-| if the alleged conduct could have an adverse impact on Riftbound competitions or |
-| in circumstances where the alleged conduct could be associated with Riot Games, |
-| Riot Games affiliates, Riot Games game titles, or other properties, in each case as |
-| determined by Riot Games. |
-
-| Reporting: Players must report any violation of these Riftbound Tournament Rules |
-| --- |
-| to the Competition Organizer or Competition Officials upon becoming aware of th |
-| violation. Reports must be made honestly and in good faith. Knowingly false, |
-| fabricated, or recklessly misleading allegations, coordinated complaints made in |
-| bad faith, or other abuses of the reporting process are prohibited and may result i |
-| sanctions. |
-
-| Duty to Cooperate: Players are required to cooperate with the Competition |
-| --- |
-| Organizer, Riot Games, or designated representatives in any internal or external |
-| investigation that is conducted relating to a suspected violation of these Riftboun |
-| Tournament Rules. Players have a duty to tell the truth in connection with any such |
-| investigation, and a duty not to obstruct any such investigation, mislead |
-| investigators, withhold evidence, or abuse investigative processes. |
-
-| Abiding to Decisions: Players must comply with all instructions, directions, |
-| --- |
-| decisions, or rulings, including any disciplinary measures or final decisions issued by |
-| the Competition Organizer or another entity recognized by Riot Games. |
-
-| Consequences: At the Competition Organizer and/or Riot Games’ discretion, |
-| --- |
-| sanctions will be proportionate to the severity of the violation, taking into account |
-| any prior sanctions. Multiple sanctions may be applied for a single violation. |
-| Violations of these Riftbound Tournament Rules may be sanctioned by the |
-| application of one or more of the following disciplinary measures: |
-
-| Game, match, or competition forfeiture (including the disqualification of |
-| --- |
-| competitions in progress and/or exclusion from future competitions) |
-
 705.2.d.7. Suspension, disqualification, or ban from one or more Riftbound
 competitions
 705.2.d.8. Riot game account suspension or termination
@@ -2191,6 +1925,7 @@ competitions
 interim or provisional disciplinary measures pending the outcome of an
 investigation and until a decision on the merits is finalized. In circumstances where
 credible evidence may suggest a breach of these Riftbound Tournament Rules, the
+
 Competition Organizer and/or Riot Games may implement provisional measures,
 including the suspension of individuals involved.
 705.2.f. Aggravating and Mitigating Circumstances: The type and extent of the
@@ -2228,72 +1963,6 @@ communications during a match can give a player an unfair competitive
 advantage, and are prohibited.
 705.3.e. Derogatory or Defamatory Statements and Hateful Acts. Players may not use
 words, gestures, digital or physical objects, or any other means to transmit, allow or
-
-| Suspension, disqualification, or ban from one or more Riftbound |
-| --- |
-| competitions |
-
-| Interim Measures: The Competition Organizer and/or Riot Games may issue |
-| --- |
-| interim or provisional disciplinary measures pending the outcome of an |
-| investigation and until a decision on the merits is finalized. In circumstances where |
-
-| Competition Organizer and/or Riot Games may implement provisional measures, |
-| --- |
-| including the suspension of individuals involved. |
-
-| Aggravating and Mitigating Circumstances: The type and extent of the |
-| --- |
-| disciplinary measures that may be imposed are based on the specific |
-| circumstances of each case, taking into account the seriousness of the offense as |
-| well as aggravating and mitigating circumstances. Repeated or multiple concurrent |
-| violations or infractions may be considered as aggravating circumstances and may |
-| be subject to escalating sanctions. |
-
-| Intent. Violations of the Riftbound Tournament Rules are subject to disciplinary |
-| --- |
-| action, whether or not they were committed intentionally or as part of a joke, a |
-| stunt, or some form of social media performance. |
-
-| Final Determinations. Competition Organizer’s and/or Riot Games’ determination |
-| --- |
-| as to the appropriate disciplinary action (or combination of disciplinary actions) wil |
-| be final and binding. |
-
-| Public Decisions. The Competition Organizer and/or Riot Games may make |
-| --- |
-| decisions public at their sole discretion, which may include certain facts, details |
-| consequences, or other information arising in connection with a ruling or other |
-| disciplinary decision regarding a violation or alleged violation of these Riftbound |
-| Tournament Rules. |
-
-| General Obligations: Players who participate in Riftbound competitions must at a |
-| --- |
-| times observe the highest standards of personal integrity and sporting conduct |
-| Players are required to behave in a respectful manner in all of their interactions |
-| with other competitors, judges, competition officials, the media, sponsors, fans and |
-| other persons. Players must promptly comply with the decisions and instructions of |
-| Competition Officials (particularly of Judges) in a respectful and non-combativ |
-| manner. |
-
-| Unsporting Conduct. Players may not engage in any unsporting conduct listed in |
-| --- |
-| 704. Engaging in unsporting conduct may additionally be subject to sanction under |
-| this Disciplinary Code. |
-
-| Cheating. Cheating is prohibited. Enabling or assisting others to cheat is also |
-| --- |
-| prohibited. |
-
-| Unauthorized Communications. Unauthorized coaching and other |
-| --- |
-| communications during a match can give a player an unfair competitive |
-| advantage, and are prohibited. |
-
-| Derogatory or Defamatory Statements and Hateful Acts. Players may not us |
-| --- |
-| words, gestures, digital or physical objects, or any other means to transmit, allow o |
-
 facilitate messages or actions that insult, encourage hatred, undermine, or harm
 the integrity of a country, individual, or group of people. This includes
 contemptuous, discriminatory, or denigrating expressions based on race, skin color,
@@ -2302,6 +1971,7 @@ opinions, financial status, birth, sexual orientation, medical condition or hist
 any other characteristic or status.
 705.3.f. Vulgar or Provocative. Players may not use words, gestures, digital or physical
 objects, or any other means to transmit, allow or facilitate messages or actions that
+
 are obscene, vulgar, provocative, hateful, racist, insulting, threatening, abusive,
 libelous, slanderous, defamatory, or otherwise offensive or objectionable.
 705.3.g. Harassment. Players may not engage in any form of harassment. Harassment is
@@ -2343,76 +2013,13 @@ constitutes an independent violation, regardless of the outcome of the underlyin
 report.
 705.3.l. Violations of Law. Players are required to comply with all applicable laws at all
 times during their participation in Riftbound competitions. Players may not engage
-
-| the integrity of a country, individual, or group of people. This includes |
-| --- |
-| contemptuous, discriminatory, or denigrating expressions based on race, skin colo |
-| ethnic, national, or social origin, gender, language, religion, political or other |
-| opinions, financial status, birth, sexual orientation, medical condition or history, or |
-| any other characteristic or status. |
-
-| defined as unwelcome and unwanted behaviors that diminish, demean, or |
-| --- |
-| otherwise intimidate. This rule also prohibits sexual harassment, which is defined |
-| any form of unwelcome sexual advances. Stalking, conduct that involves threats o |
-| violence (whether physically or online) and sharing personal information of anothe |
-| individual without permission are considered forms of harassment as is any |
-
-| harassment are prohibited, even if the behavior is not sufficiently severe or |
-| --- |
-| pervasive to constitute unlawful activity under applicable law. |
-
-| Bullying and Abuse. Players may not engage in any form of bullying or physical o |
-| --- |
-| mental abuse. Bullying is defined as malicious conduct which an objective observe |
-| would consider hostile, offensive, and unrelated to legitimate competition |
-
-| potential negative impact of one’s actions is also considered a form of bullying an |
-| --- |
-| is prohibited. |
-
-| against someone in retribution for something done or not done that could cause a |
-| --- |
-| objective observer to believe it will be carried out. |
-
-| Match-fixing or Manipulation. Players may not match-fix or otherwise manipulat |
-| --- |
-| the outcome of any match or competition or request, encourage, or instruct other |
-| to manipulate it. Manipulation is defined as the unlawful or undue influence o |
-
-| other purpose. For the purposes of this rule, manipulation also includes any attem |
-| --- |
-| to manipulate, any action that creates the appearance of manipulation, and/or an |
-| behavior that could reasonably give rise to suspicions of manipulation, whether or |
-| not the manipulation is ultimately carried out or successful. |
-
-| Retaliation. Players may not retaliate against anyone who reports a possible |
-| --- |
-| violation of these Riftbound Tournament Rules in good faith or who provides |
-| truthful information during an investigation. Retaliation (for example, threats |
-| intimidation, harassment, employment actions, or any other form of reprisal) |
-| constitutes an independent violation, regardless of the outcome of the underlying |
-| report. |
-
 in (or encourage or solicit others to engage in) any illegal activity or behavior that
 is under investigation or has resulted in formal charges, whether or not a conviction
 has occurred, if such activity may bring Riot Games, the Competition Organizer,
 and/or a Riftbound competition into disrepute, negatively affect the authority,
 honor, and brand value of Riot Games, the Competition Organizer, and/or a
 Riftbound competition, or cause harm to the operation of a Riftbound competition.
+
 705.3.m. Violations of Riot Games Terms of Service. Players are required to comply with
 the Riot Games Terms of Service and may face sanctions under this Disciplinary
 Code in addition to consequences established in the Riot Games Terms of Service.
-
-| in (or encourage or solicit others to engage in) any illegal activity or behavior that |
-| --- |
-| is under investigation or has resulted in formal charges, whether or not a conviction |
-| has occurred, if such activity may bring Riot Games, the Competition Organizer, |
-| and/or a Riftbound competition into disrepute, negatively affect the authority, |
-| honor, and brand value of Riot Games, the Competition Organizer, and/or a |
-| Riftbound competition, or cause harm to the operation of a Riftbound competition. |
-
-| Violations of Riot Games Terms of Service. Players are required to comply with |
-| --- |
-| the Riot Games Terms of Service and may face sanctions under this Disciplinary |
-| Code in addition to consequences established in the Riot Games Terms of Service. |

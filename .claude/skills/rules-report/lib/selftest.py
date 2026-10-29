@@ -149,7 +149,7 @@ def corpus_integrity():
     idx = RuleIndex()
     rules = list(idx.rules.values())
     # `> 3000` against an actual 3316 meant 300 rules could vanish silently.
-    EXPECTED = 3316
+    EXPECTED = 3469
     # EXACT, not within 1%. The tolerance was 33 rules — enough for a parser
     # change to drop or fabricate a dozen and still report healthy. The corpus
     # is a fixed document; its rule count is known, and a real rules update is
@@ -159,13 +159,17 @@ def corpus_integrity():
           "bump EXPECTED in the same commit")
 
     orphans = [r for r in rules if r["parent"] and f'{r["doc"]}:{r["parent"]}' not in idx.rules]
-    check("no orphaned parents", not orphans, f"{len(orphans)} orphans")
+    from source_anomalies import matching as printed_anomalies
+    unexpected_orphans = [r for r in orphans if not printed_anomalies(r, "missing_parent", r["parent"])]
+    check("no orphaned parents", not unexpected_orphans,
+          f"{len(unexpected_orphans)} unexpected; {len(orphans) - len(unexpected_orphans)} exact printed-source anomaly")
 
     empty = [r for r in rules if not r["text"].strip()]
     check("no empty rules", not empty, f"{len(empty)} empty")
 
     broken = [(r["id"], x) for r in rules for x in r["see_also"]
-              if f'{r["doc"]}:{x}' not in idx.rules]
+              if f'{r["doc"]}:{x}' not in idx.rules
+              and not printed_anomalies(r, "missing_cross_reference", x)]
     check("no broken cross-refs", not broken, f"{len(broken)} broken")
 
     # Fabrication signal: a wrapped cross-reference read as a rule definition
@@ -199,7 +203,7 @@ def verifier_regression(idx):
     from verify_citations import verify_citation
     bad = [
         ("194.2.b", "The Victory Score is 8 points by default."),          # wrong sub-clause
-        ("471.1.b.1", "points Gained from sources that are not Conquer are not beholden to these restrictions"),
+        ('473.1.b.1', "points Gained from sources that are not Conquer are not beholden to these restrictions"),
         ("999.9.z", None),                                                  # fabricated id
         ("343.1", "Focus passes to the next Player in Turn Order"),         # stale after renumber
     ]
@@ -208,7 +212,7 @@ def verifier_regression(idx):
 
     good = [
         ("194.3", "The Victory Score is 8 points by default."),
-        ("471.1.a.1", "points Gained from sources that are not Conquer are not beholden to these restrictions"),
+        ('473.1.a.1', "points Gained from sources that are not Conquer are not beholden to these restrictions"),
         ("829.1.b.1", "Banishing the spell in this way is a delayed replacement effect"),
     ]
     passed = sum(1 for rid, q in good if verify_citation(idx, rid, q).ok)
@@ -351,8 +355,8 @@ def rulebook_and_links():
         from render_rulebook import anchor
         pat = re.search(r"/#\(\[A-Z\]\{2\}\)-\(\.\+\)\$/", html)
         check("the overlay title regex still matches the anchor format",
-              bool(pat) and bool(re.match(r"^[A-Z]{2}-.+$", anchor("CR", "471.1.b.1"))),
-              anchor("CR", "471.1.b.1"))
+              bool(pat) and bool(re.match(r"^[A-Z]{2}-.+$", anchor("CR", '473.1.b.1'))),
+              anchor("CR", '473.1.b.1'))
 
     if not os.path.exists(rulebook_html_path()):
         note("data/rules.html not built yet; run `rules_cli.py rulebook`")
@@ -2701,11 +2705,11 @@ def topic_blocks(idx):
     reaches the worst wrong answer this system can produce.
     """
     print("\n=== topic blocks (heading -> sibling rules) ===")
-    scoring = idx.get("467", "CR")
-    check("467 Scoring is recognised as a bare heading", bool(scoring) and idx.is_topic_heading(scoring))
+    scoring = idx.get('469', "CR")
+    check('469 Scoring is recognised as a bare heading', bool(scoring) and idx.is_topic_heading(scoring))
     block = idx.topic_block(scoring) if scoring else []
     ids = [r["id"] for r in block]
-    check("its block resolves to the sibling rules", ids == ["468", "469", "470", "471", "472"],
+    check("its block resolves to the sibling rules", ids == ["470", "471", "472", "473", "474"],
           ", ".join(ids) or "empty")
 
     # The block must stop at the next heading, not run to the end of the doc.
@@ -2730,15 +2734,15 @@ def topic_blocks(idx):
     # Chapter headings hold sub-headings, not rules. 316.7.e and 348.1 both
     # say "see rule 463", and two tournament rules say "see 600" — so these
     # are reachable cross-reference targets, not hypotheticals.
-    combat = idx.get("463", "CR")
+    combat = idx.get('465', "CR")
     contents = idx.topic_contents(combat) if combat else []
     check("a chapter heading lists its sub-headings",
-          [r["id"] for r in contents] == ["464", "465", "466", "467"],
+          [r["id"] for r in contents] == ['466', '467', '468', '469'],
           ", ".join(r["id"] for r in contents) or "empty")
     # Skipping body sections to reach more sub-headings was tried; it let 463
     # run past its four steps into Layers and Modes of Play.
     check("a chapter listing does not run past its own topic",
-          all(r["id"] < "473" for r in contents), ", ".join(r["id"] for r in contents))
+          all(r["id"] < '475' for r in contents), ", ".join(r["id"] for r in contents))
 
     # TR:600 ran past its own formats into chapter 700 before this was bounded.
     formats = idx.get("600", "TR")
@@ -3161,7 +3165,7 @@ def rendered_surfaces(idx):
     # space was cheaper and reopened it.
     for _blank in (" ", "\n", "\xa0"):
         check(f"a whitespace-only quote ({_blank!r}) is refused",
-              not verify_citation(idx, "441.1.a", _blank, None, "CR").ok)
+              not verify_citation(idx, '442.1.a', _blank, None, "CR").ok)
 
     # Narrowing tightens a VAGUE cite; it must not move an already-exact one.
     _keep = verify_citation(idx, "124", "changes zones to or from a Non-Board Zone", None, "CR")
@@ -3179,11 +3183,11 @@ def rendered_surfaces(idx):
     # of one block and the start of the next exists nowhere Riot published, and
     # matching a concatenation stamped it verified — the cheapest possible way
     # to defeat a verbatim gate.
-    _sr = idx.get("811.1.d.2.a", "CR")
+    _sr = idx.get('811.1.d.4', "CR")
     _splice = (" ".join(_sr["text"].split()[-6:]) + " "
                + " ".join(_sr["examples"][0].split()[:6]))
     check("a quote spliced across a block boundary is refused",
-          not verify_citation(idx, "811.1.d.2.a", _splice, None, "CR").ok)
+          not verify_citation(idx, '811.1.d.4', _splice, None, "CR").ok)
 
     # Normative text outranks Examples when narrowing. Examples routinely
     # restate a NEIGHBOURING rule, so equal ranking attributed a quote to a rule
@@ -3221,11 +3225,11 @@ def rendered_surfaces(idx):
 
     # A descendant's Example must verify at every ancestor: it used to verify at
     # the child and be called "paraphrased" one level up.
-    _anc = [rid for rid in ("811.1.d.2.a", "811.1.d.2", "811.1.d", "811.1", "811")
+    _anc = [rid for rid in ("811.1.d.4", "811.1.d", "811.1", "811")
             if not verify_citation(idx, rid, _sr["examples"][0], None, "CR").ok]
     check("a descendant Example verifies at every ancestor", not _anc, f"failed at {_anc}")
     check("a fabricated quote is still rejected",
-          not verify_citation(idx, "103.2.a.2", "I invented this entirely", None, "CR").ok)
+          not verify_citation(idx, '103.3.a.2', "I invented this entirely", None, "CR").ok)
 
     # The pairwise overlap guard compared FIRST occurrences while placement uses
     # a cursor, so it rejected spans the renderer places perfectly.
@@ -3320,11 +3324,19 @@ def rendered_surfaces(idx):
     # — and deleting the call left this green while the committed artifact put
     # Unleashed's legality date under the Vendetta heading.
     _emitted = re.findall(r'id="(CR|TR)-([^"]+)"', open(_real_path(), encoding="utf-8").read())
+    # The October PDF happens to arrive sorted. A page rendered from that
+    # input cannot prove that the renderer sorts at all. Feed the same real
+    # corpus in reverse order and inspect its emitted anchors independently.
+    from render_rulebook import render_rulebook
+    _scrambled_page = safely(lambda: render_rulebook(list(reversed(_rules)), version="ordering fixture"),
+                             "", "render scrambled rulebook")
+    _scrambled_ids = re.findall(r'id="(CR|TR)-([^"]+)"', _scrambled_page or "")
     _wrong = []
-    for _doc in ("CR", "TR"):
-        _ids = [i for d, i in _emitted if d == _doc]
-        _wrong += [(a2, b2) for a2, b2 in zip(_ids, _ids[1:]) if _k(a2) > _k(b2)]
-    check("the rendered rulebook is in numeric id order", not _wrong,
+    for _view in (_emitted, _scrambled_ids):
+        for _doc in ("CR", "TR"):
+            _ids = [i for d, i in _view if d == _doc]
+            _wrong += [(a2, b2) for a2, b2 in zip(_ids, _ids[1:]) if _k(a2) > _k(b2)]
+    check("the rendered rulebook is in numeric id order", not _wrong and len(_scrambled_ids) == len(_rules),
           f"out of order: {_wrong[:3]}")
     check("the ordering check saw a real rulebook", len(_emitted) > 3000, f"{len(_emitted)} ids")
 
@@ -3463,7 +3475,7 @@ def research_tools(idx):
     # query made `grep` print "no matches", which is a claim about the RULES.
     # `Quick-Draw` is CR section 819; its output was byte-identical to a
     # nonsense word's.
-    for term in ("Quick-Draw", "can't", "471.1.b"):
+    for term in ("Quick-Draw", "can't", '473.1.b'):
         try:
             hits = r.search(term, 5)
             check(f"grep finds {term!r}, which exists", bool(hits), "reported as absent")
@@ -3612,7 +3624,7 @@ def research_tools(idx):
     # 37 topic headings are cross-reference targets, and SKILL.md sends the
     # agent to `rule <id>` after a `see also`. One word with no pointer is
     # indistinguishable from "the rules are silent".
-    for _rid, _want in (("467", "sections 468-472"), ("463", "chapter heading")):
+    for _rid, _want in (("469", "sections 470-474"), ("465", "chapter heading")):
         _o = subprocess.run(
             [sys.executable, os.path.join(HERE, "rules_cli.py"), "rule", _rid],
             capture_output=True, text=True, cwd=HERE).stdout
@@ -3628,7 +3640,7 @@ def research_tools(idx):
     check("the child-order check saw children", len(seq) > 5, f"{len(seq)}")
 
     # The retriever's own children() had the same lexicographic bug in SQL.
-    rows = [x["rid"] for x in r.children("CR:465.2.c")]
+    rows = [x["rid"] for x in r.children('CR:467.2.c')]
     check("the retriever orders children numerically",
           rows == sorted(rows, key=_num_key), str(rows[:5]))
 
